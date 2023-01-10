@@ -12,8 +12,12 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
       </Head>
-      <div className="body">
+      <div height="100vh">
         <h1 className="text-3xl underline font-extrabold">HELLO WORLD</h1>
+        <p>This is suppose to be poppins</p>
+        <h1 className="text-3xl underline font-extrabold py-[100vh]">
+          HELLO WORLD
+        </h1>
         <p>This is suppose to be poppins</p>
       </div>
     </>
