@@ -5,11 +5,11 @@
 
 @layer components {
     .wrapper {
-        @apply max-w-7xl mx-auto
+        @apply md:max-w-7xl md:mx-auto mx-4
     }
 
     .pbtn {
-        @apply py-4 px-8 bg-white text-black rounded-full inline-block
+        @apply font-medium text-sm text-center mr-3 md:mr-0 py-4 px-8 text-black rounded-full inline-block bg-white
     }
 }
 

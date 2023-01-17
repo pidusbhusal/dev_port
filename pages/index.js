@@ -12,11 +12,11 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
       </Head>
-      <main className="text-white py-20">
+      <main className="py-20 text-white ">
         {/* herosection */}
-        <div className=" flex items-end wrapper  ">
+        <div className=" wrapper flex items-end  ">
           <div>
-            <button className=" group flex gap-[10rem] bg-white rounded-full px-8 py-4 text-black items-center hover:bg-[#E2FDE6]">
+            <button className=" group flex items-center gap-[10rem] rounded-full bg-green-100 px-8 py-4 text-black hover:bg-green-200">
               <p>See My Work</p>
               <svg
                 width="14"
@@ -31,10 +31,10 @@ export default function Home() {
                 />
               </svg>
             </button>
-            <h1 className="text-[4rem] font-semibold leading-[4.15rem] mt-9">
+            <h1 className="mt-9 text-[4rem] font-semibold leading-[4.15rem]">
               I'M A FULL STACK DEVELOPER
             </h1>
-            <p className="max-w-[49ch] mt-5">
+            <p className="mt-5 max-w-[49ch]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim
@@ -46,10 +46,10 @@ export default function Home() {
         </div>
 
         {/* work */}
-        <div className="home-work py-40 mt-20">
+        <div className="home-work mt-20 py-40">
           <div className="wrapper">
-            <div className="flex justify-between item-center">
-              <h2 className="font-semibold text-[2.5rem]">WORK</h2>
+            <div className="item-center flex justify-between">
+              <h2 className="text-[2.5rem] font-semibold">WORK</h2>
               <button className="pbtn">See More work</button>
             </div>
           </div>

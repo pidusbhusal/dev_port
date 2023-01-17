@@ -6,8 +6,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        "backgound-gred": "linear-gradient(180deg, #0F1010 0%, #181818 100%)",
+      "colors": {},
+      "backgroundImage": {
+        "backgound-gred": "#101111",
+        "navigation-gred":
+          "linear-gradient(226.65deg, #262626 0%, #1C1B1B 103.05%)",
       },
     },
   },
