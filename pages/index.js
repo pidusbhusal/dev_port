@@ -46,11 +46,204 @@ export default function Home() {
         </div>
 
         {/* work */}
+
         <div className="home-work py-24 md:mt-20 md:py-40">
           <div className="wrapper">
             <div className="item-center flex items-center justify-between">
               <h2 className="text-3xl font-semibold md:text-[2.5rem]">WORK</h2>
               <button className="pbtn">See More work</button>
+            </div>
+          </div>
+        </div>
+
+        {/* Timeline */}
+        <div className="bg-timeline-bg py-28 md:py-48">
+          <div className="wrapper">
+            <h2 className="text-3xl font-semibold md:text-[2.5rem]">
+              TIMELINE
+            </h2>
+
+            {/* timelinelines */}
+            {/* mobile version */}
+            <div className="relative">
+              <div className="flex justify-between">
+                <div className="date mt-10 flex flex-col gap-5 pr-2 sm:pr-4">
+                  <span className="items-top flex ">2017</span>
+                  <span className="flex items-center p-3 "></span>
+                  <span className="items-top flex ">2018</span>
+                  <span className="flex items-center p-3 "></span>
+                  <span className="items-top flex ">2019</span>
+                  <span className="flex items-center p-3 "></span>
+                  <span className="items-top flex ">2020</span>
+                  <span className="flex items-center p-3 "></span>
+                  <span className="items-top flex ">2021</span>
+                  <span className="flex items-center p-3 "></span>
+                  <span className="items-top flex ">2022</span>
+                  <span className="flex items-center p-3 "></span>
+                  <span className="items-top flex ">2023</span>
+                </div>
+                <div className="date mt-10 flex flex-col gap-5">
+                  <div className="absolute h-[100%]">
+                    <div className="flex h-[25%] items-center justify-center bg-red-700 px-6">
+                      <div>
+                        <h3 className="text-xl font-semibold">
+                          Mobile Application Developer
+                        </h3>
+                        <p className="text-sm text-gray-400">
+                          Mirror Grid Pvt. Ltd.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex h-[25%] items-center justify-center bg-red-700 px-6">
+                      <div>
+                        <h3 className="text-xl font-semibold">
+                          Mobile Application Developer
+                        </h3>
+                        <p className="text-sm text-gray-400">
+                          Mirror Grid Pvt. Ltd.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    src="timeline_hr.svg"
+                    alt=""
+                    width="100%"
+                    className="flex h-6 items-center"
+                  />
+                  <img
+                    src="timeline_hr.svg"
+                    alt=""
+                    width="100%"
+                    className="h-6"
+                  />
+                  <img
+                    src="timeline_hr.svg"
+                    alt=""
+                    width="100%"
+                    className="h-6"
+                  />
+                  <img
+                    src="timeline_hr.svg"
+                    alt=""
+                    width="100%"
+                    className="h-6"
+                  />
+                  <img
+                    src="timeline_hr.svg"
+                    alt=""
+                    width="100%"
+                    className="h-6"
+                  />
+                  <img
+                    src="timeline_hr.svg"
+                    alt=""
+                    width="100%"
+                    className="h-6"
+                  />
+                  <img
+                    src="timeline_hr.svg"
+                    alt=""
+                    width="100%"
+                    className="h-6"
+                  />
+                  <img
+                    src="timeline_hr.svg"
+                    alt=""
+                    width="100%"
+                    className="h-6"
+                  />
+                  <img
+                    src="timeline_hr.svg"
+                    alt=""
+                    width="100%"
+                    className="h-6"
+                  />
+                  <img
+                    src="timeline_hr.svg"
+                    alt=""
+                    width="100%"
+                    className="h-6"
+                  />
+                  <img
+                    src="timeline_hr.svg"
+                    alt=""
+                    width="100%"
+                    className="h-6"
+                  />
+                  <img
+                    src="timeline_hr.svg"
+                    alt=""
+                    width="100%"
+                    className="h-6"
+                  />
+                  <img
+                    src="timeline_hr.svg"
+                    alt=""
+                    width="100%"
+                    className="h-6"
+                  />
+                </div>
+              </div>
+
+              {/* <div className="date mt-10 flex flex-col gap-5">
+                <div className="flex h-6 items-center justify-between ">
+                  <span className="text-left">2022</span>
+                  <img src="timeline_hr.svg" alt="" />
+                </div>
+                <div className="flex h-6 items-center justify-between ">
+                  <span className="text-left"></span>
+                  <img src="timeline_hr.svg" alt="" />
+                </div>
+                <div className="flex h-6 items-center justify-between ">
+                  <span className="text-left">2022</span>
+                  <img src="timeline_hr.svg" alt="" />
+                </div>
+                <div className="flex h-6 items-center justify-between ">
+                  <span className="text-left"></span>
+                  <img src="timeline_hr.svg" alt="" />
+                </div>
+                <div className="flex h-6 items-center justify-between ">
+                  <span className="text-left">2022</span>
+                  <img src="timeline_hr.svg" alt="" />
+                </div>
+                <div className="flex h-6 items-center justify-between ">
+                  <span className="text-left"></span>
+                  <img src="timeline_hr.svg" alt="" />
+                </div>
+                <div className="flex h-6 items-center justify-between ">
+                  <span className="text-left">2022</span>
+                  <img src="timeline_hr.svg" alt="" />
+                </div>
+                <div className="flex h-6 items-center justify-between ">
+                  <span className="text-left"></span>
+                  <img src="timeline_hr.svg" alt="" />
+                </div>
+                <div className="flex h-6 items-center justify-between ">
+                  <span className="text-left">2022</span>
+                  <img src="timeline_hr.svg" alt="" />
+                </div>
+                <div className="flex h-6 items-center justify-between ">
+                  <span className="text-left"></span>
+                  <img src="timeline_hr.svg" alt="" />
+                </div>
+                <div className="flex h-6 items-center justify-between ">
+                  <span className="text-left">2022</span>
+                  <img src="timeline_hr.svg" alt="" />
+                </div>
+                <div className="flex h-6 items-center justify-between ">
+                  <span className="text-left"></span>
+                  <img src="timeline_hr.svg" alt="" />
+                </div>
+                <div className="flex h-6 items-center justify-between ">
+                  <span className="text-left">2022</span>
+                  <img src="timeline_hr.svg" alt="" />
+                </div>
+                <div className="flex h-6 items-center justify-between ">
+                  <span className="text-left"></span>
+                  <img src="timeline_hr.svg" alt="" />
+                </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -107,7 +107,7 @@ const Navbar = () => {
         <div
           className={`${
             navbutton ? "left-[-100vw] " : "left-[0] "
-          } "mobile-menu z-19  fixed  top-[0vw] h-full w-[60vw] border-0 border-l-2 border-r-[0.5px]  border-[#344347] bg-black bg-opacity-60 bg-clip-padding px-4 py-6   opacity-80 backdrop-blur-xl backdrop-filter  transition-transform duration-300  ease-in `}
+          } "mobile-menu z-19  fixed  top-[0vw] h-full w-[60vw] border-0 border-l- border-r-[0.5px]  border-[#344347] bg-black bg-opacity-60 bg-clip-padding px-4 py-6   opacity-80 backdrop-blur-xl backdrop-filter  transition-transform duration-300  ease-in `}
         >
           <div className="mb-10 flex items-center gap-3">
             <img src="/logo.svg" alt="" />
