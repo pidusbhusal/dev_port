@@ -4,6 +4,27 @@ import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import { Poppins, Figtree } from "@next/font/google";
 
+const workexpes = [
+  {
+    work: "Mobile Developer",
+    employer: "Tuna Technology",
+    workgap: "mb-[8%]",
+    timeline: "h-[20%]",
+  },
+  {
+    work: "Mobile Developer",
+    employer: "Tuna Technology",
+    workgap: "mb-[8%]",
+    timeline: "h-[20%]",
+  },
+  {
+    work: "PHP developer",
+    employer: "Tuna Technology",
+    workgap: "mb-[9%]",
+    timeline: "h-[10%]",
+  },
+];
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -84,26 +105,21 @@ export default function Home() {
                 </div>
                 <div className="date mt-10 flex flex-col gap-5">
                   <div className="absolute h-[100%]">
-                    <div className="flex h-[25%] items-center justify-center bg-red-700 px-6">
-                      <div>
-                        <h3 className="text-xl font-semibold">
-                          Mobile Application Developer
-                        </h3>
-                        <p className="text-sm text-gray-400">
-                          Mirror Grid Pvt. Ltd.
-                        </p>
+                    {workexpes.map((workexp, key) => (
+                      <div
+                        key={key}
+                        className={`${workexp.workgap} flex ${workexp.timeline} items-center justify-center rounded-lg bg-work-gred px-6`}
+                      >
+                        <div>
+                          <h3 className="text-center text-xl font-semibold">
+                            {workexp.work}
+                          </h3>
+                          <p className="text-center text-sm text-gray-400">
+                            {workexp.employer}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex h-[25%] items-center justify-center bg-red-700 px-6">
-                      <div>
-                        <h3 className="text-xl font-semibold">
-                          Mobile Application Developer
-                        </h3>
-                        <p className="text-sm text-gray-400">
-                          Mirror Grid Pvt. Ltd.
-                        </p>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                   <img
                     src="timeline_hr.svg"
