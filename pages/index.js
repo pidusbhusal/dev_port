@@ -11,17 +11,18 @@ const workexpes = [
     workgap: "mb-[8%]",
     timeline: "h-[20%]",
   },
+
   {
-    work: "Mobile Developer",
-    employer: "Tuna Technology",
-    workgap: "mb-[8%]",
-    timeline: "h-[20%]",
+    work: "Full Stack Developer",
+    employer: "satodeal",
+    workgap: "mb-[10%]",
+    timeline: "h-[50%]",
   },
   {
     work: "PHP developer",
     employer: "Tuna Technology",
-    workgap: "mb-[9%]",
-    timeline: "h-[10%]",
+    workgap: "mb-[10%]",
+    timeline: "h-[20%]",
   },
 ];
 
