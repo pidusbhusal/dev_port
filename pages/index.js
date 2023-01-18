@@ -14,9 +14,9 @@ export default function Home() {
       </Head>
       <main className="py-20 text-white ">
         {/* herosection */}
-        <div className=" wrapper flex items-end  ">
-          <div>
-            <button className=" group flex items-center gap-[10rem] rounded-full bg-green-100 px-8 py-4 text-black hover:bg-green-200">
+        <div className=" wrapper flex flex-wrap-reverse items-end justify-center md:flex-nowrap  ">
+          <div className="mt-10 md:mt-0">
+            <button className=" group flex w-[100%] items-center justify-between rounded-full bg-green-100 px-9 py-4 text-black hover:bg-green-200 md:w-auto md:items-center md:gap-[10rem] md:px-8">
               <p>See My Work</p>
               <svg
                 width="14"
@@ -31,7 +31,7 @@ export default function Home() {
                 />
               </svg>
             </button>
-            <h1 className="mt-9 text-[4rem] font-semibold leading-[4.15rem]">
+            <h1 className="line mt-9  text-[2.5rem] font-semibold leading-10 md:text-[4rem] md:leading-[4.15rem]">
               I'M A FULL STACK DEVELOPER
             </h1>
             <p className="mt-5 max-w-[49ch]">
@@ -46,10 +46,10 @@ export default function Home() {
         </div>
 
         {/* work */}
-        <div className="home-work mt-20 py-40">
+        <div className="home-work py-24 md:mt-20 md:py-40">
           <div className="wrapper">
-            <div className="item-center flex justify-between">
-              <h2 className="text-[2.5rem] font-semibold">WORK</h2>
+            <div className="item-center flex items-center justify-between">
+              <h2 className="font-semibold text-3xl md:text-[2.5rem]">WORK</h2>
               <button className="pbtn">See More work</button>
             </div>
           </div>

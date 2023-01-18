@@ -38,55 +38,59 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <div>
-          <button className="pbtn hover:bg-green-200">Get in touch</button>
-        </div>
-
-        {/* mobile button goes here */}
-        <div className="z-50 flex items-center md:hidden">
-          {navbutton ? (
-            <button
-              className="mobile-menu-button"
-              onClick={() => setnavbutton(!navbutton)}
-            >
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6.25 11.25H33.75M6.25 20H33.75M6.25 28.75H33.75"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+        <div className="flex">
+          <div>
+            <button className="pbtn hidden  hover:bg-green-200 md:hidden ">
+              Get in touch
             </button>
-          ) : (
-            <button
-              className="mobile-menu-button"
-              onClick={() => setnavbutton(!navbutton)}
-            >
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+          </div>
+          {/* mobile button goes here */}
+          <button className="pbtn   hover:bg-green-200 ">Get in touch</button>
+          <div className="z-50 flex items-center md:hidden">
+            {navbutton ? (
+              <button
+                className="mobile-menu-button"
+                onClick={() => setnavbutton(!navbutton)}
               >
-                <path
-                  d="M10 30L30 10M10 10L30 30"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-          )}
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.25 11.25H33.75M6.25 20H33.75M6.25 28.75H33.75"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            ) : (
+              <button
+                className="mobile-menu-button"
+                onClick={() => setnavbutton(!navbutton)}
+              >
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 30L30 10M10 10L30 30"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            )}
+          </div>
         </div>
       </div>
 
