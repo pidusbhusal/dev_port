@@ -31,7 +31,7 @@ export default function Home() {
                 />
               </svg>
             </button>
-            <h1 className="line mt-9  text-[2.5rem] font-semibold leading-10 md:text-[4rem] md:leading-[4.15rem]">
+            <h1 className="line mt-9  text-[2.4rem] font-bold leading-10 md:text-[4rem] md:leading-[4.15rem]">
               I'M A FULL STACK DEVELOPER
             </h1>
             <p className="mt-5 max-w-[49ch]">
@@ -49,7 +49,7 @@ export default function Home() {
         <div className="home-work py-24 md:mt-20 md:py-40">
           <div className="wrapper">
             <div className="item-center flex items-center justify-between">
-              <h2 className="font-semibold text-3xl md:text-[2.5rem]">WORK</h2>
+              <h2 className="text-3xl font-semibold md:text-[2.5rem]">WORK</h2>
               <button className="pbtn">See More work</button>
             </div>
           </div>

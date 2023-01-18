@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+
 
 @layer components {
     .wrapper {
@@ -16,11 +18,13 @@
 body {
     background: linear-gradient(180deg, #0F1010 0%, #181818 100%);
     background-repeat: no-repeat;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 * {
     font-family: 'Poppins', sans-serif;
-
+    scroll-behavior: smooth;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 
 }
 
