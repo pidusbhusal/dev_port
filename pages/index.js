@@ -2,27 +2,39 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
-import { Poppins, Figtree } from "@next/font/google";
 
 const workexpes = [
   {
-    work: "Mobile Developer",
-    employer: "Tuna Technology",
-    workgap: "mb-[8%]",
-    timeline: "h-[20%]",
+    work: "Mobile Application Developer",
+    employer: "Mirror Grid Pvt.Ltd",
+    workgap: "mt-[0%] md:ml-[0]",
+    timeline: "h-[21%] md:w-[21%] md:h-[0%] md:p-4",
   },
 
   {
-    work: "Full Stack Developer",
-    employer: "satodeal",
-    workgap: "mb-[10%]",
-    timeline: "h-[50%]",
+    work: "PHP Developer",
+    employer: "Inititaive Nepal",
+    workgap: "mt-[7%] md:ml-[29%] md:mt-2",
+    timeline: "h-[9%] md:w-[9%] md:h-[0%] md:p-4",
   },
   {
-    work: "PHP developer",
-    employer: "Tuna Technology",
-    workgap: "mb-[10%]",
-    timeline: "h-[20%]",
+    work: "Software Engineer",
+    employer: "Java Software",
+    workgap: "mt-[6%] md:ml-[44%] md:mt-2",
+    timeline: "h-[10%] md:w-[10%] md:h-[0%] md:p-4 ",
+  },
+  {
+    work: "Software Engineer",
+    employer: "Sastodeal",
+    workgap: "mt-[3%] md:ml-[57%] md:mt-2",
+    timeline: "h-[23%] md:w-[23%] md:h-[0%] md:p-4 ",
+  },
+  {
+    work: "Software Engineer",
+    employer: "Freelancing",
+    workgap: "mt-[2%] md:ml-[82%] md:mt-2",
+    timeline: "h-[21%] md:w-[21%] md:h-[0%] md:p-4",
+    islast: true,
   },
 ];
 
@@ -38,7 +50,7 @@ export default function Home() {
         {/* herosection */}
         <div className=" wrapper flex flex-wrap-reverse items-end justify-center md:flex-nowrap  ">
           <div className="mt-10 md:mt-0">
-            <button className=" group flex w-[100%] items-center justify-between rounded-full bg-green-100 px-9 py-4 text-black hover:bg-green-200 md:w-auto md:items-center md:gap-[10rem] md:px-8">
+            <button className=" group flex w-[100%] items-center justify-between rounded-full bg-white px-9 py-4 text-black hover:bg-green-200 md:w-auto md:items-center md:gap-[10rem] md:px-8">
               <p>See My Work</p>
               <svg
                 width="14"
@@ -87,7 +99,7 @@ export default function Home() {
 
             {/* timelinelines */}
             {/* mobile version */}
-            <div className="relative">
+            <div className="relative md:hidden">
               <div className="flex justify-between">
                 <div className="date mt-10 flex flex-col gap-5 pr-2 sm:pr-4">
                   <span className="items-top flex ">2017</span>
@@ -104,15 +116,16 @@ export default function Home() {
                   <span className="flex items-center p-3 "></span>
                   <span className="items-top flex ">2023</span>
                 </div>
-                <div className="date mt-10 flex flex-col gap-5">
-                  <div className="absolute h-[100%]">
+                <div className="date mt-10 flex flex-col  gap-5">
+                  <div className="absolute top-[90%] z-10 ml-4 h-16 w-[82%] bg-last-gred-mobile"></div>
+                  <div className="absolute  ml-4 h-[100%]">
                     {workexpes.map((workexp, key) => (
                       <div
                         key={key}
-                        className={`${workexp.workgap} flex ${workexp.timeline} items-center justify-center rounded-lg bg-work-gred px-6`}
+                        className={`${workexp.workgap} flex ${workexp.timeline}   items-center  justify-center rounded-lg  border-[0.5px] border-[#313131] bg-opacity-60   bg-work-gred  bg-clip-padding px-6  backdrop-blur-xl backdrop-filter`}
                       >
                         <div>
-                          <h3 className="text-center text-xl font-semibold">
+                          <h3 className="text-center  font-medium">
                             {workexp.work}
                           </h3>
                           <p className="text-center text-sm text-gray-400">
@@ -202,65 +215,79 @@ export default function Home() {
                   />
                 </div>
               </div>
+            </div>
+            {/* desktop version */}
+            <div class=" mt-20 hidden md:grid ">
+              <div>
+                {/* date at top */}
+                <div className="dates flex justify-between md:max-w-[100%]">
+                  <span className="items-top flex ">2017</span>
+                  <span className="flex items-center p-3 "></span>
+                  <span className="items-top flex ">2018</span>
+                  <span className="flex items-center p-3 "></span>
+                  <span className="items-top flex ">2019</span>
+                  <span className="flex items-center p-3 "></span>
+                  <span className="items-top flex ">2020</span>
+                  <span className="flex items-center p-3 "></span>
+                  <span className="items-top flex ">2021</span>
+                  <span className="flex items-center p-3 "></span>
+                  <span className="items-top flex ">2022</span>
+                  <span className="flex items-center p-3 "></span>
+                  <span className="items-top flex ">2023</span>
+                </div>
 
-              {/* <div className="date mt-10 flex flex-col gap-5">
-                <div className="flex h-6 items-center justify-between ">
-                  <span className="text-left">2022</span>
-                  <img src="timeline_hr.svg" alt="" />
+                {/* bars */}
+                <div className="relative my-7 flex justify-between md:max-w-[100%]">
+                  <div className="absolute inline w-[100%]">
+                    {workexpes.map((workexp, key) => (
+                      <div
+                        key={key}
+                        className={`${workexp.workgap} flex ${workexp.timeline}   items-center  justify-center rounded-lg  border-[0.5px] border-[#313131] bg-opacity-60   bg-work-gred  bg-clip-padding px-6  backdrop-blur-xl backdrop-filter`}
+                      >
+                        <div>
+                          <h3 className="text-center  font-medium">
+                            {workexp.work}
+                          </h3>
+                          <p className="text-center text-sm text-gray-400">
+                            {workexp.employer}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <img src="timeline_vr.svg" className="" alt="" />
+                  <img src="timeline_vr.svg" className="" alt="" />
+                  <img src="timeline_vr.svg" className="" alt="" />
+                  <img src="timeline_vr.svg" className="" alt="" />
+                  <img src="timeline_vr.svg" className="" alt="" />
+                  <img src="timeline_vr.svg" className="" alt="" />
+                  <img src="timeline_vr.svg" className="" alt="" />
+                  <img src="timeline_vr.svg" className="" alt="" />
+                  <img src="timeline_vr.svg" className="" alt="" />
+                  <img src="timeline_vr.svg" className="" alt="" />
+                  <img src="timeline_vr.svg" className="" alt="" />
+                  <img src="timeline_vr.svg" className="" alt="" />
+                  <img src="timeline_vr.svg" className="" alt="" />
                 </div>
-                <div className="flex h-6 items-center justify-between ">
-                  <span className="text-left"></span>
-                  <img src="timeline_hr.svg" alt="" />
+
+                {/* buttom date */}
+                <div className="dates flex justify-between md:max-w-[100%]">
+                  <span className="items-top flex ">2017</span>
+                  <span className="flex items-center p-3 "></span>
+                  <span className="items-top flex ">2018</span>
+                  <span className="flex items-center p-3 "></span>
+                  <span className="items-top flex ">2019</span>
+                  <span className="flex items-center p-3 "></span>
+                  <span className="items-top flex ">2020</span>
+                  <span className="flex items-center p-3 "></span>
+                  <span className="items-top flex ">2021</span>
+                  <span className="flex items-center p-3 "></span>
+                  <span className="items-top flex ">2022</span>
+                  <span className="flex items-center p-3 "></span>
+                  <span className="items-top flex ">2023</span>
                 </div>
-                <div className="flex h-6 items-center justify-between ">
-                  <span className="text-left">2022</span>
-                  <img src="timeline_hr.svg" alt="" />
-                </div>
-                <div className="flex h-6 items-center justify-between ">
-                  <span className="text-left"></span>
-                  <img src="timeline_hr.svg" alt="" />
-                </div>
-                <div className="flex h-6 items-center justify-between ">
-                  <span className="text-left">2022</span>
-                  <img src="timeline_hr.svg" alt="" />
-                </div>
-                <div className="flex h-6 items-center justify-between ">
-                  <span className="text-left"></span>
-                  <img src="timeline_hr.svg" alt="" />
-                </div>
-                <div className="flex h-6 items-center justify-between ">
-                  <span className="text-left">2022</span>
-                  <img src="timeline_hr.svg" alt="" />
-                </div>
-                <div className="flex h-6 items-center justify-between ">
-                  <span className="text-left"></span>
-                  <img src="timeline_hr.svg" alt="" />
-                </div>
-                <div className="flex h-6 items-center justify-between ">
-                  <span className="text-left">2022</span>
-                  <img src="timeline_hr.svg" alt="" />
-                </div>
-                <div className="flex h-6 items-center justify-between ">
-                  <span className="text-left"></span>
-                  <img src="timeline_hr.svg" alt="" />
-                </div>
-                <div className="flex h-6 items-center justify-between ">
-                  <span className="text-left">2022</span>
-                  <img src="timeline_hr.svg" alt="" />
-                </div>
-                <div className="flex h-6 items-center justify-between ">
-                  <span className="text-left"></span>
-                  <img src="timeline_hr.svg" alt="" />
-                </div>
-                <div className="flex h-6 items-center justify-between ">
-                  <span className="text-left">2022</span>
-                  <img src="timeline_hr.svg" alt="" />
-                </div>
-                <div className="flex h-6 items-center justify-between ">
-                  <span className="text-left"></span>
-                  <img src="timeline_hr.svg" alt="" />
-                </div>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>
