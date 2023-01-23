@@ -92,23 +92,25 @@ const Navbar = () => {
             )}
           </div>
         </div>
-        <div className="absolute left-[-77px] top-[-190px] h-[324px] w-[195px] bg-[#aabbb4] opacity-25  blur-3xl  " />
+        <div className="absolute left-[-77px] top-[-190px] h-[324px] w-[195px] bg-[#aabbb4] opacity-0   blur-3xl md:opacity-25  " />
       </div>
 
       {/* mobile menu */}
 
-      <div
-        className={`${
-          navbutton ? "hidden bg-transparent" : ""
-        } fixed  top-0 z-10 h-[100vh] w-[100vw]  md:hidden`}
-      >
-        <div className="z-5  fixed   h-[100vh]   w-[100vw] bg-black  opacity-80 " />
-        <div className="absolute left-[-77px] top-[-190px] h-[324px] w-[195px] bg-[#aabbb4] opacity-50  blur-3xl   " />
+      <div className={`fixed  top-0 z-10 h-[100vh] w-[100vw]  md:hidden`}>
+        <div className="absolute left-[-77px] top-[-190px] h-[324px] w-[195px] bg-[#aabbb4] opacity-20 blur-3xl   " />
         <div
-          className={`${
-            navbutton ? "left-[-100vw] " : "left-[0] "
-          } "mobile-menu z-19  border-l-  fixed top-[0vw] h-full w-[60vw] border-0 border-r-[0.5px]  border-[#344347] bg-black bg-opacity-60 bg-clip-padding px-4 py-6   opacity-80 backdrop-blur-xl backdrop-filter  transition-transform duration-300  ease-in `}
+          className={` ${
+            navbutton ? "opacity-0" : "opacity-80"
+          } z-5  fixed   h-[100vh]   w-[100vw] bg-black  transition-opacity duration-500 ease-in-out `}
+        />
+
+        <div
+          className={` ${
+            navbutton ? "translate-x-[-100vw]" : "translate-x-0"
+          }  "mobile-menu z-19  border-l-  fixed top-[0vw] h-full w-[60vw] border-0 border-r-[0.5px]  border-[#344347] bg-black bg-opacity-60 bg-clip-padding px-4 py-6   opacity-80 backdrop-blur-xl backdrop-filter  transition-transform duration-500  ease-in-out `}
         >
+          <div className="absolute left-[-77px] top-[-190px] h-[324px] w-[195px] bg-[#aabbb4] opacity-30  blur-3xl   " />
           <div className="mb-10 flex items-center gap-3">
             <img src="/logo.svg" alt="" />
           </div>

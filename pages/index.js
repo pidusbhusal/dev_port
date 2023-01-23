@@ -1,39 +1,48 @@
+"use client";
+
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 const workexpes = [
   {
+    id: 1,
     work: "Mobile Application Developer",
     employer: "Mirror Grid Pvt.Ltd",
-    workgap: "mt-[0%] md:ml-[0]",
-    timeline: "h-[21%] md:w-[21%] md:h-[0%] md:p-4",
+    workgap: "mt-[0%] xl:ml-[0]",
+    timeline: "h-[21%] xl:w-[21%] xl:h-[0%] xl:p-4",
   },
 
   {
+    id: 2,
     work: "PHP Developer",
     employer: "Inititaive Nepal",
-    workgap: "mt-[7%] md:ml-[29%] md:mt-2",
-    timeline: "h-[9%] md:w-[9%] md:h-[0%] md:p-4",
+    workgap: "mt-[7%] xl:ml-[29%] xl:mt-2",
+    timeline: "h-[9%] xl:w-[9%] xl:h-[0%] xl:p-4",
   },
   {
+    id: 3,
     work: "Software Engineer",
     employer: "Java Software",
-    workgap: "mt-[6%] md:ml-[44%] md:mt-2",
-    timeline: "h-[10%] md:w-[10%] md:h-[0%] md:p-4 ",
+    workgap: "mt-[6%] xl:ml-[44%] xl:mt-2",
+    timeline: "h-[10%] xl:w-[10%] xl:h-[0%] xl:p-4 ",
   },
   {
+    id: 4,
     work: "Software Engineer",
     employer: "Sastodeal",
-    workgap: "mt-[3%] md:ml-[57%] md:mt-2",
-    timeline: "h-[23%] md:w-[23%] md:h-[0%] md:p-4 ",
+    workgap: "mt-[3%] xl:ml-[57%] xl:mt-2",
+    timeline: "h-[23%] xl:w-[23%] xl:h-[0%] xl:p-4 ",
   },
   {
+    id: 5,
     work: "Software Engineer",
     employer: "Freelancing",
-    workgap: "mt-[2%] md:ml-[82%] md:mt-2",
-    timeline: "h-[21%] md:w-[21%] md:h-[0%] md:p-4",
+    workgap: "mt-[2%] xl:ml-[82%] xl:mt-2",
+    timeline: "h-[21%] xl:w-[21%] xl:h-[0%] xl:p-4",
     islast: true,
   },
 ];
@@ -41,6 +50,8 @@ const workexpes = [
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [selectedId, setSelectedId] = useState(null);
+
   return (
     <>
       <Head>
@@ -85,7 +96,9 @@ export default function Home() {
           <div className="wrapper">
             <div className="item-center flex items-center justify-between">
               <h2 className="text-3xl font-semibold md:text-[2.5rem]">WORK</h2>
-              <button className="pbtn">See More work</button>
+              <div>
+                <button className="pbtn">See my work</button>
+              </div>
             </div>
           </div>
         </div>
@@ -99,7 +112,7 @@ export default function Home() {
 
             {/* timelinelines */}
             {/* mobile version */}
-            <div className="relative md:hidden">
+            <div className="relative xl:hidden ">
               <div className="flex justify-between">
                 <div className="date mt-10 flex flex-col gap-5 pr-2 sm:pr-4">
                   <span className="items-top flex ">2017</span>
@@ -217,7 +230,7 @@ export default function Home() {
               </div>
             </div>
             {/* desktop version */}
-            <div class=" mt-20 hidden md:grid ">
+            <div class=" mt-20 hidden xl:grid ">
               <div>
                 {/* date at top */}
                 <div className="dates flex justify-between md:max-w-[100%]">
@@ -291,6 +304,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {/* test */}
       </main>
     </>
   );
