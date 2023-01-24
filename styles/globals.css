@@ -6,12 +6,10 @@
 
 
 @layer components {
-    .wrapper {
-        @apply md:max-w-7xl md:mx-auto mx-4
-    }
+
 
     .pbtn {
-        @apply  font-medium text-sm text-center mr-3 sm:container md:mr-0 md:py-4 md:px-8 text-black rounded-full inline-block bg-white px-4 py-3
+        @apply font-medium text-sm text-center mr-3 sm:container md:mr-0 md:py-4 md:px-8 text-black rounded-full inline-block bg-white px-4 py-3
     }
 }
 
@@ -21,6 +19,34 @@ body {
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Media queries to adjust padding based on screen resolution */
+@media (min-width: 768px) {
+    .wrapper {
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .wrapper {
+        padding: 3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+        padding: 4rem;
+    }
+}
+
+
 * {
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
@@ -29,6 +55,7 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     font-family: 'Figtree', sans-serif;
 }

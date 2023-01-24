@@ -6,6 +6,7 @@ import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import Workcard from "../components/Workcard";
 
 const workexpes = [
   {
@@ -44,6 +45,25 @@ const workexpes = [
     workgap: "mt-[2%] xl:ml-[82%] xl:mt-2",
     timeline: "h-[21%] xl:w-[21%] xl:h-[0%] xl:p-4",
     islast: true,
+  },
+];
+
+const projects = [
+  {
+    id: 1,
+    projecttitle: "Poroject tite would be here",
+    projctdescription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+    catagories: ["React", "Android", "Typescript", "handsome"],
+    projectthumbnail: "workimage.jpg",
+  },
+  {
+    id: 1,
+    projecttitle: "Poroject tite would be here",
+    projctdescription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+    catagories: ["React", "Android", "Typescript", "handsome"],
+    projectthumbnail: "workimage.jpg",
   },
 ];
 
@@ -92,13 +112,26 @@ export default function Home() {
 
         {/* work */}
 
-        <div className="home-work py-24 md:mt-20 md:py-40">
+        <div className="home-work py-24 md:mt-3 md:py-40">
           <div className="wrapper">
             <div className="item-center flex items-center justify-between">
               <h2 className="text-3xl font-semibold md:text-[2.5rem]">WORK</h2>
               <div>
                 <button className="pbtn">See my work</button>
               </div>
+            </div>
+
+            <div className="mt-14 grid grid-cols-1 justify-start gap-x-11 sm:grid-cols-2 ">
+              {projects.map((project) => {
+                return (
+                  <Workcard
+                    projecttitle={project.projecttitle}
+                    projectdescription={project.projctdescription}
+                    projectthumbnail={project.projectthumbnail}
+                    catagories={project.catagories}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>
@@ -304,7 +337,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* test */}
       </main>
     </>
   );
