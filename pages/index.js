@@ -103,6 +103,14 @@ const testimonials = [
   },
 ];
 
+const testimonialcompanys = [
+  "airwallex.png",
+  "afterpay.png",
+  "amazon.png",
+  "amplitude.png",
+  "asana-logo.png",
+];
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -375,7 +383,7 @@ export default function Home() {
         </div>
 
         {/* testimonials*/}
-        <div className="py-16">
+        <div className="pt-16">
           <div className="wrapper">
             <div className="flex flex-wrap items-center justify-between gap-y-4">
               <h2 className="text-3xl font-semibold leading-tight md:text-[2.5rem] xl:w-[20ch]">
@@ -387,6 +395,7 @@ export default function Home() {
                 some of their testimonial
               </p>
             </div>
+            {/* testimonial card */}
             <div className="my-20 grid gap-6 md:mt-24 md:grid-cols-2 lg:grid-cols-4">
               {testimonials.map((testimonial) => {
                 return (
@@ -398,6 +407,13 @@ export default function Home() {
                     title={testimonial.testimonialTitle}
                   />
                 );
+              })}
+            </div>
+
+            {/* testimonial company */}
+            <div className=" grid grid-cols-2 place-items-start  gap-7  md:grid-cols-3 md:gap-28 md:gap-y-2 xl:grid-cols-5">
+              {testimonialcompanys.map((testimonialcompany) => {
+                return <img src={testimonialcompany} />;
               })}
             </div>
           </div>
