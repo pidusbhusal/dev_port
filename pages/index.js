@@ -375,19 +375,19 @@ export default function Home() {
         </div>
 
         {/* testimonials*/}
-        <div>
+        <div className="py-16">
           <div className="wrapper">
-            <div className="flex items-center justify-between">
-              <h2 className="w-[20ch] text-3xl font-semibold leading-tight md:text-[2.5rem]">
+            <div className="flex flex-wrap items-center justify-between gap-y-4">
+              <h2 className="text-3xl font-semibold leading-tight md:text-[2.5rem] xl:w-[20ch]">
                 WHAT PEOPLE ARE SAYING ABOUT ME
               </h2>
 
-              <p className="w-[37ch] leading-loose">
+              <p className="leading-loose xl:w-[37ch]">
                 Over the year I have worked with plenty of client and here are
                 some of their testimonial
               </p>
             </div>
-            <div className="mt-24 grid grid-cols-4 gap-6">
+            <div className="my-20 grid gap-6 md:mt-24 md:grid-cols-2 lg:grid-cols-4">
               {testimonials.map((testimonial) => {
                 return (
                   <Testimonialcard
