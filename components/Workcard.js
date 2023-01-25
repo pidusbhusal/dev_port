@@ -20,12 +20,12 @@ function Workcard({
           return <Catagorypills catagory={catagory} />;
         })}
       </div>
-      <div className="mt-3">
-        <h3 className="text-[22px] font-semibold ">{projecttitle}</h3>
-        <p className="mt-2 w-[90%] ">{projectdescription}</p>
+      <div className="mt-5">
+        <h3 className="text-2xl font-semibold ">{projecttitle}</h3>
+        <p className="mt-2 w-[90%] text-gray-400 line-clamp-3 ">{projectdescription}</p>
       </div>
       {/* buttons */}
-      <div className="mt-4 flex items-center gap-3">
+      <div className="mt-7 flex items-center gap-3">
         <div>
           <button className="pbtn">
             <Link href="#">Read Case Study</Link>

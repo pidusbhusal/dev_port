@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Workcard from "../components/Workcard";
 import Testimonialcard from "../components/Testimonialcard";
+import Blogcard from "../components/Blogcard";
 
 const workexpes = [
   {
@@ -54,7 +55,7 @@ const projects = [
     id: 1,
     projecttitle: "Poroject tite would be here",
     projctdescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation  Ut enim ad minim veniam, quis nostrud exercitation",
     catagories: ["React", "Android", "Typescript", "handsome"],
     projectthumbnail: "workimage.jpg",
   },
@@ -87,8 +88,7 @@ const testimonials = [
   },
   {
     id: 2,
-    testimonialDetail:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+    testimonialDetail: "Lorem ipsum dolor sit amet, consectetur e",
     testimonialName: "Chrish Doo",
     testimonialTitle: "CEO of Futur",
     testimonialImage: "testimonialprofile.jpg",
@@ -415,6 +415,47 @@ export default function Home() {
               {testimonialcompanys.map((testimonialcompany) => {
                 return <img src={testimonialcompany} />;
               })}
+            </div>
+          </div>
+        </div>
+
+        {/* blog */}
+        <div className="pt-16">
+          <div className="wrapper">
+            {/* title */}
+            <div className="title flex justify-between">
+              <h2 className="text-3xl font-semibold leading-tight md:text-[2.5rem] xl:w-[20ch]">
+                BLOGS
+              </h2>
+              <div>
+                <button className="sbtn flex gap-1">
+                  <p>Read More Blogs</p>{" "}
+                  <svg
+                    width="36"
+                    height="21"
+                    viewBox="0 0 36 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M26.3536 10.8536C26.5488 10.6583 26.5488 10.3417 26.3536 10.1464L23.1716 6.96447C22.9763 6.76921 22.6597 6.76921 22.4645 6.96447C22.2692 7.15973 22.2692 7.47631 22.4645 7.67157L25.2929 10.5L22.4645 13.3284C22.2692 13.5237 22.2692 13.8403 22.4645 14.0355C22.6597 14.2308 22.9763 14.2308 23.1716 14.0355L26.3536 10.8536ZM10 11L26 11L26 10L10 10L10 11Z"
+                      fill="white"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div className="flex justify-between md:mt-20">
+              {/* blog section */}
+              <div className="grid place-items-center divide-y divide-gray-700 gap-80">
+                <Blogcard />
+                <Blogcard />
+                <Blogcard />
+              </div>
+              {/* topic section */}
+              <div>
+                <h4 className="text-xl">Reccomended topic</h4>
+              </div>
             </div>
           </div>
         </div>
