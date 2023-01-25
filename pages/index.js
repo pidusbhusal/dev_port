@@ -7,6 +7,7 @@ import styles from "../styles/Home.module.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Workcard from "../components/Workcard";
+import Testimonialcard from "../components/Testimonialcard";
 
 const workexpes = [
   {
@@ -64,6 +65,41 @@ const projects = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
     catagories: ["React", "Android", "Typescript", "handsome"],
     projectthumbnail: "workimage.jpg",
+  },
+];
+
+const testimonials = [
+  {
+    id: 0,
+    testimonialDetail:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+    testimonialName: "Chrish Doo",
+    testimonialTitle: "CEO of Futur",
+    testimonialImage: "testimonialprofile.jpg",
+  },
+  {
+    id: 1,
+    testimonialDetail:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+    testimonialName: "Chrish Doo",
+    testimonialTitle: "CEO of Futur",
+    testimonialImage: "testimonialprofile.jpg",
+  },
+  {
+    id: 2,
+    testimonialDetail:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+    testimonialName: "Chrish Doo",
+    testimonialTitle: "CEO of Futur",
+    testimonialImage: "testimonialprofile.jpg",
+  },
+  {
+    id: 3,
+    testimonialDetail:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+    testimonialName: "Chrish Doo",
+    testimonialTitle: "CEO of Futur",
+    testimonialImage: "testimonialprofile.jpg",
   },
 ];
 
@@ -334,6 +370,35 @@ export default function Home() {
                   <span className="items-top flex ">2023</span>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* testimonials*/}
+        <div>
+          <div className="wrapper">
+            <div className="flex items-center justify-between">
+              <h2 className="w-[20ch] text-3xl font-semibold leading-tight md:text-[2.5rem]">
+                WHAT PEOPLE ARE SAYING ABOUT ME
+              </h2>
+
+              <p className="w-[37ch] leading-loose">
+                Over the year I have worked with plenty of client and here are
+                some of their testimonial
+              </p>
+            </div>
+            <div className="mt-24 grid grid-cols-4 gap-6">
+              {testimonials.map((testimonial) => {
+                return (
+                  <Testimonialcard
+                    key={testimonial.id}
+                    description={testimonial.testimonialDetail}
+                    name={testimonial.testimonialName}
+                    profile={testimonial.testimonialImage}
+                    title={testimonial.testimonialTitle}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>

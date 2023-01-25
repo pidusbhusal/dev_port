@@ -13,6 +13,7 @@ module.exports = {
       backgroundImage: {
         "timeline-bg":"linear-gradient(245.05deg, #141414 -13.09%, #0A0A0A 100.52%)",
         "backgound-gred":"#101111",
+        "testimonial-gred" :"linear-gradient(226.65deg, #262626 0%, #1C1B1B 103.05%)",
         "last-gred-mobile":"linear-gradient(180deg, rgba(12, 12, 12, 0) 0%, rgba(13, 13, 13, 0.848958) 50%, #0D0D0D 100%)",
 
         "navigation-gred":"linear-gradient(226.65deg, #262626 0%, #1C1B1B 103.05%)",
