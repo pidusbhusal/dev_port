@@ -4,11 +4,11 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
-import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Workcard from "../components/Workcard";
 import Testimonialcard from "../components/Testimonialcard";
 import Blogcard from "../components/Blogcard";
+import Catagorypills from "../components/Catagorypills";
 
 const workexpes = [
   {
@@ -109,6 +109,47 @@ const testimonialcompanys = [
   "amazon.png",
   "amplitude.png",
   "asana-logo.png",
+];
+
+const blogs = [
+  {
+    blogtitle: "Project title name would be here",
+    blogcontent:
+      "Everyone wants to know what UX is nowadays, but can a course help you become a designer? The following are my thoughts after taking the Google UX Design course a year ago. As we begin this experience, let’s",
+    blogimage: "blogimg.jpg",
+    bloglink: "#",
+    blogtime: "8min",
+    blogtags: ["React", "Android", "Web Development"],
+  },
+  {
+    blogtitle: "Project title name would be here",
+    blogcontent:
+      "Everyone wants to know what UX is nowadays, but can a course help you become a designer? The following are my thoughts after taking the Google UX Design course a year ago. As we begin this experience, let’s",
+    blogimage: "blogimg.jpg",
+    bloglink: "#",
+    blogtime: "8min",
+    blogtags: ["React", "Android", "Web Development"],
+  },
+  {
+    blogtitle: "Project title name would be here",
+    blogcontent:
+      "Everyone wants to know what UX is nowadays, but can a course help you become a designer? The following are my thoughts after taking the Google UX Design course a year ago. As we begin this experience, let’s",
+    blogimage: "blogimg.jpg",
+    bloglink: "#",
+    blogtime: "8min",
+    blogtags: ["React", "Android", "Web Development"],
+  },
+];
+
+const blogrecomendations = [
+  "React",
+  "Design",
+  "Graph",
+  "Web Design",
+  "Web Developnment",
+  "Android",
+  "Backend",
+  "Life Style",
 ];
 
 const inter = Inter({ subsets: ["latin"] });
@@ -445,16 +486,30 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className="flex justify-between md:mt-20">
+            <div className="flex flex-wrap justify-between md:mt-20">
               {/* blog section */}
-              <div className="grid place-items-center divide-y divide-gray-700 gap-80">
-                <Blogcard />
-                <Blogcard />
-                <Blogcard />
+              <div className="grid place-items-center  gap-16">
+                {blogs.map((blog) => {
+                  return (
+                    <Blogcard
+                      blogcontent={blog.blogcontent}
+                      blogimg={blog.blogimage}
+                      blogtitle={blog.blogtitle}
+                      bloglink={blog.bloglink}
+                      catagories={blog.blogtags}
+                      blogtime={blog.blogtime}
+                    />
+                  );
+                })}
               </div>
               {/* topic section */}
-              <div>
-                <h4 className="text-xl">Reccomended topic</h4>
+              <div className=" hidden xl:block xl:w-64">
+                <h4 className="text-xl xl:text-right">Reccomended topic</h4>
+                <div className=" mt-8 hidden flex-wrap justify-end gap-y-1 md:flex  ">
+                  {blogrecomendations.map((blogrecomendation) => {
+                    return <Catagorypills catagory={blogrecomendation} />;
+                  })}
+                </div>
               </div>
             </div>
           </div>
