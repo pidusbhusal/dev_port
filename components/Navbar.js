@@ -97,8 +97,8 @@ const Navbar = () => {
 
       {/* mobile menu */}
 
-      <div className={`fixed  top-0 z-10 h-[100vh] w-[100vw]  md:hidden`}>
-        <div className="absolute left-[-77px] top-[-190px] h-[324px] w-[195px] bg-[#aabbb4] opacity-20 blur-3xl   " />
+      <div className={` absolute  top-0 z-10 h-[100vh] w-[100vw]  md:hidden`}>
+        <div className="  absolute left-[-77px] top-[-190px] h-[324px] w-[195px] bg-[#aabbb4] opacity-20 blur-3xl   " />
         <div
           className={` ${
             navbutton ? "opacity-0" : "opacity-80"

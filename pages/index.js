@@ -464,14 +464,15 @@ export default function Home() {
         <div className="pt-16">
           <div className="wrapper">
             {/* title */}
-            <div className="title flex justify-between">
+            <div className="title mb-11 flex justify-between md:mb-0">
               <h2 className="text-3xl font-semibold leading-tight md:text-[2.5rem] xl:w-[20ch]">
                 BLOGS
               </h2>
               <div>
-                <button className="sbtn flex gap-1">
+                <button className="sbtn flex gap-0  sm:gap-1">
                   <p>Read More Blogs</p>{" "}
                   <svg
+                    className="hidden sm:block"
                     width="36"
                     height="21"
                     viewBox="0 0 36 21"
