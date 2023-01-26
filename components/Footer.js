@@ -11,7 +11,7 @@ const social = {
 function Footer() {
   return (
     <div>
-      <div className="wrapper grid flex-wrap justify-between gap-24 text-white md:flex md:gap-10 ">
+      <div className="wrapper grid flex-wrap justify-between gap-16 text-white md:flex md:gap-10 ">
         <div>
           <h2 className="text-3xl font-semibold leading-tight md:text-[2.5rem] xl:max-w-[20ch]">
             AASHAN GHIMIRE
@@ -19,6 +19,9 @@ function Footer() {
           <p className="mt-4 max-w-[36ch]">
             I am front end developer with an work expreince of more then 10
             years
+          </p>
+          <p className="invisible  mt-10 font-normal text-gray-500 md:visible">
+            © 2023. All Rights Reserved
           </p>
         </div>
         <div>
@@ -145,6 +148,9 @@ function Footer() {
               <Link href="#">{social.linkedin}</Link>
             </div>
           </div>
+        </div>
+        <div className="visible font-normal text-gray-500 md:invisible">
+          © 2023. All Rights Reserved
         </div>
       </div>
     </div>
