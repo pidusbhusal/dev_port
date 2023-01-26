@@ -18,6 +18,7 @@ module.exports = {
 
         "navigation-gred":"linear-gradient(226.65deg, #262626 0%, #1C1B1B 103.05%)",
         "work-gred": "linear-gradient(263.96deg, rgba(38, 38, 38, 0.9) 0%, rgba(27, 26, 26, 0.9) 99.67%)",
+        "contactus-gred":"linear-gradient(266.46deg, #262626 0%, #1D1C1C 101.21%)"
       },
     },
   },
