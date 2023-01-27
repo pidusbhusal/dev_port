@@ -23,7 +23,7 @@ const Navbar = () => {
           <li>
             <Link
               className="py-5 font-medium text-gray-400 hover:text-white"
-              href="/about"
+              href="/work"
             >
               Work
             </Link>
@@ -125,7 +125,7 @@ const Navbar = () => {
 
             <Link
               className=" block    py-6  px-3   font-medium text-gray-400 hover:text-white"
-              href="/about"
+              href="/work"
             >
               Work
             </Link>

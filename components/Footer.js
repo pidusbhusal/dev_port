@@ -11,7 +11,7 @@ const social = {
 function Footer() {
   return (
     <div>
-      <div className="wrapper grid flex-wrap justify-between gap-16 text-white md:flex md:gap-10 ">
+      <div className="wrapper grid flex-wrap justify-between gap-4 text-white md:flex md:gap-10 ">
         <div>
           <h2 className="text-3xl font-semibold leading-tight md:text-[2.5rem] xl:max-w-[20ch]">
             AASHAN GHIMIRE

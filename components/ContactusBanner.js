@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
 
 function ContactusBanner() {
   return (
     <div>
-    
       <div className="wrapper ">
         <div className="flex w-full flex-wrap items-center justify-between gap-10  rounded-lg bg-contactus-gred py-8 px-6 lg:px-40">
           <div>
@@ -25,4 +24,4 @@ function ContactusBanner() {
   );
 }
 
-export default ContactusBanner
+export default ContactusBanner;
