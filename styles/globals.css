@@ -9,12 +9,14 @@
 
 
     .pbtn {
-        @apply font-medium text-sm text-center mr-3 sm:container md:mr-0 md:py-4 md:px-8 text-black rounded-full inline-block bg-white px-4 py-3
+        @apply font-medium  text-sm text-center mr-3 sm:container md:mr-0 md:py-4 md:px-8 text-black rounded-full  bg-white px-4 py-3
     }
 
     .sbtn {
         @apply font-medium text-sm text-center mr-3 sm:container md:mr-0 md:py-4 md:px-8 text-white rounded-full inline-block bg-[#2E2E2E] px-4 py-3
     }
+
+    .wrapper {@apply box-border my-0 mx-auto max-w-screen-xl px-4 pb-0 pt-4 md:px-8 md:pb-4 md:pt-8 lg:px-12 lg:pb-8 lg:pt-12 xl:px-16 xl:pb-8 xl:pt-16}
 }
 
 body {
@@ -24,31 +26,6 @@ body {
 }
 
 
-.wrapper {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 1rem;
-    box-sizing: border-box;
-}
-
-/* Media queries to adjust padding based on screen resolution */
-@media (min-width: 768px) {
-    .wrapper {
-        padding: 2rem;
-    }
-}
-
-@media (min-width: 992px) {
-    .wrapper {
-        padding: 3rem;
-    }
-}
-
-@media (min-width: 1200px) {
-    .wrapper {
-        padding: 4rem;
-    }
-}
 
 
 * {
