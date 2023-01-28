@@ -10,6 +10,7 @@ import Testimonialcard from "../components/Testimonialcard";
 import Blogcard from "../components/Blogcard";
 import Catagorypills from "../components/Catagorypills";
 import ContactusBanner from "../components/ContactusBanner";
+import Link from "next/link";
 
 const workexpes = [
   {
@@ -198,7 +199,7 @@ export default function Home() {
 
         {/* work */}
 
-        <div className="home-work py-24 md:mt-3 md:py-40">
+        <div className="home-work py-24 md:mt-3 md:pt-40 md:pb-20 ">
           <div className="wrapper">
             <div className="item-center flex items-center justify-between">
               <h2 className="text-3xl font-semibold md:text-[2.5rem]">WORK</h2>

@@ -68,10 +68,10 @@ function work() {
   return (
     <div className="text-white">
       <div className="wrapper">
-        {/* catagories */}
-        <div className="heading flex flex-wrap items-center justify-between gap-y-4">
-          <h2 className="text-3xl font-semibold md:text-[2.5rem]">WORK</h2>
-          <div className="flex items-center  gap-4 rounded-full border-[1px] border-solid border-[#585858] bg-[#353535] px-6 ">
+        {/* heading */}
+        <div className="heading mb-8 flex flex-wrap items-center justify-between gap-y-2 md:mb-4">
+          <h2 className="text-3xl font-semibold md:text-[2.5rem]">WORKS</h2>
+          <div className="flex items-center  gap-4 rounded-full border-[1px] border-solid border-[#585858] bg-[#353535] px-6  ">
             <svg
               width="20"
               height="20"
@@ -99,7 +99,7 @@ function work() {
             <input
               type="text"
               placeholder="search"
-              className="border-none bg-transparent  py-3  outline-0"
+              className="border-none bg-transparent  py-2 outline-0  md:py-3"
             />
           </div>
         </div>
@@ -111,7 +111,7 @@ function work() {
         </div>
 
         {/* projects */}
-        <div className="mt-14 grid grid-cols-1 justify-start gap-x-11 sm:grid-cols-2">
+        <div className="mt-8 grid grid-cols-1 justify-start gap-x-11 sm:grid-cols-2 md:mt-4">
           {projects.map((project) => {
             return (
               <Workcard

@@ -31,9 +31,9 @@ const Navbar = () => {
           <li>
             <Link
               className="py-5 font-medium text-gray-400 hover:text-white"
-              href="/"
+              href="/blog"
             >
-              Product
+              Blog
             </Link>
           </li>
         </ul>

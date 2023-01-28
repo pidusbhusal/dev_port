@@ -11,7 +11,7 @@ function Blogcard({
   blogtime,
 }) {
   return (
-    <div className="  border-b-[0.5px] border-gray-700 pb-16  ">
+    <div className="  border-b-[0.5px] border-gray-700 pb-6  md:pb-16 ">
       <div className="hidden items-center  gap-2 sm:flex md:gap-10">
         <Link href={bloglink}>
           <img src="blogimg.jpg" alt="" className="max-h-40" />
