@@ -19,6 +19,7 @@ const workexpes = [
     employer: "Mirror Grid Pvt.Ltd",
     workgap: "mt-[0%] xl:ml-[0]",
     timeline: "h-[21%] xl:w-[21%] xl:h-[0%] xl:p-4",
+    casestudy: "/project1",
   },
 
   {
@@ -60,6 +61,7 @@ const projects = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation  Ut enim ad minim veniam, quis nostrud exercitation",
     catagories: ["React", "Android", "Typescript", "handsome"],
     projectthumbnail: "workimage.jpg",
+    projectcasestudy: "/project1",
   },
   {
     id: 1,
@@ -199,7 +201,7 @@ export default function Home() {
 
         {/* work */}
 
-        <div className="home-work py-24 md:mt-3 md:pt-40 md:pb-20 ">
+        <div className="home-work py-20 md:mt-3 md:pt-40 md:pb-20 ">
           <div className="wrapper">
             <div className="item-center flex items-center justify-between">
               <h2 className="text-3xl font-semibold md:text-[2.5rem]">WORK</h2>
@@ -216,6 +218,7 @@ export default function Home() {
                     projectdescription={project.projctdescription}
                     projectthumbnail={project.projectthumbnail}
                     catagories={project.catagories}
+                    projectcasestudy={project.projectcasestudy}
                   />
                 );
               })}
@@ -224,7 +227,7 @@ export default function Home() {
         </div>
 
         {/* Timeline */}
-        <div className="bg-timeline-bg py-28 md:py-48">
+        <div className="bg-timeline-bg py-28 md:py-28">
           <div className="wrapper">
             <h2 className="text-3xl font-semibold md:text-[2.5rem]">
               TIMELINE

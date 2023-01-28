@@ -7,6 +7,8 @@ function Workcard({
   catagories,
   projectdescription,
   projecttitle,
+  projectlink,
+  projectcasestudy,
 }) {
   return (
     <div className="mb-20  ">
@@ -31,12 +33,14 @@ function Workcard({
       <div className="mt-7 flex items-center gap-3">
         <div>
           <button className="pbtn">
-            <Link href="#">Read Case Study</Link>
+            <Link href={projectcasestudy ? projectcasestudy : "#"}>
+              Read Case Study
+            </Link>
           </button>
         </div>
         <div>
-          <button className="pbtn h-[52px] w-[52px]">
-            <Link href="#">
+          <button className=" first-letter flex  h-[45px] w-[45px] items-center justify-center rounded-full bg-white md:h-[52px] md:w-[52px]">
+            <a href="#">
               <svg
                 width="12"
                 height="12"
@@ -49,7 +53,7 @@ function Workcard({
                   fill="black"
                 />
               </svg>
-            </Link>
+            </a>
           </button>
         </div>
       </div>
