@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 
 const social = {
@@ -22,7 +21,7 @@ const social = {
 
 
 
-function contacus() {
+const ContactUs = () => {
   return (
     <div>
       <div className="wrapper mb-60 grid gap-y-16 text-white lg:grid-cols-2">
@@ -62,7 +61,6 @@ function contacus() {
             <div className="flex flex-col">
               <label className="mb-2 text-gray-300">Message</label>
               <textarea
-                type="textbox"
                 placeholder="Enter your message here"
                 className="focused h-32 max-w-xs rounded bg-[#353535] px-4 py-3 outline-none "
               />
@@ -280,4 +278,4 @@ function contacus() {
   );
 }
 
-export default contacus;
+export default ContactUs;

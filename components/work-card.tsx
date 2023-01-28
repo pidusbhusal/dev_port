@@ -1,39 +1,42 @@
-import React from "react";
-import Catagorypills from "./Catagorypills";
-import Link from "next/link";
 
-function Workcard({
-  projectthumbnail,
-  catagories,
-  projectdescription,
-  projecttitle,
-  projectlink,
-  projectcasestudy,
-}) {
+import Link from "next/link";
+import Image from "next/image";
+import { CategoryPills } from "./category-pills";
+
+
+export interface Works {
+  id: number; 
+  thumbnail: string;
+  categories: Array<{title: string, id: number}>,
+  title: string;
+  description: string;
+  link?: string;
+  caseStudy?: string;
+ }
+
+
+export const WorkCard = ({thumbnail, caseStudy, categories, title, description, link}: Works) => {
   return (
     <div className="mb-20  ">
-      <img
-        src={projectthumbnail}
+      <Image
+        src={`/${thumbnail}`}
+        width={500}
+        height={500}
         alt="dis my work"
         className="w-full rounded  md:rounded-md "
       />
-      <div className=" mt-7 flex flex-wrap ">
-        {catagories &&
-          catagories.map((catagory) => {
-            return <Catagorypills catagory={catagory} />;
-          })}
-      </div>
+      <CategoryPills containerClassName="mt-7 flex flex-wrap " categories={categories} />
       <div className="mt-5">
-        <h3 className="text-2xl font-semibold ">{projecttitle}</h3>
+        <h3 className="text-2xl font-semibold ">{title}</h3>
         <p className="mt-2 w-[90%] text-gray-400 line-clamp-3 ">
-          {projectdescription}
+          {description}
         </p>
       </div>
       {/* buttons */}
       <div className="mt-7 flex items-center gap-3">
         <div>
           <button className="pbtn">
-            <Link href={projectcasestudy ? projectcasestudy : "#"}>
+            <Link href={caseStudy ? caseStudy : "#"}>
               Read Case Study
             </Link>
           </button>
@@ -60,5 +63,3 @@ function Workcard({
     </div>
   );
 }
-
-export default Workcard;

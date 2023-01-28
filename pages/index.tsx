@@ -3,14 +3,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
-import styles from "../styles/Home.module.css";
 import { useState } from "react";
-import Workcard from "../components/Workcard";
-import Testimonialcard from "../components/Testimonialcard";
-import Blogcard from "../components/Blogcard";
-import Catagorypills from "../components/Catagorypills";
-import ContactusBanner from "../components/ContactusBanner";
-import Link from "next/link";
+import { Blog, BlogCard, Category, CategoryPills, ContactUsBanner, Testimonial, TestimonialCard, WorkCard, Works } from "@app/components";
 
 const workexpes = [
   {
@@ -53,107 +47,124 @@ const workexpes = [
   },
 ];
 
-const projects = [
+const projects: Array<Works> = [
   {
     id: 1,
-    projecttitle: "Poroject tite would be here",
-    projctdescription:
+    title: "Poroject tite would be here",
+    description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation  Ut enim ad minim veniam, quis nostrud exercitation",
-    catagories: ["React", "Android", "Typescript", "handsome"],
-    projectthumbnail: "workimage.jpg",
-    projectcasestudy: "/project1",
+    categories: [
+      { title: "React", id: 1 },
+      { title: "Android", id: 2 },
+      { title: "Typescript", id: 3 },
+      { title: "handsome", id: 4 },
+    ],
+    thumbnail: "workimage.jpg",
+    caseStudy: "/projects/1",
   },
   {
     id: 1,
-    projecttitle: "Poroject tite would be here",
-    projctdescription:
+    title: "Poroject tite would be here",
+    description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
-    catagories: ["React", "Android", "Typescript", "handsome"],
-    projectthumbnail: "workimage.jpg",
+    categories: [
+      { title: "React", id: 1 },
+      { title: "Android", id: 2 },
+      { title: "Typescript", id: 3 },
+      { title: "handsome", id: 4 },
+    ],
+    thumbnail: "workimage.jpg",
   },
 ];
 
-const testimonials = [
+const testimonials: Array<Testimonial> = [
   {
-    id: 0,
-    testimonialDetail:
+    description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-    testimonialName: "Chrish Doo",
-    testimonialTitle: "CEO of Futur",
-    testimonialImage: "testimonialprofile.jpg",
+    name: "Chrish Doo",
+    title: "CEO of Futur",
+    image: "/testimonialprofile.jpg",
   },
   {
-    id: 1,
-    testimonialDetail:
+    description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-    testimonialName: "Chrish Doo",
-    testimonialTitle: "CEO of Futur",
-    testimonialImage: "testimonialprofile.jpg",
+    name: "Chrish Doo",
+    title: "CEO of Futur",
+    image: "/testimonialprofile.jpg",
   },
   {
-    id: 2,
-    testimonialDetail: "Lorem ipsum dolor sit amet, consectetur e",
-    testimonialName: "Chrish Doo",
-    testimonialTitle: "CEO of Futur",
-    testimonialImage: "testimonialprofile.jpg",
+    description: "Lorem ipsum dolor sit amet, consectetur e",
+    name: "Chrish Doo",
+    title: "CEO of Futur",
+    image: "/testimonialprofile.jpg",
   },
   {
-    id: 3,
-    testimonialDetail:
+    description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-    testimonialName: "Chrish Doo",
-    testimonialTitle: "CEO of Futur",
-    testimonialImage: "testimonialprofile.jpg",
+    name: "Chrish Doo",
+    title: "CEO of Futur",
+    image: "/testimonialprofile.jpg",
   },
 ];
 
 const testimonialcompanys = [
-  "airwallex.png",
-  "afterpay.png",
-  "amazon.png",
-  "amplitude.png",
-  "asana-logo.png",
+  "/airwallex.png",
+  "/afterpay.png",
+  "/amazon.png",
+  "/amplitude.png",
+  "/asana-logo.png",
+];
+const blogs: Array<Blog> = [
+  {
+    title: "Project title name would be here",
+    content:
+      "veryone wants to know what UX is nowadays, but can a course help you become a designer? The following are my thoughts after taking the Google UX Design course a year ago. As we begin this experience, let’s",
+    image: "/blogImage.jpg",
+    link: "#",
+    time: "8min",
+    categories: [
+      { id: 1, title: "React" },
+      { id: 2, title: "Web Development" },
+      { id: 3, title: "Android" },
+    ],
+  },
+  {
+    title: "Project title name would be here",
+    content:
+      "veryone wants to know what UX is nowadays, but can a course help you become a designer? The following are my thoughts after taking the Google UX Design course a year ago. As we begin this experience, let’s",
+    image: "/blogImage.jpg",
+    link: "#",
+    time: "8min",
+    categories: [
+      { id: 1, title: "React" },
+      { id: 2, title: "Web Development" },
+      { id: 3, title: "Android" },
+    ],
+  },
+  {
+    title: "Project title name would be here",
+    content:
+      "Everyone wants to know what UX is nowadays, but can a course help you become a designer? The following are my thoughts after taking the Google UX Design course a year ago. As we begin this experience, let’s",
+    image: "/blogImage.jpg",
+    link: "#",
+    time: "8min",
+    categories: [
+      { id: 1, title: "React" },
+      { id: 2, title: "Web Development" },
+      { id: 3, title: "Android" },
+    ],
+  },
 ];
 
-const blogs = [
-  {
-    blogtitle: "Project title name would be here",
-    blogcontent:
-      "Everyone wants to know what UX is nowadays, but can a course help you become a designer? The following are my thoughts after taking the Google UX Design course a year ago. As we begin this experience, let’s",
-    blogimage: "blogimg.jpg",
-    bloglink: "#",
-    blogtime: "8min",
-    blogtags: ["React", "Android", "Web Development"],
-  },
-  {
-    blogtitle: "Project title name would be here",
-    blogcontent:
-      "Everyone wants to know what UX is nowadays, but can a course help you become a designer? The following are my thoughts after taking the Google UX Design course a year ago. As we begin this experience, let’s",
-    blogimage: "blogimg.jpg",
-    bloglink: "#",
-    blogtime: "8min",
-    blogtags: ["React", "Android", "Web Development"],
-  },
-  {
-    blogtitle: "Project title name would be here",
-    blogcontent:
-      "Everyone wants to know what UX is nowadays, but can a course help you become a designer? The following are my thoughts after taking the Google UX Design course a year ago. As we begin this experience, let’s",
-    blogimage: "blogimg.jpg",
-    bloglink: "#",
-    blogtime: "8min",
-    blogtags: ["React", "Android", "Web Development"],
-  },
-];
-
-const blogrecomendations = [
-  "React",
-  "Design",
-  "Graph",
-  "Web Design",
-  "Web Developnment",
-  "Android",
-  "Backend",
-  "Life Style",
+const recommendations: Array<Category> = [
+  { title: "React", id: 1 },
+  { title: "Design", id: 2 },
+  { title: "Graph", id: 3 },
+  { title: "Web Design", id: 4 },
+  { title: "Web Developnment", id: 5 },
+  { title: "Android", id: 6 },
+  { title: "Backend", id: 7 },
+  { title: "Life Style", id: 8 },
 ];
 
 const inter = Inter({ subsets: ["latin"] });
@@ -186,7 +197,7 @@ export default function Home() {
               </svg>
             </button>
             <h1 className="line mt-9  text-[2.4rem] font-bold leading-10 md:text-[4rem] md:leading-[4.15rem]">
-              I'M A FULL STACK DEVELOPER
+              I&apos;M A FULL STACK DEVELOPER
             </h1>
             <p className="mt-5 max-w-[49ch]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -195,7 +206,7 @@ export default function Home() {
             </p>
           </div>
           <div className="overflow-hidden rounded-lg ">
-            <img width="100%" src="./profile.jpg" alt="Me 😁" />
+            <Image width={1200} height={600} src="/profile.jpg" alt="Me 😁" />
           </div>
         </div>
 
@@ -212,15 +223,7 @@ export default function Home() {
 
             <div className="mt-14 grid grid-cols-1 justify-start gap-x-11 sm:grid-cols-2 ">
               {projects.map((project) => {
-                return (
-                  <Workcard
-                    projecttitle={project.projecttitle}
-                    projectdescription={project.projctdescription}
-                    projectthumbnail={project.projectthumbnail}
-                    catagories={project.catagories}
-                    projectcasestudy={project.projectcasestudy}
-                  />
-                );
+                return <WorkCard key={project.id} {...project} />;
               })}
             </div>
           </div>
@@ -271,89 +274,102 @@ export default function Home() {
                       </div>
                     ))}
                   </div>
-                  <img
-                    src="timeline_hr.svg"
+                  <Image
+                    src="/timeline_hr.svg"
                     alt=""
-                    width="100%"
-                    className="flex h-6 items-center"
+                    width={100}
+                    height={10}
+                    className="flex h-6 w-full items-center"
                   />
-                  <img
-                    src="timeline_hr.svg"
+                  <Image
+                    src="/timeline_hr.svg"
                     alt=""
-                    width="100%"
+                    width={100}
+                    height={10}
+                    className="h-6 w-full"
+                  />
+                  <Image
+                    src="/timeline_hr.svg"
+                    alt=""
+                    width={100}
+                    height={10}
                     className="h-6"
                   />
-                  <img
-                    src="timeline_hr.svg"
+                  <Image
+                    src="/timeline_hr.svg"
                     alt=""
-                    width="100%"
+                    width={100}
+                    height={10}
                     className="h-6"
                   />
-                  <img
-                    src="timeline_hr.svg"
+                  <Image
+                    src="/timeline_hr.svg"
                     alt=""
-                    width="100%"
+                    width={100}
+                    height={10}
                     className="h-6"
                   />
-                  <img
-                    src="timeline_hr.svg"
+                  <Image
+                    src="/timeline_hr.svg"
                     alt=""
-                    width="100%"
+                    width={100}
+                    height={10}
                     className="h-6"
                   />
-                  <img
-                    src="timeline_hr.svg"
+                  <Image
+                    src="/timeline_hr.svg"
                     alt=""
-                    width="100%"
+                    width={100}
+                    height={10}
                     className="h-6"
                   />
-                  <img
-                    src="timeline_hr.svg"
+                  <Image
+                    src="/timeline_hr.svg"
                     alt=""
-                    width="100%"
+                    width={100}
+                    height={10}
                     className="h-6"
                   />
-                  <img
-                    src="timeline_hr.svg"
+                  <Image
+                    src="/timeline_hr.svg"
                     alt=""
-                    width="100%"
+                    width={100}
+                    height={10}
                     className="h-6"
                   />
-                  <img
-                    src="timeline_hr.svg"
+                  <Image
+                    src="/timeline_hr.svg"
                     alt=""
-                    width="100%"
+                    width={100}
+                    height={10}
                     className="h-6"
                   />
-                  <img
-                    src="timeline_hr.svg"
+                  <Image
+                    src="/timeline_hr.svg"
                     alt=""
-                    width="100%"
+                    width={100}
+                    height={10}
                     className="h-6"
                   />
-                  <img
-                    src="timeline_hr.svg"
+                  <Image
+                    src="/timeline_hr.svg"
                     alt=""
-                    width="100%"
+                    width={100}
+                    height={10}
                     className="h-6"
                   />
-                  <img
-                    src="timeline_hr.svg"
+                  <Image
+                    src="/timeline_hr.svg"
                     alt=""
-                    width="100%"
-                    className="h-6"
-                  />
-                  <img
-                    src="timeline_hr.svg"
-                    alt=""
-                    width="100%"
+                    width={100}
+                    height={10}
                     className="h-6"
                   />
                 </div>
               </div>
             </div>
             {/* desktop version */}
-            <div class=" mt-20 hidden xl:grid ">
+            <div className=" mt-20 hidden xl:grid ">
               <div>
                 {/* date at top */}
                 <div className="dates flex justify-between md:max-w-[100%]">
@@ -392,19 +408,19 @@ export default function Home() {
                     ))}
                   </div>
 
-                  <img src="timeline_vr.svg" className="" alt="" />
-                  <img src="timeline_vr.svg" className="" alt="" />
-                  <img src="timeline_vr.svg" className="" alt="" />
-                  <img src="timeline_vr.svg" className="" alt="" />
-                  <img src="timeline_vr.svg" className="" alt="" />
-                  <img src="timeline_vr.svg" className="" alt="" />
-                  <img src="timeline_vr.svg" className="" alt="" />
-                  <img src="timeline_vr.svg" className="" alt="" />
-                  <img src="timeline_vr.svg" className="" alt="" />
-                  <img src="timeline_vr.svg" className="" alt="" />
-                  <img src="timeline_vr.svg" className="" alt="" />
-                  <img src="timeline_vr.svg" className="" alt="" />
-                  <img src="timeline_vr.svg" className="" alt="" />
+                  <Image src="timeline_vr.svg" height={10} width={1} className="" alt="" />
+                  <Image src="timeline_vr.svg" height={10} width={1} className="" alt="" />
+                  <Image src="timeline_vr.svg" height={10} width={1} className="" alt="" />
+                  <Image src="timeline_vr.svg" height={10} width={1} className="" alt="" />
+                  <Image src="timeline_vr.svg" height={1} width={1} className="" alt="" />
+                  <Image src="timeline_vr.svg" height={1} width={1} className="" alt="" />
+                  <Image src="timeline_vr.svg" height={1} width={1} className="" alt="" />
+                  <Image src="timeline_vr.svg" height={1} width={1} className="" alt="" />
+                  <Image src="timeline_vr.svg" height={1} width={1} className="" alt="" />
+                  <Image src="timeline_vr.svg" height={1} width={1} className="" alt="" />
+                  <Image src="timeline_vr.svg" height={1} width={1} className="" alt="" />
+                  <Image src="timeline_vr.svg" height={1} width={1} className="" alt="" />
+                  <Image src="timeline_vr.svg" height={1} width={1} className="" alt="" />
                 </div>
 
                 {/* buttom date */}
@@ -443,15 +459,9 @@ export default function Home() {
             </div>
             {/* testimonial card */}
             <div className="my-20 grid gap-6 md:mt-24 md:grid-cols-2 lg:grid-cols-4">
-              {testimonials.map((testimonial) => {
+              {testimonials.map((testimonial, id) => {
                 return (
-                  <Testimonialcard
-                    key={testimonial.id}
-                    description={testimonial.testimonialDetail}
-                    name={testimonial.testimonialName}
-                    profile={testimonial.testimonialImage}
-                    title={testimonial.testimonialTitle}
-                  />
+                  <TestimonialCard {...testimonial} key={id} />
                 );
               })}
             </div>
@@ -459,7 +469,7 @@ export default function Home() {
             {/* testimonial company */}
             <div className=" grid grid-cols-2 place-items-start  gap-7  md:grid-cols-3 md:gap-28 md:gap-y-2 xl:grid-cols-5">
               {testimonialcompanys.map((testimonialcompany) => {
-                return <img src={testimonialcompany} />;
+                return <Image key={testimonialcompany} height={1} width={1} alt={'Testimonial'} src={testimonialcompany} />;
               })}
             </div>
           </div>
@@ -495,27 +505,16 @@ export default function Home() {
             <div className="flex flex-wrap justify-between md:mt-20">
               {/* blog section */}
               <div className="grid place-items-center  gap-16">
-                {blogs.map((blog) => {
+                {blogs.map((blog, id) => {
                   return (
-                    <Blogcard
-                      blogcontent={blog.blogcontent}
-                      blogimg={blog.blogimage}
-                      blogtitle={blog.blogtitle}
-                      bloglink={blog.bloglink}
-                      catagories={blog.blogtags}
-                      blogtime={blog.blogtime}
-                    />
+                    <BlogCard {...blog} key={id} />
                   );
                 })}
               </div>
               {/* topic section */}
               <div className=" hidden xl:block xl:w-64">
                 <h4 className="text-xl xl:text-right">Reccomended topic</h4>
-                <div className=" mt-8 hidden flex-wrap justify-end gap-y-1 md:flex  ">
-                  {blogrecomendations.map((blogrecomendation) => {
-                    return <Catagorypills catagory={blogrecomendation} />;
-                  })}
-                </div>
+                <CategoryPills categories={recommendations} containerClassName="mt-8 hidden flex-wrap justify-end gap-y-1 md:flex"/>
               </div>
             </div>
           </div>
@@ -524,7 +523,7 @@ export default function Home() {
         {/* contact us */}
 
         <div className="contactus pt-16 ">
-          <ContactusBanner />
+          <ContactUsBanner />
         </div>
       </main>
     </>

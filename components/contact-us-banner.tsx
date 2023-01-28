@@ -1,6 +1,4 @@
-import React from "react";
-
-function ContactusBanner() {
+export const ContactUsBanner = () => {
   return (
     <div>
       <div className="wrapper ">
@@ -11,7 +9,7 @@ function ContactusBanner() {
             </h2>
             <p className="mt-4  leading-relaxed text-gray-300 md:w-[37ch]">
               I am always looking for new challenges and opportunities to work
-              on. If you liked my work and want to work together, let's get in
+              on. If you liked my work and want to work together, let&apos;s get in
               touch
             </p>
           </div>
@@ -23,5 +21,3 @@ function ContactusBanner() {
     </div>
   );
 }
-
-export default ContactusBanner;
