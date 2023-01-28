@@ -1,14 +1,14 @@
 import Link from "next/link";
-import React from "react";
 
-const social = {
-  email: "pidusbhusal@gmail.com",
-  facebook: "Sudip Bhusal",
-  insta: "pidus_id",
-  linkedin: "pidus_id",
-};
+interface FooterProps {
+  email: string;
+  facebook: string;
+  insta: string;
+  linkedin: string;
+  github: string;
+}
 
-function Footer() {
+export const Footer = ({email, facebook, insta, linkedin, github }: FooterProps) => {
   return (
     <div>
       <div className="wrapper grid flex-wrap justify-between gap-4 text-white md:flex md:gap-10 ">
@@ -62,7 +62,7 @@ function Footer() {
                   stroke-linecap="round"
                 />
               </svg>
-              <Link href="#">{social.email}</Link>
+              <Link href="#">{email}</Link>
             </div>
             <div className="flex gap-2">
               <svg
@@ -88,7 +88,7 @@ function Footer() {
                 />
               </svg>
 
-              <Link href="#">{social.facebook}</Link>
+              <Link href="#">{facebook}</Link>
             </div>
             <div className="flex gap-2">
               <svg
@@ -119,7 +119,7 @@ function Footer() {
                 />
               </svg>
 
-              <Link href="#">{social.insta}</Link>
+              <Link href="#">{insta}</Link>
             </div>
             <div className="flex gap-2">
               <svg
@@ -145,7 +145,7 @@ function Footer() {
                 />
               </svg>
 
-              <Link href="#">{social.linkedin}</Link>
+              <Link href="#">{linkedin}</Link>
             </div>
           </div>
         </div>
@@ -156,5 +156,3 @@ function Footer() {
     </div>
   );
 }
-
-export default Footer;

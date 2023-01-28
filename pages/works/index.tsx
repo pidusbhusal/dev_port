@@ -1,66 +1,96 @@
+import { Category, CategoryPills, ContactUsBanner, WorkCard } from "@app/components";
 import React from "react";
-import Catagorypills from "../components/Catagorypills";
-import ContactusBanner from "../components/ContactusBanner";
-import Workcard from "../components/Workcard";
 
-const catagories = [
-  "React",
-  "Javascript",
-  "TypeScript",
-  "Android",
-  "Android",
-  "Android",
+
+const categories : Array<Category> = [
+  {title:"react", id: 1},
+  {title:"backend", id: 2},
+  {title:"nextjs", id: 3},
+  {title:"fullstack", id: 4},
 ];
+
+
+
 const projects = [
   {
     id: 1,
-    projecttitle: "Poroject tite would be here",
-    projctdescription:
+    title: "Poroject tite would be here",
+    description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation  Ut enim ad minim veniam, quis nostrud exercitation",
-    catagories: ["React", "Android", "Typescript", "handsome"],
-    projectthumbnail: "workimage.jpg",
+    categories: [
+      {title: "React", id: 1},
+      {title: "Android", id: 2},
+      {title: "Typescript", id: 3},
+      {title: "handsome", id: 4},
+  ],
+    thumbnail: "workimage.jpg",
   },
   {
     id: 2,
-    projecttitle: "Poroject tite would be here",
-    projctdescription:
+    title: "Poroject tite would be here",
+    description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
-    catagories: ["React", "Android", "Typescript", "handsome"],
-    projectthumbnail: "workimage.jpg",
+    categories: [
+      {title: "React", id: 1},
+      {title: "Android", id: 2},
+      {title: "Typescript", id: 3},
+      {title: "handsome", id: 4},
+  ],
+    thumbnail: "workimage.jpg",
   },
   {
     id: 2,
-    projecttitle: "Poroject tite would be here",
-    projctdescription:
+    title: "Poroject tite would be here",
+    description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
-    catagories: ["React", "Android", "Typescript", "handsome"],
-    projectthumbnail: "workimage.jpg",
-  },
-
-  {
-    id: 2,
-    projecttitle: "Poroject tite would be here",
-    projctdescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
-    catagories: ["React", "Android", "Typescript", "handsome"],
-    projectthumbnail: "workimage.jpg",
-  },
-  {
-    id: 2,
-    projecttitle: "Poroject tite would be here",
-    projctdescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
-    catagories: ["React", "Android", "Typescript", "handsome"],
-    projectthumbnail: "workimage.jpg",
+    categories: [
+      {title: "React", id: 1},
+      {title: "Android", id: 2},
+      {title: "Typescript", id: 3},
+      {title: "handsome", id: 4},
+  ],
+    thumbnail: "workimage.jpg",
   },
 
   {
     id: 2,
-    projecttitle: "Poroject tite would be here",
-    projctdescription:
+    title: "Poroject tite would be here",
+    description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
-    catagories: ["React", "Android", "Typescript", "handsome"],
-    projectthumbnail: "workimage.jpg",
+    categories: [
+      {title: "React", id: 1},
+      {title: "Android", id: 2},
+      {title: "Typescript", id: 3},
+      {title: "handsome", id: 4},
+  ],
+    thumbnail: "workimage.jpg",
+  },
+  {
+    id: 2,
+    title: "Poroject tite would be here",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+    categories: [
+      {title: "React", id: 1},
+      {title: "Android", id: 2},
+      {title: "Typescript", id: 3},
+      {title: "handsome", id: 4},
+  ],
+    thumbnail: "workimage.jpg",
+  },
+
+  {
+    id: 2,
+    title: "Poroject tite would be here",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+    categories: [
+      {title: "React", id: 1},
+      {title: "Android", id: 2},
+      {title: "Typescript", id: 3},
+      {title: "handsome", id: 4},
+  ],
+    thumbnail: "workimage.jpg",
   },
 ];
 
@@ -103,31 +133,21 @@ function work() {
             />
           </div>
         </div>
-        {/* Catagories  tags*/}
-        <div className="mt-8 md:mt-4">
-          {catagories.map((catagory) => {
-            return <Catagorypills catagory={catagory} />;
-          })}
-        </div>
-
+        {/* categories  tags*/}
+        <CategoryPills containerClassName="mt-8 md:mt-4" categories={categories} />
         {/* projects */}
         <div className="mt-8 grid grid-cols-1 justify-start gap-x-11 sm:grid-cols-2 md:mt-4">
-          {projects.map((project) => {
+          {projects.map((project, id) => {
             return (
-              <Workcard
-                key={project.id}
-                projecttitle={project.projecttitle}
-                projectdescription={project.projctdescription}
-                projectthumbnail={project.projectthumbnail}
-                catagories={project.catagories}
-              />
+
+              <WorkCard key={id} {...project} />
             );
           })}
         </div>
       </div>
       {/* contact us banner */}
       <div className="mb-16">
-        <ContactusBanner />
+        <ContactUsBanner />
       </div>
     </div>
   );

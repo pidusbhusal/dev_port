@@ -1,14 +1,14 @@
+import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import { useState } from "react";
 
-const Navbar = () => {
-  const [navbutton, setnavbutton] = useState(true);
+export const Navbar = () => {
+  const [navButton, setNavButton] = useState(true);
   return (
     <nav className="">
       <div className=" wrapper flex items-center justify-between  py-6 md:py-10">
         <div>
-          <img src="logo.svg" alt="Our Logo" />
+          <Image src="logo.svg" alt="Our Logo" />
         </div>
 
         <ul className=" hidden items-center gap-[4vw] md:flex md:flex-row">
@@ -47,10 +47,10 @@ const Navbar = () => {
           {/* mobile button goes here */}
           <button className="pbtn   hover:bg-green-200 ">Get in touch</button>
           <div className="z-50 flex items-center md:hidden">
-            {navbutton ? (
+            {navButton ? (
               <button
                 className="mobile-menu-button"
-                onClick={() => setnavbutton(!navbutton)}
+                onClick={() => setNavButton(!navButton)}
               >
                 <svg
                   width="40"
@@ -71,7 +71,7 @@ const Navbar = () => {
             ) : (
               <button
                 className="mobile-menu-button"
-                onClick={() => setnavbutton(!navbutton)}
+                onClick={() => setNavButton(!navButton)}
               >
                 <svg
                   width="40"
@@ -101,18 +101,18 @@ const Navbar = () => {
         <div className="  absolute left-[-77px] top-[-190px] h-[324px] w-[195px] bg-[#aabbb4] opacity-20 blur-3xl   " />
         <div
           className={` ${
-            navbutton ? "opacity-0" : "opacity-80"
+            navButton ? "opacity-0" : "opacity-80"
           } z-5  fixed   h-[100vh]   w-[100vw] bg-black  transition-opacity duration-500 ease-in-out `}
         />
 
         <div
           className={` ${
-            navbutton ? "translate-x-[-100vw]" : "translate-x-0"
+            navButton ? "translate-x-[-100vw]" : "translate-x-0"
           }  "mobile-menu z-19  border-l-  fixed top-[0vw] h-full w-[60vw] border-0 border-r-[0.5px]  border-[#344347] bg-black bg-opacity-60 bg-clip-padding px-4 py-6   opacity-80 backdrop-blur-xl backdrop-filter  transition-transform duration-500  ease-in-out `}
         >
           <div className="absolute left-[-77px] top-[-190px] h-[324px] w-[195px] bg-[#aabbb4] opacity-30  blur-3xl   " />
           <div className="mb-10 flex items-center gap-3">
-            <img src="/logo.svg" alt="" />
+            <Image src="/logo.svg" alt="" />
           </div>
 
           <div className=" divide-y divide-[#585858]">
@@ -143,4 +143,3 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
