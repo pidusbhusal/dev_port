@@ -93,7 +93,7 @@ function blog() {
         {/* blogs */}
         <div className="flex flex-wrap justify-between md:mt-20">
           {/* blog section */}
-          <div className="grid place-items-center  gap-6 md:gap-16">
+          <div className="my-16 grid  place-items-center gap-6 md:gap-16">
             {blogs.map((blog) => {
               return (
                 <Blogcard

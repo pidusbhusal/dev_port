@@ -7,9 +7,9 @@ const Navbar = () => {
   return (
     <nav className="">
       <div className=" wrapper flex items-center justify-between  py-6 md:py-10">
-        <div>
+        <Link href="/">
           <img src="logo.svg" alt="Our Logo" />
-        </div>
+        </Link>
 
         <ul className=" hidden items-center gap-[4vw] md:flex md:flex-row">
           <li>
@@ -40,12 +40,17 @@ const Navbar = () => {
 
         <div className="flex">
           <div>
-            <button className="pbtn hidden  hover:bg-green-200 md:hidden ">
+            <Link
+              href="/contact"
+              className="pbtn hidden  hover:bg-green-200 md:hidden "
+            >
               Get in touch
-            </button>
+            </Link>
           </div>
           {/* mobile button goes here */}
-          <button className="pbtn   hover:bg-green-200 ">Get in touch</button>
+          <Link href="/contact" className="pbtn   hover:bg-green-200 ">
+            Get in touch
+          </Link>
           <div className="z-50 flex items-center md:hidden">
             {navbutton ? (
               <button
@@ -132,9 +137,9 @@ const Navbar = () => {
 
             <Link
               className=" block py-6   px-3 font-medium text-gray-400 hover:text-white"
-              href="/"
+              href="/blog"
             >
-              Product
+              Blogs
             </Link>
           </div>
         </div>

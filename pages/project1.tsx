@@ -24,6 +24,7 @@ const projects = [
     catagories: ["React", "Android", "Typescript", "handsome"],
     projectthumbnail: "workimage.jpg",
     projectcasestudy: "/project1",
+    projectlink: "google.com"
   },
   {
     id: 1,
@@ -32,6 +33,7 @@ const projects = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
     catagories: ["React", "Android", "Typescript", "handsome"],
     projectthumbnail: "workimage.jpg",
+    projectlink: "google.com"
   },
 ];
 
@@ -202,6 +204,7 @@ function project1() {
             <div className=" mt-14 grid grid-cols-1 justify-start gap-x-11 sm:grid-cols-2">
               {projects.map(project => {
                 return (<Workcard
+                  projectlink={project.projectlink}
                   projecttitle={project.projecttitle}
                   projectdescription={project.projctdescription}
                   projectthumbnail={project.projectthumbnail}
@@ -217,8 +220,10 @@ function project1() {
 
 
         {/* contactbanner */}
+        <div className="mb-16">
+          <ContactusBanner />
+        </div>
 
-        <ContactusBanner />
 
       </div>
     </div>
