@@ -35,105 +35,135 @@ const Navbar = () => {
 
   const [navbutton, setnavbutton] = useState(true);
   return (
-    <nav
-      className={` ${
-        show ? "top-0" : "top-[-100px]"
-      } sticky z-50  block w-full bg-[#0F1010]  bg-opacity-60 bg-clip-padding backdrop-blur-xl backdrop-filter transition-[top] duration-[0.3s] ease-in`}
-    >
-      <div className="  wrapper flex items-center justify-between  py-6 md:py-4">
-        <Link href="/">
-          <img src="logo.svg" alt="Our Logo" />
-        </Link>
+    <>
+      <nav
+        className={` ${
+          show ? "top-0" : "top-[-100px]"
+        } sticky z-50  block w-full bg-[#0F1010]  bg-opacity-60 bg-clip-padding backdrop-blur-xl backdrop-filter transition-[top] duration-[0.3s] ease-in`}
+      >
+        <div className="  wrapper flex items-center justify-between  py-6 md:py-4">
+          <Link href="/">
+            <img src="logo.svg" alt="Our Logo" />
+          </Link>
 
-        <ul className=" hidden items-center gap-[4vw] md:flex md:flex-row">
-          <li>
-            <Link
-              className="py-5 font-medium text-gray-400 hover:text-white"
-              href="/"
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="py-5 font-medium text-gray-400 hover:text-white"
-              href="/work"
-            >
-              Work
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="py-5 font-medium text-gray-400 hover:text-white"
-              href="/blog"
-            >
-              Blog
-            </Link>
-          </li>
-        </ul>
+          <ul className=" hidden items-center gap-[4vw] md:flex md:flex-row">
+            <li>
+              <Link
+                className="py-5 font-medium text-gray-400 hover:text-white"
+                href="/"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="py-5 font-medium text-gray-400 hover:text-white"
+                href="/work"
+              >
+                Work
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="py-5 font-medium text-gray-400 hover:text-white"
+                href="/blog"
+              >
+                Blog
+              </Link>
+            </li>
+          </ul>
 
-        <div className="flex">
-          <div>
-            <Link
-              href="/contact"
-              className="pbtn hidden  hover:bg-green-200 md:hidden "
-            >
+          <div className="flex">
+            <div>
+              <Link
+                href="/contact"
+                className="pbtn hidden  hover:bg-green-200 md:hidden "
+              >
+                Get in touch
+              </Link>
+            </div>
+            {/* mobile button goes here */}
+            <Link href="/contact" className="pbtn   hover:bg-green-200 ">
               Get in touch
             </Link>
-          </div>
-          {/* mobile button goes here */}
-          <Link href="/contact" className="pbtn   hover:bg-green-200 ">
-            Get in touch
-          </Link>
-          <div className="z-50 flex items-center md:hidden">
-            {navbutton ? (
-              <button
-                className="mobile-menu-button"
-                onClick={() => setnavbutton(!navbutton)}
-              >
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 40 40"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+            <div className="z-50 flex items-center md:hidden">
+              {navbutton ? (
+                // burger menu
+                <button
+                  className="mobile-menu-button focus:bg-none"
+                  onClick={() => setnavbutton(!navbutton)}
                 >
-                  <path
-                    d="M6.25 11.25H33.75M6.25 20H33.75M6.25 28.75H33.75"
-                    stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-            ) : (
-              <button
-                className="mobile-menu-button"
-                onClick={() => setnavbutton(!navbutton)}
-              >
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 40 40"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.25 11.25H33.75M6.25 20H33.75M6.25 28.75H33.75"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              ) : (
+                // close button will display
+                <button
+                  className="mobile-menu-button"
+                  onClick={() => setnavbutton(!navbutton)}
                 >
-                  <path
-                    d="M10 30L30 10M10 10L30 30"
-                    stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-            )}
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 30L30 10M10 10L30 30"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              )}
+            </div>
           </div>
         </div>
-        
+      </nav>
+
+      {/* mobile menu that apears when button is clicked */}
+      <div
+        className={`${
+          navbutton ? " translate-x-[175%]" : " translate-x-0"
+        } fixed right-0 top-0 z-10 grid h-full w-2/3 place-items-center bg-[#0F1010]  bg-opacity-90 bg-clip-padding py-24 text-white backdrop-blur-xl backdrop-filter transition-all duration-[0.3s]  ease-in-out md:hidden`}
+      >
+        <Link className="" href={"/"}>
+          Home
+        </Link>
+
+        <Link className="" href={"/work"}>
+          Work
+        </Link>
+
+        <Link className="" href={"/blog"}>
+          Blog
+        </Link>
       </div>
-    </nav>
+
+      {/* this is background bg when mobile nav is open */}
+      <div
+        className={`${
+          navbutton ? " opacity-0" : " bg-opacity-50 "
+        } fixed  top-0   z-0 h-full w-full place-items-center bg-[#0F1010]  bg-clip-padding py-24 text-white backdrop-blur-xl backdrop-filter transition-all duration-[0.3s]  ease-in-out md:hidden`}
+      ></div>
+    </>
+
     // <nav className="">
     //   <div className=" wrapper flex items-center justify-between  py-6 md:py-10">
     //     <Link href="/">
