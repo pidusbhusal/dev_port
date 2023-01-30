@@ -67,9 +67,11 @@ const projects = [
 function work() {
   return (
     <div className="text-white">
+      <div className="absolute left-[-77px] top-[-190px] z-50 h-[324px] w-[195px] bg-[#779283]   opacity-0 blur-3xl md:opacity-25 " />
+
       <div className="wrapper">
         {/* heading */}
-        <div className="heading mb-8 flex flex-wrap items-center justify-between gap-y-2 md:mb-4">
+        <div className="heading mb-8 flex flex-wrap items-center justify-between gap-y-2 md:mb-8">
           <h2 className="text-3xl font-semibold md:text-[2.5rem]">WORKS</h2>
           <div className="flex items-center  gap-4 rounded-full border-[1px] border-solid border-[#585858] bg-[#353535] px-6  ">
             <svg
@@ -104,7 +106,7 @@ function work() {
           </div>
         </div>
         {/* Catagories  tags*/}
-        <div className="mt-8 md:mt-4">
+        <div className="mt-8 mb-8">
           {catagories.map((catagory) => {
             return <Catagorypills catagory={catagory} />;
           })}

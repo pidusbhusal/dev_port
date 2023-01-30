@@ -49,6 +49,8 @@ function project1() {
   return (
     <div>
       <div className=" text-white">
+        <div className="absolute left-[-77px] top-[-190px] z-50 h-[324px] w-[195px] bg-[#779283]   opacity-0 blur-3xl md:opacity-25 " />
+
         <motion.div
           className="fixed top-0 left-0 right-0 h-1 origin-left bg-white"
           style={{ scaleX: scrollYProgress }}

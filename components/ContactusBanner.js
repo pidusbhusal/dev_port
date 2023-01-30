@@ -3,8 +3,9 @@ import React from "react";
 function ContactusBanner() {
   return (
     <div>
-      <div className="wrapper ">
-        <div className="flex w-full flex-wrap items-center justify-between gap-10  rounded-lg bg-contactus-gred py-8 px-6 lg:px-40">
+      <div className="wrapper text-white ">
+        <div className="relative flex w-full flex-wrap items-center justify-between gap-10 overflow-hidden  rounded-lg bg-contactus-gred py-8 px-6 lg:px-40">
+          <div className="absolute right-20 z-0 h-[324px] w-[300px] bg-[#30473a]   opacity-0 blur-3xl md:opacity-10 " />
           <div>
             <h2 className="text-3xl font-semibold leading-tight md:text-[2.5rem] xl:w-[20ch]">
               LETS GET IN TOUCH
@@ -16,7 +17,7 @@ function ContactusBanner() {
             </p>
           </div>
           <div>
-            <button className="pbtn">Get in touch</button>
+            <button className="pbtn z-20  ">Get in touch</button>
           </div>
         </div>
       </div>

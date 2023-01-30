@@ -48,6 +48,8 @@ import Blogcard from "../components/Blogcard";
 function blogopen() {
   return (
     <div>
+      <div className="absolute left-[-77px] top-[-190px] z-50 h-[324px] w-[195px] bg-[#779283]   opacity-0 blur-3xl md:opacity-25 " />
+
       <div className="wrapper text-white">
         <div className="flex grid-cols-5 justify-between gap-16">
           <div className="col-span-3">

@@ -19,12 +19,11 @@ const social = {
   },
 };
 
-
-
-
 function contacus() {
   return (
     <div>
+      <div className="absolute left-[-77px] top-[-190px] z-50 h-[324px] w-[195px] bg-[#779283]   opacity-0 blur-3xl md:opacity-25 " />
+
       <div className="wrapper mb-60 grid gap-y-16 text-white lg:grid-cols-2">
         {/* contact us form */}
         <div>

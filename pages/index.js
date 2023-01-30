@@ -167,6 +167,7 @@ export default function Home() {
         <title>Create Next App</title>
       </Head>
       <main className="py-20 text-white ">
+        <div className="absolute left-[-77px] top-[-190px] z-50 h-[324px] w-[195px] bg-[#779283]   opacity-0 blur-3xl md:opacity-25 " />
         {/* herosection */}
         <div className=" wrapper flex flex-wrap-reverse items-end justify-center md:flex-nowrap  ">
           <div className="mt-10 md:mt-0">

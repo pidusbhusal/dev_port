@@ -131,7 +131,7 @@ const Navbar = () => {
             )}
           </div>
         </div>
-        <div className="absolute left-[-77px] top-[-190px] h-[324px] w-[195px] bg-[#aabbb4] opacity-0   blur-3xl md:opacity-25  " />
+        
       </div>
     </nav>
     // <nav className="">
