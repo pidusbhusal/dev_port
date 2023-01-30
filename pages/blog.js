@@ -51,10 +51,11 @@ function blog() {
 
       <div className="wrapper text-white">
         {/* heading */}
-        <div className="heading mb-8 flex flex-wrap items-center justify-between gap-y-2 md:mb-4">
+        <div className="heading mb-8 mt-4 flex flex-wrap items-center justify-between gap-y-2 md:mb-4">
           <h2 className="text-3xl font-semibold md:text-[2.5rem]">BLOG </h2>
-          <div className="flex items-center  gap-4 rounded-full border-[1px] border-solid border-[#585858] bg-[#353535] px-6  ">
+          <div className="flex w-full  items-center gap-4 rounded-full border-[0px] border-solid border-[#585858] bg-[#353535]  ">
             <svg
+              className="ml-4"
               width="20"
               height="20"
               viewBox="0 0 24 24"
@@ -81,7 +82,7 @@ function blog() {
             <input
               type="text"
               placeholder="search"
-              className="border-none bg-transparent  py-2 outline-0  md:py-3"
+              className="w-full border-none  bg-transparent py-2  outline-0 md:py-3"
             />
           </div>
         </div>

@@ -73,8 +73,9 @@ function work() {
         {/* heading */}
         <div className="heading mb-8 flex flex-wrap items-center justify-between gap-y-2 md:mb-8">
           <h2 className="text-3xl font-semibold md:text-[2.5rem]">WORKS</h2>
-          <div className="flex items-center  gap-4 rounded-full border-[1px] border-solid border-[#585858] bg-[#353535] px-6  ">
+          <div className="mt-4   flex w-full items-center gap-4 rounded-full border-[0px] border-solid border-[#585858] bg-[#353535] ">
             <svg
+              className="ml-4"
               width="20"
               height="20"
               viewBox="0 0 24 24"
