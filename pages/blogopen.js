@@ -80,24 +80,25 @@ function blogopen() {
 
             <div className="md:mt-16">
               <img src="blogtumbnail.png" alt="" />
+              <h2>CSS Position Sticky - How It Really Works!</h2>
               Deciding on a JavaScript framework for your web application can be
               overwhelming. Angular and React are very popular these days, and
               there is an upstart which has been getting a lot of traction
               lately: VueJS. What’s more, these are just a few of the new kids
               on the block.
-              <br className="mt-4" />
+              <p className="mt-4" />
               Deciding on a JavaScript framework for your web application can be
               overwhelming. Angular and React are very popular these days, and
               there is an upstart which has been getting a lot of traction
               lately: VueJS. What’s more, these are just a few of the new kids
               on the block.
-              <br className="mt-4" />
+              <p className="mt-4" />
               Deciding on a JavaScript framework for your web application can be
               overwhelming. Angular and React are very popular these days, and
               there is an upstart which has been getting a lot of traction
               lately: VueJS. What’s more, these are just a few of the new kids
               on the block.
-              <br className="mt-4" />
+              <p className="mt-4" />
               Deciding on a JavaScript framework for your web application can be
               overwhelming. Angular and React are very popular these days, and
               there is an upstart which has been getting a lot of traction
@@ -107,8 +108,8 @@ function blogopen() {
           </div>
 
           {/* topic section */}
-          <div className="sticky top-0  col-span-2">
-            <div className=" hidden xl:block ">
+          <div className="    col-span-2  overscroll-none  px-4">
+            <div className=" sticky  top-20 hidden xl:block ">
               <h4 className="text-xl ">Reccomended topic</h4>
               <div className=" mt-8 hidden flex-wrap justify-start gap-y-1 md:flex  ">
                 {blogrecomendations.map((blogrecomendation) => {
