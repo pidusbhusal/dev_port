@@ -172,7 +172,7 @@ export default function Home() {
         <div className=" wrapper flex flex-wrap-reverse items-end justify-center md:flex-nowrap  ">
           <div className="mt-10 md:mt-0">
             <button className=" group flex w-[100%] items-center justify-between rounded-full bg-white px-9 py-4 text-black hover:bg-green-200 md:w-auto md:items-center md:gap-[10rem] md:px-8">
-              <p>See My Work</p>
+              <p className="text-black">See My Work</p>
               <svg
                 width="14"
                 height="14"
@@ -511,8 +511,8 @@ export default function Home() {
               </div>
               {/* topic section */}
               <div className=" hidden xl:block xl:w-64">
-                <h4 className="text-xl xl:text-right">Reccomended topic</h4>
-                <div className=" mt-8 hidden flex-wrap justify-end gap-y-1 md:flex  ">
+                <h4 className="text-xl xl:text-left">Reccomended topic</h4>
+                <div className=" justify-left mt-8 hidden flex-wrap gap-y-1 md:flex  ">
                   {blogrecomendations.map((blogrecomendation) => {
                     return <Catagorypills catagory={blogrecomendation} />;
                   })}

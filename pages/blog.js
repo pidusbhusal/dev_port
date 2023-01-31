@@ -54,7 +54,7 @@ function blog() {
           {/* heading */}
           <div className="heading mb-8 mt-4 flex flex-wrap items-center justify-between gap-y-2 md:mb-4">
             <h2 className="text-3xl font-semibold md:text-[2.5rem]">BLOG </h2>
-            <div className="flex w-full items-center  gap-4 rounded-full border-[0px] border-solid border-[#585858] bg-[#353535] md:w-fit  ">
+            <div className=" mt-4 flex w-full items-center  gap-4 rounded-full border-[0px] border-solid border-[#585858] bg-[#353535] md:w-fit  ">
               <svg
                 className="ml-4"
                 width="20"
@@ -83,13 +83,13 @@ function blog() {
               <input
                 type="text"
                 placeholder="search"
-                className="w-full border-none  bg-transparent py-2  outline-0 md:py-3"
+                className="w-full border-none bg-transparent py-2  outline-0 md:py-3"
               />
             </div>
           </div>
 
           {/* blog recomendation in mobile version */}
-          <div className="mt-8 block md:hidden">
+          <div className="mt-8 block xl:hidden">
             {blogrecomendations.map((catagory) => {
               return <Catagorypills catagory={catagory} />;
             })}
@@ -112,9 +112,11 @@ function blog() {
               })}
             </div>
             {/* topic section */}
-            <div className=" sticky top-0 hidden xl:block xl:w-64">
-              <h4 className="text-xl xl:text-right">Reccomended topic</h4>
-              <div className=" mt-8 hidden flex-wrap justify-end gap-y-1 md:flex  ">
+            <div className="   hidden xl:block xl:w-64">
+              <h4 className="sticky top-0 text-xl xl:text-left">
+                Reccomended topic
+              </h4>
+              <div className="  sticky top-20  mt-8 hidden flex-wrap justify-start gap-y-1 md:flex  ">
                 {blogrecomendations.map((blogrecomendation) => {
                   return <Catagorypills catagory={blogrecomendation} />;
                 })}
