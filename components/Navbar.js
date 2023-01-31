@@ -8,14 +8,14 @@ const Navbar = () => {
 
   function MyButton({ href, children }) {
     return (
-      <Link href={href}>
-        <Link
-          href={href}
-          passHref
-          className="w-full border-b   border-y-[#ffffff35] py-16  text-center "
-        >
-          <button onClick={() => setnavbutton(!navbutton)}>{children}</button>
-        </Link>
+      <Link
+        href={href}
+        passHref
+        className="w-full border-b   border-y-[#ffffff35]   text-center "
+      >
+        <button className="py-16" onClick={() => setnavbutton(!navbutton)}>
+          {children}
+        </button>
       </Link>
     );
   }

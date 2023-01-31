@@ -3,7 +3,6 @@ const projecttags = ["react", "backend", "nextjs", "fullstack"];
 import Catagorypills from "../components/Catagorypills";
 import { motion, useScroll } from "framer-motion";
 
-
 const blogs = [
   {
     blogtitle: "Project title name would be here",
@@ -55,7 +54,7 @@ function blogopen() {
       <div className="absolute left-[-77px] top-[-190px] z-50 h-[324px] w-[195px] bg-[#779283]   opacity-0 blur-3xl md:opacity-25 " />
 
       <div className="wrapper text-white">
-        <div className="flex  flex-wrap justify-between gap-16  md:flex-nowrap">
+        <div className="flex  flex-wrap justify-between gap-14  md:flex-nowrap">
           <div className=" ">
             {/* title */}
             <div className=" flex flex-wrap items-center gap-0 md:gap-6">
