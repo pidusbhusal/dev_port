@@ -44,6 +44,7 @@ const blogrecomendations = [
 ];
 
 import Blogcard from "../components/Blogcard";
+import ContactusBanner from "../components/ContactusBanner";
 
 function blogopen() {
   return (
@@ -79,37 +80,128 @@ function blogopen() {
             <hr className=" opacity-20 md:mt-16" />
 
             <div className="md:mt-16">
-              <img src="blogtumbnail.png" alt="" />
-              <h2>CSS Position Sticky - How It Really Works!</h2>
-              Deciding on a JavaScript framework for your web application can be
-              overwhelming. Angular and React are very popular these days, and
-              there is an upstart which has been getting a lot of traction
-              lately: VueJS. What’s more, these are just a few of the new kids
-              on the block.
-              <p className="mt-4" />
-              Deciding on a JavaScript framework for your web application can be
-              overwhelming. Angular and React are very popular these days, and
-              there is an upstart which has been getting a lot of traction
-              lately: VueJS. What’s more, these are just a few of the new kids
-              on the block.
-              <p className="mt-4" />
-              Deciding on a JavaScript framework for your web application can be
-              overwhelming. Angular and React are very popular these days, and
-              there is an upstart which has been getting a lot of traction
-              lately: VueJS. What’s more, these are just a few of the new kids
-              on the block.
-              <p className="mt-4" />
-              Deciding on a JavaScript framework for your web application can be
-              overwhelming. Angular and React are very popular these days, and
-              there is an upstart which has been getting a lot of traction
-              lately: VueJS. What’s more, these are just a few of the new kids
-              on the block.
+              <h2 className="text-3xl font-semibold md:text-[2.5rem]">
+                NAME OF THE PROJEECT
+              </h2>
+              <p className="mt-8 text-gray-300">
+                Deciding on a JavaScript framework for your web application can
+                be overwhelming. Angular and React are very popular these days,
+                and there is an upstart which has been getting a lot of traction
+                lately: VueJS. What’s more, these are just a few of the new kids
+                on the block. Years ago, I (Marc) was a clinical intern at a
+                large urban hospital, working under an extremely critical and
+                generally unpleasant supervisor. She was the kind of person who
+                complained incessantly, picking holes in even the most solid of
+                efforts — be they of good will, or working hard to complete a
+                tough case analysis on time. In my many months working with her,
+                I don’t believe I saw her smile once. I was fascinated by the
+                work but dreaded going in each day. In the end, I had to leave
+                the internship. Looking back, my supervisor’s negativity — and
+                the way I felt in her presence — cast a shadow over the entire
+                experience. But even more remarkable than a dour and critical
+                supervisor in a psychiatric treatment center is the fact when I
+                told the story to Robin, she realized that she had encountered
+                that same supervisor nearly two decades earlier! I (Robin) would
+                not have remembered her name, but listening to the way Marc felt
+                around her, I recognized her immediately. In my case, I was
+                fortunate to have other supervisors who were more actively
+                involved in my internship. But when I think back, her
+                unpleasantness and negativity colored the day each time I met
+                with her.
+              </p>
+              <p className="mt-8 text-gray-300">
+                Deciding on a JavaScript framework for your web application can
+                be overwhelming. Angular and React are very popular these days,
+                and there is an upstart which has been getting a lot of traction
+                lately: VueJS. What’s more, these are just a few of the new kids
+                on the block. Years ago, I (Marc) was a clinical intern at a
+                large urban hospital, working under an extremely critical and
+                generally unpleasant supervisor. She was the kind of person who
+                complained incessantly, picking holes in even the most solid of
+                efforts — be they of good will, or working hard to complete a
+                tough case analysis on time. In my many months working with her,
+                I don’t believe I saw her smile once. I was fascinated by the
+                work but dreaded going in each day. In the end, I had to leave
+                the internship. Looking back, my supervisor’s negativity — and
+                the way I felt in her presence — cast a shadow over the entire
+                experience. But even more remarkable than a dour and critical
+                supervisor in a psychiatric treatment center is the fact when I
+                told the story to Robin, she realized that she had encountered
+                that same supervisor nearly two decades earlier! I (Robin) would
+                not have remembered her name, but listening to the way Marc felt
+                around her, I recognized her immediately. In my case, I was
+                fortunate to have other supervisors who were more actively
+                involved in my internship. But when I think back, her
+                unpleasantness and negativity colored the day each time I met
+                with her.
+              </p>
+              <p className="mt-8 text-gray-300">
+                Deciding on a JavaScript framework for your web application can
+                be overwhelming. Angular and React are very popular these days,
+                and there is an upstart which has been getting a lot of traction
+                lately: VueJS. What’s more, these are just a few of the new kids
+                on the block. Years ago, I (Marc) was a clinical intern at a
+                large urban hospital, working under an extremely critical and
+                generally unpleasant supervisor. She was the kind of person who
+                complained incessantly, picking holes in even the most solid of
+                efforts — be they of good will, or working hard to complete a
+                tough case analysis on time. In my many months working with her,
+                I don’t believe I saw her smile once. I was fascinated by the
+                work but dreaded going in each day. In the end, I had to leave
+                the internship. Looking back, my supervisor’s negativity — and
+                the way I felt in her presence — cast a shadow over the entire
+                experience. But even more remarkable than a dour and critical
+                supervisor in a psychiatric treatment center is the fact when I
+                told the story to Robin, she realized that she had encountered
+                that same supervisor nearly two decades earlier! I (Robin) would
+                not have remembered her name, but listening to the way Marc felt
+                around her, I recognized her immediately. In my case, I was
+                fortunate to have other supervisors who were more actively
+                involved in my internship. But when I think back, her
+                unpleasantness and negativity colored the day each time I met
+                with her.
+              </p>
+              <p className="mt-8 text-gray-300">
+                Deciding on a JavaScript framework for your web application can
+                be overwhelming. Angular and React are very popular these days,
+                and there is an upstart which has been getting a lot of traction
+                lately: VueJS. What’s more, these are just a few of the new kids
+                on the block. Years ago, I (Marc) was a clinical intern at a
+                large urban hospital, working under an extremely critical and
+                generally unpleasant supervisor. She was the kind of person who
+                complained incessantly, picking holes in even the most solid of
+                efforts — be they of good will, or working hard to complete a
+                tough case analysis on time. In my many months working with her,
+                I don’t believe I saw her smile once. I was fascinated by the
+                work but dreaded going in each day. In the end, I had to leave
+                the internship. Looking back, my supervisor’s negativity — and
+                the way I felt in her presence — cast a shadow over the entire
+                experience. But even more remarkable than a dour and critical
+                supervisor in a psychiatric treatment center is the fact when I
+                told the story to Robin, she realized that she had encountered
+                that same supervisor nearly two decades earlier! I (Robin) would
+                not have remembered her name, but listening to the way Marc felt
+                around her, I recognized her immediately. In my case, I was
+                fortunate to have other supervisors who were more actively
+                involved in my internship. But when I think back, her
+                unpleasantness and negativity colored the day each time I met
+                with her.
+              </p>
+              <img src="blogtumbnail.png" alt="" className="mt-8" />
+              <h3 className="mt-8 text-2xl font-semibold">Context</h3>
+              <p className="mt-4 text-gray-300">
+                Deciding on a JavaScript framework for your web application can
+                be overwhelming. Angular and React are very popular these days,
+                and there is an upstart which has been getting a lot of traction
+                lately: VueJS. What’s more, these are just a few of the new kids
+                on the block.
+              </p>
             </div>
           </div>
 
           {/* topic section */}
           <div className="    col-span-2  overscroll-none  px-4">
-            <div className=" sticky  top-20 hidden xl:block ">
+            <div className=" sticky  top-10 hidden xl:block ">
               <h4 className="text-xl ">Reccomended topic</h4>
               <div className=" mt-8 hidden flex-wrap justify-start gap-y-1 md:flex  ">
                 {blogrecomendations.map((blogrecomendation) => {
@@ -147,6 +239,7 @@ function blogopen() {
           </div>
         </div>
       </div>
+      <ContactusBanner />
     </div>
   );
 }

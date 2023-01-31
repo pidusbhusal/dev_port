@@ -94,7 +94,7 @@ function blog() {
           })}
         </div>
         {/* blogs */}
-        <div className="flex flex-wrap justify-between md:mt-20">
+        <div className=" top-0 flex flex-wrap justify-between md:mt-20">
           {/* blog section */}
           <div className="my-16 grid  place-items-center gap-6 md:gap-16">
             {blogs.map((blog) => {
@@ -111,7 +111,7 @@ function blog() {
             })}
           </div>
           {/* topic section */}
-          <div className=" hidden xl:block xl:w-64">
+          <div className=" sticky top-0 hidden xl:block xl:w-64">
             <h4 className="text-xl xl:text-right">Reccomended topic</h4>
             <div className=" mt-8 hidden flex-wrap justify-end gap-y-1 md:flex  ">
               {blogrecomendations.map((blogrecomendation) => {

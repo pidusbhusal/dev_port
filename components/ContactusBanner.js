@@ -3,7 +3,7 @@ import React from "react";
 function ContactusBanner() {
   return (
     <div>
-      <div className="wrapper text-white ">
+      <div className="wrapper my-16 text-white ">
         <div className="relative flex w-full flex-wrap items-center justify-between gap-10 overflow-hidden  rounded-lg bg-contactus-gred py-8 px-6 lg:px-40">
           <div className="absolute right-20 z-0 h-[324px] w-[300px] bg-[#30473a]   opacity-0 blur-3xl md:opacity-10 " />
           <div>
