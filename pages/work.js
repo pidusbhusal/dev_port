@@ -2,6 +2,7 @@ import React from "react";
 import Catagorypills from "../components/Catagorypills";
 import ContactusBanner from "../components/ContactusBanner";
 import Workcard from "../components/Workcard";
+import ScrollableTitles from "../components/scrollableTitles";
 
 const catagories = [
   "React",
@@ -107,12 +108,13 @@ function work() {
           </div>
         </div>
         {/* Catagories  tags*/}
-        <div className="mt-8 mb-8">
+
+        <ScrollableTitles />
+        {/* <div className="mt-8 mb-8">
           {catagories.map((catagory) => {
             return <Catagorypills catagory={catagory} />;
           })}
-        </div>
-
+        </div> */}
         {/* projects */}
         <div className="mt-8 grid grid-cols-1 justify-start gap-x-11 sm:grid-cols-2 md:mt-4">
           {projects.map((project) => {

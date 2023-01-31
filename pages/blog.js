@@ -136,7 +136,7 @@ function blog() {
             </div>
 
             {/* blog recomendation in mobile version */}
-            <div className="mt-4 block xl:mt-8 xl:hidden">
+            <div className="mt-4  flex h-fit w-full overflow-hidden overflow-scroll lg:mt-8 lg:hidden">
               {blogrecomendations.map((catagory) => {
                 return <Catagorypills catagory={catagory} />;
               })}
