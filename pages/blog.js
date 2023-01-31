@@ -223,6 +223,32 @@ function blog() {
             </div>
           </div>
         </div>
+
+        <div className="mt-16 xl:hidden">
+          <h4 className="text-xl ">Subscribe to my newsletter</h4>
+          <p className="mt-4 text-gray-300">
+            You can also write your email and I will get to you{" "}
+          </p>
+
+          <form action="" className="mt-4 grid gap-4">
+            <div className="flex flex-col">
+              <label className="mb-2 text-gray-300">Email*</label>
+              <input
+                required
+                type="text"
+                placeholder="ex. example@gmail.com"
+                className="focused max-w-xs rounded bg-[#353535] px-4 py-3 outline-none "
+              />
+            </div>
+
+            <div className="mt-2">
+              <input
+                type="submit"
+                className="pbtn inline-block w-full  lg:w-max"
+              />
+            </div>
+          </form>
+        </div>
       </div>
 
       <ContactusBanner />

@@ -164,7 +164,7 @@ const Navbar = () => {
       <div
         className={`${
           navbutton ? " translate-x-[175%]" : " translate-x-0"
-        } fixed right-0 top-0 z-10 grid h-full w-2/3 place-items-center  bg-[#0F1010]  bg-opacity-90 bg-clip-padding py-24 text-white backdrop-blur-xl backdrop-filter transition-all duration-[0.3s]  ease-in-out md:hidden`}
+        } fixed right-0 top-0 z-20 grid h-full w-2/3 place-items-center  bg-[#0F1010]  bg-opacity-90 bg-clip-padding py-24 text-white backdrop-blur-xl backdrop-filter transition-all duration-[0.3s]  ease-in-out md:hidden`}
       >
         <MyButton href={"/"}>Home</MyButton>
         <MyButton href={"/work"}>Work</MyButton>
@@ -172,10 +172,10 @@ const Navbar = () => {
       </div>
 
       {/* this is background bg when mobile nav is open */}
-      <div
+      <div 
         className={`${
-          navbutton ? " opacity-0" : " bg-opacity-50 "
-        } fixed  top-0   z-0 h-full w-full place-items-center bg-[#0F1010]  bg-clip-padding py-24 text-white backdrop-blur-xl backdrop-filter transition-all duration-[0.3s]  ease-in-out md:hidden`}
+          navbutton ? " hidden opacity-0" : "  bg-opacity-50 "
+        } fixed  top-0    z-10 h-full w-full place-items-center bg-[#0F1010]  bg-clip-padding py-24 text-white backdrop-blur-xl backdrop-filter transition-all duration-[0.3s]  ease-in-out md:hidden`}
       ></div>
     </>
   );

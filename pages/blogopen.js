@@ -195,11 +195,12 @@ function blogopen() {
                 lately: VueJS. What’s more, these are just a few of the new kids
                 on the block.
               </p>
+              <hr className="my-16 opacity-20" />
             </div>
           </div>
 
           {/* topic section */}
-          <div className="    overscroll-none   px-4  md:col-span-2  ">
+          <div className="    overscroll-none    md:col-span-2  ">
             <div className=" sticky  top-10 ">
               <h4 className="text-xl ">Reccomended topic</h4>
               <div className=" mt-8  flex-wrap justify-start gap-y-1 md:flex  ">
