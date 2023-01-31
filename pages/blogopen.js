@@ -52,15 +52,15 @@ function blogopen() {
       <div className="absolute left-[-77px] top-[-190px] z-50 h-[324px] w-[195px] bg-[#779283]   opacity-0 blur-3xl md:opacity-25 " />
 
       <div className="wrapper text-white">
-        <div className="flex grid-cols-5 justify-between gap-16">
-          <div className="col-span-3">
+        <div className="flex  flex-wrap justify-between gap-16  md:flex-nowrap">
+          <div className=" ">
             {/* title */}
             <div className=" flex flex-wrap items-center gap-0 md:gap-6">
               <h2 className="text-3xl font-semibold md:text-[2.5rem]">
                 NAME OF THE BLOGS
               </h2>
             </div>
-            <div className="mt-8 flex items-center gap-8">
+            <div className="mt-8 flex flex-wrap items-center gap-8">
               {/* time and date */}
 
               <p className=" text-sm text-gray-400">
@@ -77,12 +77,9 @@ function blogopen() {
             </div>
 
             {/* rich text */}
-            <hr className=" opacity-20 md:mt-16" />
+            <hr className=" mt-8 opacity-20 md:mt-16" />
 
             <div className="md:mt-16">
-              <h2 className="text-3xl font-semibold md:text-[2.5rem]">
-                NAME OF THE PROJEECT
-              </h2>
               <p className="mt-8 text-gray-300">
                 Deciding on a JavaScript framework for your web application can
                 be overwhelming. Angular and React are very popular these days,
@@ -200,10 +197,10 @@ function blogopen() {
           </div>
 
           {/* topic section */}
-          <div className="    col-span-2  overscroll-none  px-4">
-            <div className=" sticky  top-10 hidden xl:block ">
+          <div className="    overscroll-none   px-4  md:col-span-2  ">
+            <div className=" sticky  top-10 ">
               <h4 className="text-xl ">Reccomended topic</h4>
-              <div className=" mt-8 hidden flex-wrap justify-start gap-y-1 md:flex  ">
+              <div className=" mt-8  flex-wrap justify-start gap-y-1 md:flex  ">
                 {blogrecomendations.map((blogrecomendation) => {
                   return <Catagorypills catagory={blogrecomendation} />;
                 })}
