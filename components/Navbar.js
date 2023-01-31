@@ -92,13 +92,22 @@ const Navbar = () => {
               <Link
                 href="/contact"
                 className="pbtn hidden  hover:bg-green-200 md:hidden "
+                passHref
               >
-                Get in touch
+                <button onClick={() => setnavbutton(!navbutton)}>
+                  Get in touch
+                </button>
               </Link>
             </div>
             {/* mobile button goes here */}
-            <Link href="/contact" className="pbtn   hover:bg-green-200 ">
-              Get in touch
+            <Link
+              href="/contact"
+              passHref
+              className="pbtn   hover:bg-green-200 "
+            >
+              <button onClick={() => setnavbutton(!navbutton)}>
+                Get in touch
+              </button>
             </Link>
             <div className="z-50 flex items-center md:hidden">
               {navbutton ? (

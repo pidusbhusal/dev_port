@@ -2,7 +2,7 @@ import React from "react";
 import Blogcard from "../components/Blogcard";
 import ContactusBanner from "../components/ContactusBanner";
 import Catagorypills from "../components/Catagorypills";
-
+import ScrollableTitles from "../components/scrollableTitles";
 const blogs = [
   {
     blogtitle: "Project title name would be here",
@@ -97,12 +97,12 @@ function blog() {
           {/* blog section */}
           <div className=" grid   gap-6 md:gap-16">
             {/* heading */}
-            <h2 className="mb-4 text-3xl font-semibold md:text-[2.5rem] xl:mb-8">
+            <h2 className="text-3xl font-semibold md:text-[2.5rem] xl:mb-4 ">
               BLOG
             </h2>
 
             {/* search bar which will apear on mobile */}
-            <div className="flex w-full items-center gap-4 rounded-full border-[0px] border-solid border-[#585858] bg-[#353535] md:w-fit xl:hidden ">
+            <div className="gap flex w-full  items-center  gap-4 rounded-full bg-[#353535] xl:hidden">
               <svg
                 className="ml-4"
                 width="20"
@@ -131,15 +131,13 @@ function blog() {
               <input
                 type="text"
                 placeholder="search"
-                className="border-none bg-transparent  py-2 outline-0  md:py-3"
+                className="w-full border-none  bg-transparent py-2 outline-0  md:py-3"
               />
             </div>
 
             {/* blog recomendation in mobile version */}
-            <div className="mt-4  flex h-fit w-full overflow-hidden overflow-scroll lg:mt-8 lg:hidden">
-              {blogrecomendations.map((catagory) => {
-                return <Catagorypills catagory={catagory} />;
-              })}
+            <div className="flex w-full overflow-hidden xl:hidden">
+              <ScrollableTitles />
             </div>
 
             {blogs.map((blog) => {
