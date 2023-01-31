@@ -1,6 +1,8 @@
 import React from "react";
 const projecttags = ["react", "backend", "nextjs", "fullstack"];
 import Catagorypills from "../components/Catagorypills";
+import { motion, useScroll } from "framer-motion";
+
 
 const blogs = [
   {
@@ -47,6 +49,7 @@ import Blogcard from "../components/Blogcard";
 import ContactusBanner from "../components/ContactusBanner";
 
 function blogopen() {
+  const { scrollYProgress } = useScroll();
   return (
     <div>
       <div className="absolute left-[-77px] top-[-190px] z-50 h-[324px] w-[195px] bg-[#779283]   opacity-0 blur-3xl md:opacity-25 " />

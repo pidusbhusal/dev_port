@@ -5,15 +5,7 @@ import ContactusBanner from "../components/ContactusBanner"
 import {
   motion,
   useScroll,
-  useSpring,
-  useTransform,
-  useMotionValue,
-  useVelocity,
-  useAnimationFrame,
 } from "framer-motion";
-import { useRef } from "react";
-import { wrap } from "@motionone/utils";
-
 
 const projects = [
   {

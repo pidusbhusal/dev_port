@@ -9,7 +9,7 @@ const blogs = [
     blogcontent:
       "Everyone wants to know what UX is nowadays, but can a course help you become a designer? The following are my thoughts after taking the Google UX Design course a year ago. As we begin this experience, let’s",
     blogimage: "blogimg.jpg",
-    bloglink: "#",
+    bloglink: "/blogopen",
     blogtime: "8min",
     blogtags: ["React", "Android", "Web Development"],
   },
@@ -18,7 +18,7 @@ const blogs = [
     blogcontent:
       "Everyone wants to know what UX is nowadays, but can a course help you become a designer? The following are my thoughts after taking the Google UX Design course a year ago. As we begin this experience, let’s",
     blogimage: "blogimg.jpg",
-    bloglink: "#",
+    bloglink: "/blogopen",
     blogtime: "8min",
     blogtags: ["React", "Android", "Web Development"],
   },
@@ -27,7 +27,7 @@ const blogs = [
     blogcontent:
       "Everyone wants to know what UX is nowadays, but can a course help you become a designer? The following are my thoughts after taking the Google UX Design course a year ago. As we begin this experience, let’s",
     blogimage: "blogimg.jpg",
-    bloglink: "#",
+    bloglink: "/blogopen",
     blogtime: "8min",
     blogtags: ["React", "Android", "Web Development"],
   },
