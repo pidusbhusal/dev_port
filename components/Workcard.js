@@ -11,7 +11,7 @@ function Workcard({
   projectcasestudy,
 }) {
   return (
-    <div className="mb-20  ">
+    <Link href={"/project1"} passHref className="mb-20  ">
       <img
         src={projectthumbnail}
         alt="dis my work"
@@ -57,7 +57,7 @@ function Workcard({
           </button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
