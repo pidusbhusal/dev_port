@@ -3,6 +3,11 @@ import Blogcard from "../components/Blogcard";
 import ContactusBanner from "../components/ContactusBanner";
 import Catagorypills from "../components/Catagorypills";
 import ScrollableTitles from "../components/scrollableTitles";
+
+
+
+
+
 const blogs = [
   {
     blogtitle: "Project title name would be here",
