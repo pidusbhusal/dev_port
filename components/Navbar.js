@@ -61,7 +61,7 @@ const Navbar = () => {
         } sticky z-50  block w-full bg-[#0F1010]  bg-opacity-60 bg-clip-padding backdrop-blur-xl backdrop-filter transition-[top] duration-[0.3s] ease-in`}
       >
         <div className="  wrapper flex items-center justify-between  py-6 md:py-4">
-          <Link href="/">
+          <Link href="/" passHref>
             <img src="logo.svg" alt="Our Logo" />
           </Link>
 
