@@ -192,8 +192,8 @@ function blog() {
               </div>
               <h4 className="text-xl xl:text-left">Reccomended topic</h4>
               <div className="    mt-8 hidden flex-wrap justify-start gap-y-1 md:flex  ">
-                {blogrecomendations.map((blogrecomendation) => {
-                  return <Catagorypills catagory={blogrecomendation} />;
+                {blogrecomendations.map((blogrecomendation, i) => {
+                  return <Catagorypills key={i} catagory={blogrecomendation} />;
                 })}
               </div>
               <hr className="my-16 opacity-20" />

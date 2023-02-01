@@ -19,7 +19,7 @@ const projects = [
     projectlink: "google.com"
   },
   {
-    id: 1,
+    id: 2,
     projecttitle: "Poroject tite would be here",
     projctdescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
@@ -79,8 +79,8 @@ function project1() {
 
           <div className="mt-2">
             {projecttags &&
-              projecttags.map((projecttag) => {
-                return <Catagorypills catagory={projecttag} />;
+              projecttags.map((projecttag, i) => {
+                return <Catagorypills key={i} catagory={projecttag} />;
               })}
           </div>
 
@@ -136,7 +136,7 @@ function project1() {
               <div>
                 <h3 className="text-2xl font-semibold">Project Includes</h3>
                 <ul className="mt-2 text-gray-300">
-                  {projectincludes.map(projectinclude => { return (<li>{projectinclude}</li>) })}
+                  {projectincludes.map((projectinclude, i) => { return (<li key={i}>{projectinclude}</li>) })}
                 </ul>
               </div>
               <div>
@@ -196,8 +196,9 @@ function project1() {
               </div>
             </div>
             <div className=" mt-14 grid grid-cols-1 justify-start gap-x-11 sm:grid-cols-2">
-              {projects.map(project => {
+              {projects.map((project) => {
                 return (<Workcard
+                  key={project.id}
                   projectlink={project.projectlink}
                   projecttitle={project.projecttitle}
                   projectdescription={project.projctdescription}

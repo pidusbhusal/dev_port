@@ -76,8 +76,8 @@ function blogopen() {
 
               <div className="">
                 {projecttags &&
-                  projecttags.map((projecttag) => {
-                    return <Catagorypills catagory={projecttag} />;
+                  projecttags.map((projecttag,i) => {
+                    return <Catagorypills key={i} catagory={projecttag} />;
                   })}
               </div>
             </div>
@@ -208,8 +208,8 @@ function blogopen() {
             <div className=" sticky  top-10 ">
               <h4 className="text-xl ">Reccomended topic</h4>
               <div className=" mt-8  flex-wrap justify-start gap-y-1 md:flex  ">
-                {blogrecomendations.map((blogrecomendation) => {
-                  return <Catagorypills catagory={blogrecomendation} />;
+                {blogrecomendations.map((blogrecomendation,i) => {
+                  return <Catagorypills key={i} catagory={blogrecomendation} />;
                 })}
               </div>
 

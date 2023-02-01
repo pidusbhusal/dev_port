@@ -36,10 +36,8 @@ function Workcard({
       {/* buttons */}
       <div className="mt-7 flex items-center gap-3">
         <div>
-          <button className="pbtn">
-            <button onClick={() => router.push("/project1")}>
-              Read Case Study
-            </button>
+          <button className="pbtn" onClick={() => router.push("/project1")}>
+            Read Case Study
           </button>
         </div>
         <div>
