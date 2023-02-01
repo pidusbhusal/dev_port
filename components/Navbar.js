@@ -1,22 +1,27 @@
+"use client";
+
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 import React from "react";
 import { useState, useEffect } from "react";
 
 const Navbar = () => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const router = useRouter();
 
   function MyButton({ href, children }) {
     return (
-      <Link
-        href={href}
-        passHref
-        className="w-full border-b   border-y-[#ffffff35]   text-center "
+      <button
+        className="w-full border-b border-y-[#ffffff35]   py-16   text-center "
+        onClick={() => {
+          router.push(href);
+          setnavbutton(!navbutton);
+        }}
       >
-        <button className="py-16" onClick={() => setnavbutton(!navbutton)}>
-          {children}
-        </button>
-      </Link>
+        {children}
+      </button>
     );
   }
 
@@ -89,26 +94,25 @@ const Navbar = () => {
 
           <div className="flex">
             <div>
-              <Link
-                href="/contact"
+              <button
                 className="pbtn hidden  hover:bg-green-200 md:hidden "
-                passHref
+                onClick={() => {
+                  router.push("/contact");
+                }}
               >
-                <button onClick={() => setnavbutton(!navbutton)}>
-                  Get in touch
-                </button>
-              </Link>
-            </div>
-            {/* mobile button goes here */}
-            <Link
-              href="/contact"
-              passHref
-              className="pbtn   hover:bg-green-200 "
-            >
-              <button onClick={() => setnavbutton(!navbutton)}>
                 Get in touch
               </button>
-            </Link>
+            </div>
+            {/* mobile button goes here */}
+            <button
+              className="pbtn   hover:bg-green-200 md:hidden "
+              onClick={() => {
+                router.push("/contact");
+                navbutton ? "" : setnavbutton(!navbutton);
+              }}
+            >
+              Get in touch
+            </button>
             <div className="z-50 flex items-center md:hidden">
               {navbutton ? (
                 // burger menu
@@ -126,9 +130,9 @@ const Navbar = () => {
                     <path
                       d="M6.25 11.25H33.75M6.25 20H33.75M6.25 28.75H33.75"
                       stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                 </button>
@@ -148,9 +152,9 @@ const Navbar = () => {
                     <path
                       d="M10 30L30 10M10 10L30 30"
                       stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                 </button>
@@ -172,7 +176,7 @@ const Navbar = () => {
       </div>
 
       {/* this is background bg when mobile nav is open */}
-      <div 
+      <div
         className={`${
           navbutton ? " hidden opacity-0" : "  bg-opacity-50 "
         } fixed  top-0    z-10 h-full w-full place-items-center bg-[#0F1010]  bg-clip-padding py-24 text-white backdrop-blur-xl backdrop-filter transition-all duration-[0.3s]  ease-in-out md:hidden`}

@@ -4,10 +4,6 @@ import ContactusBanner from "../components/ContactusBanner";
 import Catagorypills from "../components/Catagorypills";
 import ScrollableTitles from "../components/scrollableTitles";
 
-
-
-
-
 const blogs = [
   {
     blogtitle: "Project title name would be here",
@@ -121,16 +117,16 @@ function blog() {
                   cy="11.7659"
                   r="8.98856"
                   stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M18.0195 18.4844L21.5436 21.9992"
                   stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
               <input
@@ -145,9 +141,10 @@ function blog() {
               <ScrollableTitles />
             </div>
 
-            {blogs.map((blog) => {
+            {blogs.map((blog, i) => {
               return (
                 <Blogcard
+                  key={i}
                   blogcontent={blog.blogcontent}
                   blogimg={blog.blogimage}
                   blogtitle={blog.blogtitle}
@@ -175,16 +172,16 @@ function blog() {
                     cy="11.7659"
                     r="8.98856"
                     stroke="white"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M18.0195 18.4844L21.5436 21.9992"
                     stroke="white"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
                 <input

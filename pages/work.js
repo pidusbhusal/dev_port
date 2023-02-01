@@ -30,7 +30,7 @@ const projects = [
     projectthumbnail: "workimage.jpg",
   },
   {
-    id: 2,
+    id: 3,
     projecttitle: "Poroject tite would be here",
     projctdescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
@@ -39,7 +39,7 @@ const projects = [
   },
 
   {
-    id: 2,
+    id: 4,
     projecttitle: "Poroject tite would be here",
     projctdescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
@@ -47,7 +47,7 @@ const projects = [
     projectthumbnail: "workimage.jpg",
   },
   {
-    id: 2,
+    id: 5,
     projecttitle: "Poroject tite would be here",
     projctdescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
@@ -56,7 +56,7 @@ const projects = [
   },
 
   {
-    id: 2,
+    id: 6,
     projecttitle: "Poroject tite would be here",
     projctdescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
@@ -88,16 +88,16 @@ function work() {
                 cy="11.7659"
                 r="8.98856"
                 stroke="white"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M18.0195 18.4844L21.5436 21.9992"
                 stroke="white"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
             <input
@@ -110,11 +110,7 @@ function work() {
         {/* Catagories  tags*/}
 
         <ScrollableTitles />
-        {/* <div className="mt-8 mb-8">
-          {catagories.map((catagory) => {
-            return <Catagorypills catagory={catagory} />;
-          })}
-        </div> */}
+
         {/* projects */}
         <div className="mt-8 grid grid-cols-1 justify-start gap-x-11 sm:grid-cols-2 md:mt-4">
           {projects.map((project) => {

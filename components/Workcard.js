@@ -11,7 +11,7 @@ function Workcard({
   projectcasestudy,
 }) {
   return (
-    <Link href={"/project1"} passHref className="mb-20  ">
+    <div className="mb-20  ">
       <img
         src={projectthumbnail}
         alt="dis my work"
@@ -19,8 +19,8 @@ function Workcard({
       />
       <div className=" mt-7 flex flex-wrap ">
         {catagories &&
-          catagories.map((catagory) => {
-            return <Catagorypills catagory={catagory} />;
+          catagories.map((catagory, i) => {
+            return <Catagorypills key={i} catagory={catagory} />;
           })}
       </div>
       <div className="mt-5">
@@ -57,7 +57,7 @@ function Workcard({
           </button>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }
 

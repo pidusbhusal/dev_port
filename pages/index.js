@@ -212,9 +212,10 @@ export default function Home() {
             </div>
 
             <div className="mt-14 grid grid-cols-1 justify-start gap-x-11 sm:grid-cols-2 ">
-              {projects.map((project) => {
+              {projects.map((project, i) => {
                 return (
                   <Workcard
+                    key={i}
                     projecttitle={project.projecttitle}
                     projectdescription={project.projctdescription}
                     projectthumbnail={project.projectthumbnail}
@@ -256,9 +257,9 @@ export default function Home() {
                 <div className="date mt-10 flex flex-col  gap-5">
                   <div className="absolute top-[90%] z-10 ml-4 h-16 w-[82%] bg-last-gred-mobile"></div>
                   <div className="absolute  ml-4 h-[100%]">
-                    {workexpes.map((workexp, key) => (
+                    {workexpes.map((workexp, i) => (
                       <div
-                        key={key}
+                        key={i}
                         className={`${workexp.workgap} flex ${workexp.timeline}   items-center  justify-center rounded-lg  border-[0.5px] border-[#313131] bg-opacity-60   bg-work-gred  bg-clip-padding px-6  backdrop-blur-xl backdrop-filter`}
                       >
                         <div>
@@ -354,7 +355,7 @@ export default function Home() {
               </div>
             </div>
             {/* desktop version */}
-            <div class=" mt-20 hidden xl:grid ">
+            <div className=" mt-20 hidden xl:grid ">
               <div>
                 {/* date at top */}
                 <div className="dates flex justify-between md:max-w-[100%]">
@@ -376,9 +377,9 @@ export default function Home() {
                 {/* bars */}
                 <div className="relative my-7 flex justify-between md:max-w-[100%]">
                   <div className="absolute inline w-[100%]">
-                    {workexpes.map((workexp, key) => (
+                    {workexpes.map((workexp, i) => (
                       <div
-                        key={key}
+                        key={i}
                         className={`${workexp.workgap} flex ${workexp.timeline}   items-center  justify-center rounded-lg  border-[0.5px] border-[#313131] bg-opacity-60   bg-work-gred  bg-clip-padding px-6  backdrop-blur-xl backdrop-filter`}
                       >
                         <div>
@@ -459,8 +460,8 @@ export default function Home() {
 
             {/* testimonial company */}
             <div className=" grid grid-cols-2 place-items-start  gap-7  md:grid-cols-3 md:gap-28 md:gap-y-2 xl:grid-cols-5">
-              {testimonialcompanys.map((testimonialcompany) => {
-                return <img src={testimonialcompany} />;
+              {testimonialcompanys.map((testimonialcompany, i) => {
+                return <img key={i} src={testimonialcompany} />;
               })}
             </div>
           </div>
@@ -496,9 +497,10 @@ export default function Home() {
             <div className="flex flex-wrap justify-between md:mt-20">
               {/* blog section */}
               <div className="grid place-items-center  gap-16">
-                {blogs.map((blog) => {
+                {blogs.map((blog, i) => {
                   return (
                     <Blogcard
+                      key={i}
                       blogcontent={blog.blogcontent}
                       blogimg={blog.blogimage}
                       blogtitle={blog.blogtitle}
@@ -513,8 +515,10 @@ export default function Home() {
               <div className=" hidden xl:block xl:w-64">
                 <h4 className="text-xl xl:text-left">Reccomended topic</h4>
                 <div className=" justify-left mt-8 hidden flex-wrap gap-y-1 md:flex  ">
-                  {blogrecomendations.map((blogrecomendation) => {
-                    return <Catagorypills catagory={blogrecomendation} />;
+                  {blogrecomendations.map((blogrecomendation, i) => {
+                    return (
+                      <Catagorypills key={i} catagory={blogrecomendation} />
+                    );
                   })}
                 </div>
               </div>

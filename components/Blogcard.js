@@ -24,8 +24,8 @@ function Blogcard({
           <div className="mt-4 flex  items-center gap-4">
             <div className="variation overflow-hidden line-clamp-1">
               {catagories &&
-                catagories.map((catagory) => {
-                  return <Catagorypills catagory={catagory} />;
+                catagories.map((catagory, i) => {
+                  return <Catagorypills key={i} catagory={catagory} />;
                 })}
             </div>
             ·<p className="text-gray-400">{blogtime}</p>
@@ -47,8 +47,8 @@ function Blogcard({
         <div className="mt-4 flex  items-center gap-4">
           <div className="variation overflow-hidden line-clamp-1">
             {catagories &&
-              catagories.map((catagory) => {
-                return <Catagorypills catagory={catagory} />;
+              catagories.map((catagory, i) => {
+                return <Catagorypills key={i} catagory={catagory} />;
               })}
           </div>
           ·<p className="text-gray-400">{blogtime}</p>
