@@ -20,6 +20,7 @@ const projects = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation  Ut enim ad minim veniam, quis nostrud exercitation",
     catagories: ["React", "Android", "Typescript", "handsome"],
     projectthumbnail: "workimage.jpg",
+    projectcasestudy: "/project1",
   },
   {
     id: 2,
@@ -28,6 +29,7 @@ const projects = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
     catagories: ["React", "Android", "Typescript", "handsome"],
     projectthumbnail: "workimage.jpg",
+    projectcasestudy: "/project1",
   },
   {
     id: 3,
@@ -36,6 +38,7 @@ const projects = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
     catagories: ["React", "Android", "Typescript", "handsome"],
     projectthumbnail: "workimage.jpg",
+    projectcasestudy: "/project1",
   },
 
   {
@@ -45,6 +48,7 @@ const projects = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
     catagories: ["React", "Android", "Typescript", "handsome"],
     projectthumbnail: "workimage.jpg",
+    projectcasestudy: "/project1",
   },
   {
     id: 5,
@@ -53,6 +57,7 @@ const projects = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
     catagories: ["React", "Android", "Typescript", "handsome"],
     projectthumbnail: "workimage.jpg",
+    projectcasestudy: "/project1",
   },
 
   {
@@ -62,6 +67,7 @@ const projects = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
     catagories: ["React", "Android", "Typescript", "handsome"],
     projectthumbnail: "workimage.jpg",
+    projectcasestudy: "/project1",
   },
 ];
 
@@ -117,6 +123,7 @@ function work() {
             return (
               <Workcard
                 key={project.id}
+                projectcasestudy={project.projectcasestudy}
                 projecttitle={project.projecttitle}
                 projectdescription={project.projctdescription}
                 projectthumbnail={project.projectthumbnail}

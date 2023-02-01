@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Catagorypills from "./Catagorypills";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 function Workcard({
   projectthumbnail,
@@ -10,6 +12,8 @@ function Workcard({
   projectlink,
   projectcasestudy,
 }) {
+  const router = useRouter();
+
   return (
     <div className="mb-20  ">
       <img
@@ -33,9 +37,9 @@ function Workcard({
       <div className="mt-7 flex items-center gap-3">
         <div>
           <button className="pbtn">
-            <Link href={projectcasestudy ? projectcasestudy : "#"}>
+            <button onClick={() => router.push("/project1")}>
               Read Case Study
-            </Link>
+            </button>
           </button>
         </div>
         <div>

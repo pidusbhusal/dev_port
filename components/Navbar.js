@@ -95,7 +95,7 @@ const Navbar = () => {
           <div className="flex">
             <div>
               <button
-                className="pbtn hidden  hover:bg-green-200 md:hidden "
+                className="pbtn hidden  hover:bg-green-200 md:block "
                 onClick={() => {
                   router.push("/contact");
                 }}
