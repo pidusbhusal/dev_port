@@ -21,6 +21,20 @@ const workexpes = [
     workgap: "mt-[0%] xl:ml-[0]",
     timeline: "h-[21%] xl:w-[21%] xl:h-[0%] xl:p-4",
     casestudy: "/project1",
+    desciption:
+      "Developed numerous freelance projects consisting of work  in Magento 2 module development, Magento 2 theme development, Mobile Application development in React Native and Ionic Framework and LAMP stack.",
+    skills: [
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+    ],
   },
 
   {
@@ -29,6 +43,20 @@ const workexpes = [
     employer: "Inititaive Nepal",
     workgap: "mt-[7%] xl:ml-[29%] xl:mt-2",
     timeline: "h-[9%] xl:w-[9%] xl:h-[0%] xl:p-4",
+    desciption:
+      "Developed numerous freelance projects consisting of work  in Magento 2 module development, Magento 2 theme development, Mobile Application development in React Native and Ionic Framework and LAMP stack.",
+    skills: [
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+    ],
   },
   {
     id: 3,
@@ -36,6 +64,20 @@ const workexpes = [
     employer: "Java Software",
     workgap: "mt-[6%] xl:ml-[44%] xl:mt-2",
     timeline: "h-[10%] xl:w-[10%] xl:h-[0%] xl:p-4 ",
+    desciption:
+      "Developed numerous freelance projects consisting of work  in Magento 2 module development, Magento 2 theme development, Mobile Application development in React Native and Ionic Framework and LAMP stack.",
+    skills: [
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+    ],
   },
   {
     id: 4,
@@ -43,6 +85,20 @@ const workexpes = [
     employer: "Sastodeal",
     workgap: "mt-[3%] xl:ml-[57%] xl:mt-2",
     timeline: "h-[23%] xl:w-[23%] xl:h-[0%] xl:p-4 ",
+    desciption:
+      "Developed numerous freelance projects consisting of work  in Magento 2 module development, Magento 2 theme development, Mobile Application development in React Native and Ionic Framework and LAMP stack.",
+    skills: [
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+    ],
   },
   {
     id: 5,
@@ -50,6 +106,20 @@ const workexpes = [
     employer: "Freelancing",
     workgap: "mt-[2%] xl:ml-[82%] xl:mt-2",
     timeline: "h-[21%] xl:w-[21%] xl:h-[0%] xl:p-4",
+    desciption:
+      "Developed numerous freelance projects consisting of work  in Magento 2 module development, Magento 2 theme development, Mobile Application development in React Native and Ionic Framework and LAMP stack.",
+    skills: [
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+      "test",
+    ],
     islast: true,
   },
 ];
@@ -58,9 +128,12 @@ export default function test() {
   const [selectedId, setSelectedId] = useState(null);
   const [selectedJob, setSelectedJob] = useState(false);
 
-  selectedId && selectedId != selectedJob.id
-    ? setSelectedJob(workexpes.find((data) => data.id === selectedId))
-    : "";
+  {
+    selectedId &&
+      (selectedId != selectedJob.id
+        ? setSelectedJob(workexpes.find((data) => data.id === selectedId))
+        : "");
+  }
 
   return (
     <div className="wrapper text-white">
@@ -93,47 +166,20 @@ export default function test() {
                     setSelectedId(workexp.id);
                   }}
                   key={i}
-                  className={`${workexp.workgap} flex ${workexp.timeline}   items-center  justify-center rounded-lg  border-[0.5px] border-[#313131] bg-opacity-60   bg-work-gred  bg-clip-padding px-6  backdrop-blur-xl backdrop-filter`}
+                  className={`${workexp.workgap} flex ${workexp.timeline}  cursor-pointer items-center  justify-center rounded-lg  border-[0.5px] border-[#313131] bg-opacity-60   bg-work-gred  bg-clip-padding px-6  backdrop-blur-xl backdrop-filter`}
                 >
-                  <div>
-                    <h3 className="text-center  font-medium">{workexp.work}</h3>
-                    <p className="text-center text-sm text-gray-400">
+                  <motion.div>
+                    <motion.h3 className="  font-medium">
+                      {workexp.work}
+                    </motion.h3>
+                    <motion.p className="text-sm text-gray-400">
                       {workexp.employer}
-                    </p>
-                  </div>
+                    </motion.p>
+                  </motion.div>
                 </motion.div>
               ))}
             </div>
 
-            <AnimatePresence>
-              {selectedJob && (
-                <motion.div
-                  layoutId={selectedId}
-                  className={`${selectedJob.workgap} text   absolute  z-20  place-items-center rounded-lg  border-[0.5px]   border-[#313131]  bg-work-gred px-10 py-10`}
-                >
-                  <div>
-                    <h3 className="  text-xl font-medium">
-                      {selectedJob.work}
-                    </h3>
-                    <p className=" mb-2 text-lg text-gray-400">
-                      {selectedJob.employer}
-                    </p>
-                    <p className=" mb-2 max-w-prose">
-                      Developed numerous freelance projects consisting of work
-                      in Magento 2 module development, Magento 2 theme
-                      development, Mobile Application development in React
-                      Native and Ionic Framework and LAMP stack.
-                    </p>
-                    <span>Skills: </span>
-                    {Skills.map((skill, i) => (
-                      <span className=" text-gray-400" key={i}>
-                        {skill} ·{" "}
-                      </span>
-                    ))}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
             <img src="timeline_vr.svg" className="" alt="" />
             <img src="timeline_vr.svg" className="" alt="" />
             <img src="timeline_vr.svg" className="" alt="" />
@@ -149,6 +195,69 @@ export default function test() {
             <img src="timeline_vr.svg" className="" alt="" />
           </div>
 
+          <AnimatePresence>
+            {selectedJob && (
+              <motion.div
+                onClick={() => {
+                  setSelectedId(null);
+                  setSelectedJob(false);
+                }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="fixed  top-0  left-0  z-50 flex h-full w-full items-center justify-center bg-black bg-opacity-80"
+              >
+                <motion.div
+                  onClick={(e) => e.stopPropagation()}
+                  layoutId={selectedId}
+                  className={`text   absolute  z-20  place-items-center rounded-lg  border-[0.5px]   border-[#313131]  bg-work-gred px-10 py-10`}
+                >
+                  <motion.div>
+                    <motion.div className="flex w-full justify-end">
+                      <motion.button
+                        onClick={() => {
+                          setSelectedId(null);
+                          setSelectedJob(false);
+                        }}
+                        className="  rounded-sm bg-gray-200 bg-opacity-10 px-2 py-2 "
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="currentColor"
+                          className="h-6 w-6"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
+                      </motion.button>
+                    </motion.div>
+
+                    <motion.h3 className="  text-xl font-medium">
+                      {selectedJob.work}
+                    </motion.h3>
+                    <motion.p className=" mb-2 text-lg text-gray-400">
+                      {selectedJob.employer}
+                    </motion.p>
+                    <motion.p className=" mb-2 max-w-prose">
+                      {selectedJob.desciption}
+                    </motion.p>
+                    <span>Skills: </span>
+                    {selectedJob.skills.map((skill, i) => (
+                      <span className=" text-gray-400" key={i}>
+                        {skill} ·{" "}
+                      </span>
+                    ))}
+                  </motion.div>
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
           {/* buttom date */}
           <div className="dates flex justify-between md:max-w-[100%]">
             <span className="items-top flex ">2017</span>
