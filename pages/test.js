@@ -87,7 +87,8 @@ export default function test() {
           <div className="relative my-7 flex justify-between md:max-w-[100%]">
             <div className="absolute inline w-[100%]">
               {workexpes.map((workexp, i) => (
-                <div
+                <motion.div
+                  layoutId={workexp.id}
                   onClick={() => {
                     setSelectedId(workexp.id);
                   }}
@@ -100,37 +101,39 @@ export default function test() {
                       {workexp.employer}
                     </p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
-            {selectedJob && (
-              <AnimatePresence>
+
+            <AnimatePresence>
+              {selectedJob && (
                 <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  exit={{ scale: 0 }}
-                  layout
-                  className="text absolute top-[50%] right-[50%] bg-timeline-bg px-10 py-10"
+                  layoutId={selectedId}
+                  className={`${selectedJob.workgap} text   absolute  z-20  place-items-center rounded-lg  border-[0.5px]   border-[#313131]  bg-work-gred px-10 py-10`}
                 >
-                  <h3 className="  text-xl font-medium">{selectedJob.work}</h3>
-                  <p className=" mb-2 text-lg text-gray-400">
-                    {selectedJob.employer}
-                  </p>
-                  <p className=" mb-2">
-                    Developed numerous freelance projects consisting of work in
-                    Magento 2 module development, Magento 2 theme development,
-                    Mobile Application development in React Native and Ionic
-                    Framework and LAMP stack.
-                  </p>
-                  <span>Skills: </span>
-                  {Skills.map((skill, i) => (
-                    <span className=" text-gray-400" key={i}>
-                      {skill} ·{" "}
-                    </span>
-                  ))}
+                  <div>
+                    <h3 className="  text-xl font-medium">
+                      {selectedJob.work}
+                    </h3>
+                    <p className=" mb-2 text-lg text-gray-400">
+                      {selectedJob.employer}
+                    </p>
+                    <p className=" mb-2 max-w-prose">
+                      Developed numerous freelance projects consisting of work
+                      in Magento 2 module development, Magento 2 theme
+                      development, Mobile Application development in React
+                      Native and Ionic Framework and LAMP stack.
+                    </p>
+                    <span>Skills: </span>
+                    {Skills.map((skill, i) => (
+                      <span className=" text-gray-400" key={i}>
+                        {skill} ·{" "}
+                      </span>
+                    ))}
+                  </div>
                 </motion.div>
-              </AnimatePresence>
-            )}
+              )}
+            </AnimatePresence>
             <img src="timeline_vr.svg" className="" alt="" />
             <img src="timeline_vr.svg" className="" alt="" />
             <img src="timeline_vr.svg" className="" alt="" />
