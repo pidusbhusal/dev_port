@@ -38,7 +38,7 @@ function contacus() {
                 required
                 type="text"
                 placeholder="ex. Chrish Doo"
-                className="focused max-w-xs rounded bg-[#353535] px-4 py-3 outline-none "
+                className="focused rounded bg-[#353535] px-4 py-3 outline-none md:max-w-xs "
               />
             </div>
             <div className="flex flex-col">
@@ -46,7 +46,7 @@ function contacus() {
               <input
                 type="text"
                 placeholder="ex. +123 123456789"
-                className="focused max-w-xs rounded bg-[#353535] px-4 py-3 outline-none "
+                className="focused rounded bg-[#353535] px-4 py-3 outline-none md:max-w-xs "
               />
             </div>
             <div className="flex flex-col">
@@ -55,7 +55,7 @@ function contacus() {
                 required
                 type="text"
                 placeholder="ex. example@gmail.com"
-                className="focused max-w-xs rounded bg-[#353535] px-4 py-3 outline-none "
+                className="focused max-w-full rounded bg-[#353535] px-4 py-3 outline-none md:max-w-xs "
               />
             </div>
             <div className="flex flex-col">
@@ -63,7 +63,7 @@ function contacus() {
               <textarea
                 type="textbox"
                 placeholder="Enter your message here"
-                className="focused h-32 max-w-xs rounded bg-[#353535] px-4 py-3 outline-none "
+                className="focused h-32 rounded bg-[#353535] px-4 py-3 outline-none md:max-w-xs "
               />
             </div>
             <div className="mt-6">
@@ -92,7 +92,7 @@ function contacus() {
                   required
                   type="text"
                   placeholder="ex. example@gmail.com"
-                  className="focused max-w-xs rounded bg-[#353535] px-4 py-3 outline-none "
+                  className="focused rounded bg-[#353535] px-4 py-3 outline-none md:max-w-xs "
                 />
               </div>
 
