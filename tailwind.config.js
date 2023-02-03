@@ -11,6 +11,8 @@ module.exports = {
         "last-gred-border":" linear-gradient(180deg, #313131 68.75%, rgba(34, 33, 33, 0) 100%)",
       },
       backgroundImage: {
+        "fading-bg-left":"linear-gradient(90deg, #101111 44.46%, rgba(16, 17, 17, 0) 100%);",
+        "fading-bg-right":"linear-gradient(90deg, rgba(16, 17, 17, 0) 3.41%, rgba(16, 17, 17, 0.166667) 11.76%, #101111 57.54%);",
         "timeline-bg":"linear-gradient(245.05deg, #141414 -13.09%, #0A0A0A 100.52%)",
         "backgound-gred": "#101111",
         "testimonial-gred":"linear-gradient(226.65deg, #262626 0%, #1C1B1B 103.05%)",
