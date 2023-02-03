@@ -25,13 +25,13 @@ const generatedTopics = [
 export default function ScrollableTitles() {
   return (
     <div className="">
-      <div className="relative flex w-[97%]  items-start">
+      <div className="relative flex  w-[87%] items-start md:w-[95%] xl:w-[95%]">
         <div className="absolute  z-10">
           <button
             onClick={() => {
               document.getElementById("scrollbar").scrollLeft += -600;
             }}
-            className="top- right-full z-10  bg-fading-bg-left  px-5 py-3 text-black"
+            className="top- right-full z-10  bg-fading-bg-left  px-8 py-3 text-black"
           >
             <svg
               width="18"
@@ -54,7 +54,7 @@ export default function ScrollableTitles() {
           onClick={() => {
             document.getElementById("scrollbar").scrollLeft += +600;
           }}
-          className=" absolute left-full z-10    bg-fading-bg-right px-5 py-3 text-black"
+          className=" absolute left-full z-10    bg-fading-bg-right px-10 py-3 text-black"
         >
           <svg
             width="18"
