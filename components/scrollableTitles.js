@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import Catagorypills from "./Catagorypills";
 
 const generatedTopics = [
@@ -23,36 +23,39 @@ const generatedTopics = [
 ];
 
 export default function ScrollableTitles() {
+  const [displayLeft, setDisplayLeft] = useState(false);
   return (
     <div className="">
       <div className="relative flex  w-[87%] items-start md:w-[95%] xl:w-[95%]">
-        <div className="absolute  z-10">
-          <button
-            onClick={() => {
-              document.getElementById("scrollbar").scrollLeft += -600;
-            }}
-            className="top- right-full z-10  bg-fading-bg-left  px-8 py-3 text-black"
-          >
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 18 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+        {displayLeft && (
+          <div className="absolute  z-10">
+            <button
+              onClick={() => {
+                document.getElementById("scrollbar").scrollLeft += -600;
+              }}
+              className="top- right-full z-10  bg-fading-bg-left  px-8 py-3 text-black"
             >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M9 7.86805e-07C4.02944 1.22135e-06 -1.22135e-06 4.02944 -7.86805e-07 9C-3.52265e-07 13.9706 4.02944 18 9 18C13.9706 18 18 13.9706 18 9C18 4.02944 13.9706 3.52265e-07 9 7.86805e-07ZM9.89377 13.6954C10.2574 14.059 10.8469 14.059 11.2104 13.6954C11.574 13.3318 11.574 12.7424 11.2104 12.3788L7.52396 8.69227L11.2104 5.00578C11.574 4.64219 11.574 4.05269 11.2104 3.6891C10.8469 3.32551 10.2574 3.32551 9.89377 3.6891L4.8906 8.69227L9.89377 13.6954Z"
-                fill="white"
-              />
-            </svg>
-          </button>
-        </div>
-
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9 7.86805e-07C4.02944 1.22135e-06 -1.22135e-06 4.02944 -7.86805e-07 9C-3.52265e-07 13.9706 4.02944 18 9 18C13.9706 18 18 13.9706 18 9C18 4.02944 13.9706 3.52265e-07 9 7.86805e-07ZM9.89377 13.6954C10.2574 14.059 10.8469 14.059 11.2104 13.6954C11.574 13.3318 11.574 12.7424 11.2104 12.3788L7.52396 8.69227L11.2104 5.00578C11.574 4.64219 11.574 4.05269 11.2104 3.6891C10.8469 3.32551 10.2574 3.32551 9.89377 3.6891L4.8906 8.69227L9.89377 13.6954Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+          </div>
+        )}
         <button
           onClick={() => {
             document.getElementById("scrollbar").scrollLeft += +600;
+            setDisplayLeft(true);
           }}
           className=" absolute left-full z-10    bg-fading-bg-right px-10 py-3 text-black"
         >
