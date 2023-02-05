@@ -256,6 +256,7 @@ export default function Home() {
       },
     },
   };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -352,7 +353,13 @@ export default function Home() {
         </div>
 
         {/* Timeline */}
-        <div className="bg-timeline-bg py-28 md:py-28">
+        <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeInUp}
+          className="bg-timeline-bg py-28 md:py-28"
+        >
           <div className="wrapper">
             <h2 className="text-3xl font-semibold md:text-[2.5rem]">
               TIMELINE
@@ -620,20 +627,32 @@ export default function Home() {
               )}
             </AnimatePresence>
           </div>
-        </div>
+        </motion.div>
 
         {/* testimonials*/}
         <div className="pt-16">
           <div className="wrapper">
             <div className="flex flex-wrap items-center justify-between gap-y-4">
-              <h2 className="text-3xl font-semibold leading-tight md:text-[2.5rem] xl:w-[20ch]">
+              <motion.h2
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0 }}
+                variants={fadeInUp}
+                className="text-3xl font-semibold leading-tight md:text-[2.5rem] xl:w-[20ch]"
+              >
                 WHAT PEOPLE ARE SAYING ABOUT ME
-              </h2>
+              </motion.h2>
 
-              <p className="leading-loose xl:w-[37ch]">
+              <motion.p
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0 }}
+                variants={fadeInUp}
+                className="leading-loose xl:w-[37ch]"
+              >
                 Over the year I have worked with plenty of client and here are
                 some of their testimonial
-              </p>
+              </motion.p>
             </div>
             {/* testimonial card */}
             <div className="my-20 grid gap-6 md:mt-24 md:grid-cols-2 lg:grid-cols-4">
@@ -651,11 +670,17 @@ export default function Home() {
             </div>
 
             {/* testimonial company */}
-            <div className=" grid grid-cols-2 place-items-start  gap-7  md:grid-cols-3 md:gap-28 md:gap-y-2 xl:grid-cols-5">
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0 }}
+              variants={fadeInUp}
+              className=" grid grid-cols-2 place-items-start  gap-7  md:grid-cols-3 md:gap-28 md:gap-y-2 xl:grid-cols-5"
+            >
               {testimonialcompanys.map((testimonialcompany, i) => {
                 return <img key={i} src={testimonialcompany} />;
               })}
-            </div>
+            </motion.div>
           </div>
         </div>
 

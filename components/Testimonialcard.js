@@ -1,8 +1,29 @@
 import React from "react";
+import { motion } from "framer-motion";
+const fadeInUp = {
+  offscreen: {
+    y: 50,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+
+    transition: {
+      type: "spring",
+
+      duration: 2,
+    },
+  },
+};
 
 function Testimonialcard({ description, name, title, profile }) {
   return (
-    <div
+    <motion.div
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0 }}
+      variants={fadeInUp}
       className={` grid items-stretch gap-5 rounded-lg border-solid border-[#1C1B1B] bg-opacity-20 bg-clip-padding py-7 px-7 backdrop-blur-xl backdrop-filter   first:border-[1px] first:bg-testimonial-gred`}
     >
       <img src="./quote.svg" alt="" />
@@ -16,7 +37,7 @@ function Testimonialcard({ description, name, title, profile }) {
           <p className="text-sm text-gray-400">{title}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
