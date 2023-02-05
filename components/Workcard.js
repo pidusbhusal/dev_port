@@ -3,6 +3,24 @@ import React from "react";
 import Catagorypills from "./Catagorypills";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
+
+const cardVariants = {
+  offscreen: {
+    y: 50,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+
+    transition: {
+      type: "spring",
+      delay: 0.1,
+      duration: 0.8,
+    },
+  },
+};
 
 function Workcard({
   projectthumbnail,
@@ -15,7 +33,13 @@ function Workcard({
   const router = useRouter();
 
   return (
-    <div className="mb-20  ">
+    <motion.div
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0 }}
+      variants={cardVariants}
+      className="mb-20  "
+    >
       <img
         src={projectthumbnail}
         alt="dis my work"
@@ -59,7 +83,7 @@ function Workcard({
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

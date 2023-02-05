@@ -49,7 +49,11 @@ import ContactusBanner from "../components/ContactusBanner";
 function blogopen() {
   const { scrollYProgress } = useScroll();
   return (
-    <motion.div exit={{opacity:0}}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div className="absolute left-[-77px] top-[-190px] z-50 h-[324px] w-[195px] bg-[#779283]   opacity-0 blur-3xl md:opacity-25 " />
 
       {/* this will show progress in blog */}
@@ -76,7 +80,7 @@ function blogopen() {
 
               <div className="">
                 {projecttags &&
-                  projecttags.map((projecttag,i) => {
+                  projecttags.map((projecttag, i) => {
                     return <Catagorypills key={i} catagory={projecttag} />;
                   })}
               </div>
@@ -208,7 +212,7 @@ function blogopen() {
             <div className=" sticky  top-10 ">
               <h4 className="text-xl ">Reccomended topic</h4>
               <div className=" mt-8  flex-wrap justify-start gap-y-1 md:flex  ">
-                {blogrecomendations.map((blogrecomendation,i) => {
+                {blogrecomendations.map((blogrecomendation, i) => {
                   return <Catagorypills key={i} catagory={blogrecomendation} />;
                 })}
               </div>

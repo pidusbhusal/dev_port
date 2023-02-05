@@ -55,10 +55,17 @@ const Navbar = () => {
   const [navbutton, setnavbutton] = useState(true);
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      >
+      initial={{ y: -10, opacity: 0 }}
+      animate={{
+        y: 0,
+        opacity: 1,
+        transition: {
+          type: "spring",
+
+          duration: 0.8,
+        },
+      }}
+    >
       <nav
         className={` ${
           show ? "top-0" : "top-[-100px]"

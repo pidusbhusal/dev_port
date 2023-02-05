@@ -240,6 +240,22 @@ export default function Home() {
         : "");
   }
 
+  const fadeInUp = {
+    offscreen: {
+      y: 50,
+      opacity: 0,
+    },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+
+      transition: {
+        type: "spring",
+
+        duration: 1,
+      },
+    },
+  };
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -252,9 +268,15 @@ export default function Home() {
       <main className="py-20 text-white ">
         <div className="absolute left-[-77px] top-[-190px] z-50 h-[324px] w-[195px] bg-[#779283]   opacity-0 blur-3xl md:opacity-25 " />
         {/* herosection */}
-        <div className=" wrapper flex flex-wrap-reverse items-end justify-center md:flex-nowrap  ">
+        <motion.div className=" wrapper flex flex-wrap-reverse items-end justify-center md:flex-nowrap  ">
           <div className="mt-10 md:mt-0">
-            <button className=" group flex w-[100%] items-center justify-between rounded-full bg-white px-9 py-4 text-black hover:bg-green-200 md:w-auto md:items-center md:gap-[10rem] md:px-8">
+            <motion.button
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0 }}
+              variants={fadeInUp}
+              className=" group flex w-[100%] items-center justify-between rounded-full bg-white px-9 py-4 text-black hover:bg-green-200 md:w-auto md:items-center md:gap-[10rem] md:px-8"
+            >
               <p className="text-black">See My Work</p>
               <svg
                 width="14"
@@ -268,20 +290,38 @@ export default function Home() {
                   fill="black"
                 />
               </svg>
-            </button>
-            <h1 className="line mt-9  text-[2.4rem] font-bold leading-10 md:text-[4rem] md:leading-[4.15rem]">
+            </motion.button>
+            <motion.h1
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0 }}
+              variants={fadeInUp}
+              className="line mt-9  text-[2.4rem] font-bold leading-10 md:text-[4rem] md:leading-[4.15rem]"
+            >
               I'M A FULL STACK DEVELOPER
-            </h1>
-            <p className="mt-5 max-w-[49ch]">
+            </motion.h1>
+            <motion.p
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0 }}
+              variants={fadeInUp}
+              className="mt-5 max-w-[49ch]"
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim
-            </p>
+            </motion.p>
           </div>
-          <div className="overflow-hidden rounded-lg ">
+          <motion.div
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0 }}
+            variants={fadeInUp}
+            className="overflow-hidden rounded-lg "
+          >
             <img width="100%" src="./profile.jpg" alt="Me 😁" />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* work */}
 

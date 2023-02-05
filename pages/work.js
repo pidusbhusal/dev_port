@@ -74,7 +74,12 @@ const projects = [
 
 function work() {
   return (
-    <motion.div exit={{ opacit: 0 }} className="text-white">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacit: 0 }}
+      className="text-white"
+    >
       <div className="absolute left-[-77px] top-[-190px] z-50 h-[324px] w-[195px] bg-[#779283]   opacity-0 blur-3xl md:opacity-25 " />
 
       <div className="wrapper">
