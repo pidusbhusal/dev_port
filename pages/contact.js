@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const social = {
   email: "pidusbhusal@gmail.com",
@@ -21,7 +22,7 @@ const social = {
 
 function contacus() {
   return (
-    <div>
+    <motion.div exit={{ exit: 0 }}>
       <div className="absolute left-[-77px] top-[-190px] z-50 h-[324px] w-[195px] bg-[#779283]   opacity-0 blur-3xl md:opacity-25 " />
 
       <div className="wrapper mb-60 grid gap-y-16 text-white lg:grid-cols-2">
@@ -275,7 +276,7 @@ function contacus() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

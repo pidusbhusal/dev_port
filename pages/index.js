@@ -241,7 +241,11 @@ export default function Home() {
   }
 
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <Head>
         <title>Create Next App</title>
       </Head>
@@ -680,6 +684,6 @@ export default function Home() {
           <ContactusBanner />
         </div>
       </main>
-    </>
+    </motion.div>
   );
 }

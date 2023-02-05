@@ -3,7 +3,7 @@ import Blogcard from "../components/Blogcard";
 import ContactusBanner from "../components/ContactusBanner";
 import Catagorypills from "../components/Catagorypills";
 import ScrollableTitles from "../components/scrollableTitles";
-
+import { motion } from "framer-motion";
 const blogs = [
   {
     blogtitle: "Project title name would be here",
@@ -89,7 +89,11 @@ const blogrecomendations = [
 
 function blog() {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div className="absolute left-[-77px] top-[-190px] z-50 h-[324px] w-[195px] bg-[#779283]   opacity-0 blur-3xl md:opacity-25 " />
 
       <div className="wrapper text-white">
@@ -254,7 +258,7 @@ function blog() {
       </div>
 
       <ContactusBanner />
-    </div>
+    </motion.div>
   );
 }
 

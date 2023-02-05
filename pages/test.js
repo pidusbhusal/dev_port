@@ -136,7 +136,7 @@ export default function test() {
   }
 
   return (
-    <div className="wrapper text-white">
+    <motion.div exit={{ opacity: 0 }} className="wrapper text-white">
       {/* mobile version */}
       <div className="relative xl:hidden ">
         <div className="flex justify-between">
@@ -336,6 +336,6 @@ export default function test() {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 }

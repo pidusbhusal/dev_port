@@ -49,7 +49,7 @@ import ContactusBanner from "../components/ContactusBanner";
 function blogopen() {
   const { scrollYProgress } = useScroll();
   return (
-    <div>
+    <motion.div exit={{opacity:0}}>
       <div className="absolute left-[-77px] top-[-190px] z-50 h-[324px] w-[195px] bg-[#779283]   opacity-0 blur-3xl md:opacity-25 " />
 
       {/* this will show progress in blog */}
@@ -244,7 +244,7 @@ function blogopen() {
         </div>
       </div>
       <ContactusBanner />
-    </div>
+    </motion.div>
   );
 }
 

@@ -3,6 +3,7 @@ import Catagorypills from "../components/Catagorypills";
 import ContactusBanner from "../components/ContactusBanner";
 import Workcard from "../components/Workcard";
 import ScrollableTitles from "../components/scrollableTitles";
+import { motion } from "framer-motion";
 
 const catagories = [
   "React",
@@ -73,7 +74,7 @@ const projects = [
 
 function work() {
   return (
-    <div className="text-white">
+    <motion.div exit={{ opacit: 0 }} className="text-white">
       <div className="absolute left-[-77px] top-[-190px] z-50 h-[324px] w-[195px] bg-[#779283]   opacity-0 blur-3xl md:opacity-25 " />
 
       <div className="wrapper">
@@ -137,7 +138,7 @@ function work() {
       <div className="mb-16">
         <ContactusBanner />
       </div>
-    </div>
+    </motion.div>
   );
 }
 <h1>WORK</h1>;

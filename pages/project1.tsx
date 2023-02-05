@@ -39,7 +39,7 @@ function project1() {
   const { scrollYProgress } = useScroll();
 
   return (
-    <div>
+    <motion.div exit={{ opacity: 0 }}>
       <div className=" text-white">
         <div className="absolute left-[-77px] top-[-190px] z-50 h-[324px] w-[195px] bg-[#779283]   opacity-0 blur-3xl md:opacity-25 " />
 
@@ -221,7 +221,7 @@ function project1() {
 
 
       </div>
-    </div>
+    </motion.div>
   );
 }
 

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-
+import { motion } from "framer-motion";
 import React from "react";
 import { useState, useEffect } from "react";
 
@@ -54,7 +54,11 @@ const Navbar = () => {
 
   const [navbutton, setnavbutton] = useState(true);
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      >
       <nav
         className={` ${
           show ? "top-0" : "top-[-100px]"
@@ -181,7 +185,7 @@ const Navbar = () => {
           navbutton ? " hidden opacity-0" : "  bg-opacity-50 "
         } fixed  top-0    z-10 h-full w-full place-items-center bg-[#0F1010]  bg-clip-padding py-24 text-white backdrop-blur-xl backdrop-filter transition-all duration-[0.3s]  ease-in-out md:hidden`}
       ></div>
-    </>
+    </motion.div>
   );
 };
 
