@@ -1,6 +1,24 @@
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 import Catagorypills from "./Catagorypills";
+
+const cardVariants = {
+  offscreen: {
+    y: 50,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+
+    transition: {
+      type: "spring",
+      delay: 0.1,
+      duration: 0.8,
+    },
+  },
+};
 
 function Blogcard({
   blogtitle,
@@ -11,7 +29,13 @@ function Blogcard({
   blogtime,
 }) {
   return (
-    <div className="  border-b-[0.5px] border-gray-700 pb-6  md:pb-16 ">
+    <motion.div
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0 }}
+      variants={cardVariants}
+      className="  border-b-[0.5px] border-gray-700 pb-6  md:pb-16 "
+    >
       <div className="hidden items-center  gap-2 sm:flex md:gap-10">
         <Link href={bloglink}>
           <img src="blogimg.jpg" alt="" className="max-h-40" />
@@ -54,7 +78,7 @@ function Blogcard({
           ·<p className="text-gray-400">{blogtime}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

@@ -689,11 +689,23 @@ export default function Home() {
           <div className="wrapper">
             {/* title */}
             <div className="title mb-11 flex justify-between md:mb-0">
-              <h2 className="text-3xl font-semibold leading-tight md:text-[2.5rem] xl:w-[20ch]">
+              <motion.h2
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0 }}
+                variants={fadeInUp}
+                className="text-3xl font-semibold leading-tight md:text-[2.5rem] xl:w-[20ch]"
+              >
                 BLOGS
-              </h2>
+              </motion.h2>
               <div>
-                <button className="sbtn flex gap-0  sm:gap-1">
+                <motion.button
+                  initial="offscreen"
+                  whileInView="onscreen"
+                  viewport={{ once: true, amount: 0 }}
+                  variants={fadeInUp}
+                  className="sbtn flex gap-0  sm:gap-1"
+                >
                   <p>Read More Blogs</p>{" "}
                   <svg
                     className="hidden sm:block"
@@ -708,7 +720,7 @@ export default function Home() {
                       fill="white"
                     />
                   </svg>
-                </button>
+                </motion.button>
               </div>
             </div>
             <div className="flex flex-wrap justify-between md:mt-20">
@@ -730,14 +742,28 @@ export default function Home() {
               </div>
               {/* topic section */}
               <div className=" hidden xl:block xl:w-64">
-                <h4 className="text-xl xl:text-left">Reccomended topic</h4>
-                <div className=" justify-left mt-8 hidden flex-wrap gap-y-1 md:flex  ">
+                <motion.h4
+                  initial="offscreen"
+                  whileInView="onscreen"
+                  viewport={{ once: true, amount: 0 }}
+                  variants={fadeInUp}
+                  className="text-xl xl:text-left"
+                >
+                  Reccomended topic
+                </motion.h4>
+                <motion.div
+                  initial="offscreen"
+                  whileInView="onscreen"
+                  viewport={{ once: true, amount: 0 }}
+                  variants={fadeInUp}
+                  className=" justify-left mt-8 hidden flex-wrap gap-y-1 md:flex  "
+                >
                   {blogrecomendations.map((blogrecomendation, i) => {
                     return (
                       <Catagorypills key={i} catagory={blogrecomendation} />
                     );
                   })}
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>

@@ -1,8 +1,31 @@
 import React from "react";
+import { motion } from "framer-motion";
+
+const cardVariants = {
+  offscreen: {
+    y: 50,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+
+    transition: {
+      type: "spring",
+
+      duration: 1,
+    },
+  },
+};
 
 function ContactusBanner() {
   return (
-    <div>
+    <motion.div
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0 }}
+      variants={cardVariants}
+    >
       <div className="wrapper my-16 text-white ">
         <div className="relative flex w-full flex-wrap items-center justify-between gap-10 overflow-hidden  rounded-lg bg-contactus-gred py-8 px-6 lg:px-40">
           <div className="absolute right-20 z-0 h-[324px] w-[300px] bg-[#30473a]   opacity-0 blur-3xl md:opacity-10 " />
@@ -21,7 +44,7 @@ function ContactusBanner() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

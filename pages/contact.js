@@ -20,6 +20,23 @@ const social = {
   },
 };
 
+const fadeInUp = {
+  offscreen: {
+    y: 50,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+
+    transition: {
+      type: "spring",
+
+      duration: 1,
+    },
+  },
+};
+
 function contacus() {
   return (
     <motion.div
@@ -32,12 +49,24 @@ function contacus() {
       <div className="wrapper mb-60 grid gap-y-16 text-white lg:grid-cols-2">
         {/* contact us form */}
         <div>
-          <h2 className="text-left text-3xl font-semibold md:text-[2.5rem]">
+          <motion.h2
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0 }}
+            variants={fadeInUp}
+            className="text-left text-3xl font-semibold md:text-[2.5rem]"
+          >
             CONTACT
-          </h2>
+          </motion.h2>
 
           <form action="" className="mt-8 grid gap-4">
-            <div className="flex flex-col">
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0 }}
+              variants={fadeInUp}
+              className="flex flex-col"
+            >
               <label className="mb-2 text-gray-300  ">Name*</label>
               <input
                 required
@@ -45,16 +74,28 @@ function contacus() {
                 placeholder="ex. Chrish Doo"
                 className="focused rounded bg-[#353535] px-4 py-3 outline-none md:max-w-xs "
               />
-            </div>
-            <div className="flex flex-col">
+            </motion.div>
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0 }}
+              variants={fadeInUp}
+              className="flex flex-col"
+            >
               <label className="mb-2 text-gray-300">Phone No</label>
               <input
                 type="text"
                 placeholder="ex. +123 123456789"
                 className="focused rounded bg-[#353535] px-4 py-3 outline-none md:max-w-xs "
               />
-            </div>
-            <div className="flex flex-col">
+            </motion.div>
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0 }}
+              variants={fadeInUp}
+              className="flex flex-col"
+            >
               <label className="mb-2 text-gray-300">Email*</label>
               <input
                 required
@@ -62,18 +103,30 @@ function contacus() {
                 placeholder="ex. example@gmail.com"
                 className="focused max-w-full rounded bg-[#353535] px-4 py-3 outline-none md:max-w-xs "
               />
-            </div>
-            <div className="flex flex-col">
+            </motion.div>
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0 }}
+              variants={fadeInUp}
+              className="flex flex-col"
+            >
               <label className="mb-2 text-gray-300">Message</label>
               <textarea
                 type="textbox"
                 placeholder="Enter your message here"
                 className="focused h-32 rounded bg-[#353535] px-4 py-3 outline-none md:max-w-xs "
               />
-            </div>
-            <div className="mt-6">
+            </motion.div>
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0 }}
+              variants={fadeInUp}
+              className="mt-6"
+            >
               <input type="submit" className="pbtn w-full lg:w-max" />
-            </div>
+            </motion.div>
           </form>
         </div>
 
@@ -83,15 +136,33 @@ function contacus() {
 
         <div className="flex flex-col items-stretch gap-16 ">
           <div className="">
-            <h2 className="text-3xl font-semibold md:text-[2.5rem]">
+            <motion.h2
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0 }}
+              variants={fadeInUp}
+              className="text-3xl font-semibold md:text-[2.5rem]"
+            >
               ENTER EMAIL
-            </h2>
-            <p className="mt-4 text-gray-300">
+            </motion.h2>
+            <motion.p
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0 }}
+              variants={fadeInUp}
+              className="mt-4 text-gray-300"
+            >
               You can also write your email and I will get to you{" "}
-            </p>
+            </motion.p>
 
             <form action="" className="mt-4 grid gap-4">
-              <div className="flex flex-col">
+              <motion.div
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0 }}
+                variants={fadeInUp}
+                className="flex flex-col"
+              >
                 <label className="mb-2 text-gray-300">Email*</label>
                 <input
                   required
@@ -99,24 +170,48 @@ function contacus() {
                   placeholder="ex. example@gmail.com"
                   className="focused rounded bg-[#353535] px-4 py-3 outline-none md:max-w-xs "
                 />
-              </div>
+              </motion.div>
 
-              <div className="mt-2">
+              <motion.div
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0 }}
+                variants={fadeInUp}
+                className="mt-2"
+              >
                 <input
                   type="submit"
                   className="pbtn inline-block w-full lg:w-max"
                 />
-              </div>
+              </motion.div>
             </form>
           </div>
 
-          <hr className="opacity-20" />
+          <motion.hr
+            initial={{ x: 50 }}
+            animate={{ x: 0 }}
+            className="opacity-20"
+          />
 
           {/* socials */}
           <div className="">
-            <h2 className="text-3xl font-semibold md:text-[2.5rem]">SOCIALS</h2>
+            <motion.h2
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0 }}
+              variants={fadeInUp}
+              className="text-3xl font-semibold md:text-[2.5rem]"
+            >
+              SOCIALS
+            </motion.h2>
 
-            <div className="mt-8  grid grid-cols-1 gap-4 md:grid-cols-2">
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0 }}
+              variants={fadeInUp}
+              className="mt-8  grid grid-cols-1 gap-4 md:grid-cols-2"
+            >
               <div className="flex  items-center  gap-2">
                 <svg
                   width="25"
@@ -276,7 +371,7 @@ function contacus() {
 
                 <p>{social.linkedins.name}</p>
               </a>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

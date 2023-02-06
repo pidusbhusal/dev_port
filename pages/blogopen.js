@@ -3,6 +3,23 @@ const projecttags = ["react", "backend", "nextjs", "fullstack"];
 import Catagorypills from "../components/Catagorypills";
 import { motion, useScroll } from "framer-motion";
 
+const fadeInUp = {
+  offscreen: {
+    y: 50,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+
+    transition: {
+      type: "spring",
+
+      duration: 1,
+    },
+  },
+};
+
 const blogs = [
   {
     blogtitle: "Project title name would be here",
@@ -65,12 +82,24 @@ function blogopen() {
         <div className="flex  flex-wrap justify-between gap-14  md:flex-nowrap">
           <div className=" ">
             {/* title */}
-            <div className=" flex flex-wrap items-center gap-0 md:gap-6">
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0 }}
+              variants={fadeInUp}
+              className=" flex flex-wrap items-center gap-0 md:gap-6"
+            >
               <h2 className="text-3xl font-semibold md:text-[2.5rem]">
                 NAME OF THE BLOGS
               </h2>
-            </div>
-            <div className="mt-8 flex flex-wrap items-center gap-8">
+            </motion.div>
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0 }}
+              variants={fadeInUp}
+              className="mt-8 flex flex-wrap items-center gap-8"
+            >
               {/* time and date */}
 
               <p className=" text-sm text-gray-400">
@@ -84,12 +113,18 @@ function blogopen() {
                     return <Catagorypills key={i} catagory={projecttag} />;
                   })}
               </div>
-            </div>
+            </motion.div>
 
             {/* rich text */}
             <hr className=" mt-8 opacity-20 md:mt-16" />
 
-            <div className="md:mt-16">
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0 }}
+              variants={fadeInUp}
+              className="md:mt-16"
+            >
               <p className="mt-8 text-gray-300">
                 Deciding on a JavaScript framework for your web application can
                 be overwhelming. Angular and React are very popular these days,
@@ -204,27 +239,67 @@ function blogopen() {
                 on the block.
               </p>
               <hr className="my-16 opacity-20" />
-            </div>
+            </motion.div>
           </div>
 
           {/* topic section */}
           <div className="    overscroll-none    md:col-span-2  ">
             <div className=" sticky  top-10 ">
-              <h4 className="text-xl ">Reccomended topic</h4>
-              <div className=" mt-8  flex-wrap justify-start gap-y-1 md:flex  ">
+              <motion.h4
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0 }}
+                variants={fadeInUp}
+                className="text-xl "
+              >
+                Reccomended topic
+              </motion.h4>
+              <motion.div
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0 }}
+                variants={fadeInUp}
+                className=" mt-8  flex-wrap justify-start gap-y-1 md:flex  "
+              >
                 {blogrecomendations.map((blogrecomendation, i) => {
                   return <Catagorypills key={i} catagory={blogrecomendation} />;
                 })}
-              </div>
+              </motion.div>
 
-              <hr className="my-16 opacity-20" />
-              <div>
-                <h4 className="text-xl ">Subscribe to my newsletter</h4>
-                <p className="mt-4 text-gray-300">
+              <hr className="my-8 opacity-20" />
+              <motion.div
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0 }}
+                variants={fadeInUp}
+              >
+                <motion.h4
+                  initial="offscreen"
+                  whileInView="onscreen"
+                  viewport={{ once: true, amount: 0 }}
+                  variants={fadeInUp}
+                  className="text-xl "
+                >
+                  Subscribe to my newsletter
+                </motion.h4>
+                <motion.p
+                  initial="offscreen"
+                  whileInView="onscreen"
+                  viewport={{ once: true, amount: 0 }}
+                  variants={fadeInUp}
+                  className="mt-4 text-gray-300"
+                >
                   You can also write your email and I will get to you{" "}
-                </p>
+                </motion.p>
 
-                <form action="" className="mt-4 grid gap-4">
+                <motion.form
+                  initial="offscreen"
+                  whileInView="onscreen"
+                  viewport={{ once: true, amount: 0 }}
+                  variants={fadeInUp}
+                  action=""
+                  className="mt-4 grid gap-4"
+                >
                   <div className="flex flex-col">
                     <label className="mb-2 text-gray-300">Email*</label>
                     <input
@@ -241,8 +316,8 @@ function blogopen() {
                       className="pbtn inline-block w-full lg:w-max"
                     />
                   </div>
-                </form>
-              </div>
+                </motion.form>
+              </motion.div>
             </div>
           </div>
         </div>

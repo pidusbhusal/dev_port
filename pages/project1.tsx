@@ -7,6 +7,40 @@ import {
   useScroll,
 } from "framer-motion";
 
+
+const fadeInUp = {
+  offscreen: {
+    y: 50,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+
+    transition: {
+      type: "spring",
+
+      duration: 1,
+    },
+  },
+};
+
+const slideInRight = {
+  offscreen: {
+    x: 100,
+    opacity: 0,
+  },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      duration: 1,
+    },
+  },
+};
+
+
 const projects = [
   {
     id: 1,
@@ -53,10 +87,16 @@ function project1() {
         <div className="wrapper">
           {/* title */}
           <div className="mt-28 flex flex-wrap items-center gap-0 md:gap-6">
-            <h2 className="text-3xl font-semibold md:text-[2.5rem]">
+            <motion.h2 initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0 }}
+              variants={fadeInUp} className="text-3xl font-semibold md:text-[2.5rem]">
               NAME OF THE PROJEECT
-            </h2>
-            <button className=" first-letter flex  h-[45px] w-[45px] items-center justify-center rounded-full bg-white md:h-[52px] md:w-[52px]">
+            </motion.h2>
+            <motion.button initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0 }}
+              variants={fadeInUp} className=" first-letter flex  h-[45px] w-[45px] items-center justify-center rounded-full bg-white md:h-[52px] md:w-[52px]">
               <a href="#">
                 <svg
                   width="12"
@@ -71,39 +111,54 @@ function project1() {
                   />
                 </svg>
               </a>
-            </button>
+            </motion.button>
           </div>
 
           {/* role */}
-          <p className="mt-1 text-lg">Backend Developer</p>
+          <motion.p initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0 }}
+            variants={fadeInUp} className="mt-1 text-lg">Backend Developer</motion.p>
 
           {/* projecttags */}
 
-          <div className="mt-2">
+          <motion.div initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0 }}
+            variants={fadeInUp} className="mt-2">
             {projecttags &&
               projecttags.map((projecttag, i) => {
                 return <Catagorypills key={i} catagory={projecttag} />;
               })}
-          </div>
+          </motion.div>
 
           {/* time and date */}
-          <p className="mt-4 text-sm text-gray-400">Oct 24, 2022 · 7 min read</p>
+          <motion.p initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0 }}
+            variants={fadeInUp} className="mt-4 text-sm text-gray-400">Oct 24, 2022 · 7 min read</motion.p>
 
           {/* description */}
 
-          <p className="mt-8 max-w-prose text-lg leading-[1.7] text-gray-300">
+          <motion.p initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0 }}
+            variants={fadeInUp} className="mt-8 max-w-prose text-lg leading-[1.7] text-gray-300">
             Deciding on a JavaScript framework for your web application can be
             overwhelming. Angular and React are very popular these days, and there
             is an upstart which has been getting a lot of traction lately: VueJS.
             What’s more, these are just a few of the new kids on the block.
-          </p>
+          </motion.p>
         </div>
 
 
 
         {/* ss from the projects */}
 
-        <section className="h-[80vh]  mt-16  overflow-hidden bg-[#262626]">
+        <motion.section initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={slideInRight} className="h-[80vh]  mt-16  overflow-hidden bg-[#262626]">
 
 
           <div className="grid grid-col-1  md:grid-cols-5 gap-10">
@@ -118,7 +173,7 @@ function project1() {
           </div>
 
 
-        </section>
+        </motion.section>
 
 
 
@@ -129,23 +184,32 @@ function project1() {
           <div className="wrapper">
 
             <div className="grid mt-16 mb-16 justify-around grid-cols-1 md:grid-cols-2 gap-y-10">
-              <div>
+              <motion.div initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0 }}
+                variants={fadeInUp}>
                 <h3 className="text-2xl font-semibold">Context</h3>
                 <p className="max-w-[44ch] mt-2 text-gray-300">To design a fresh application experience with a high emphasis on user interactivity and visual content in a functional yet innovative design while also introducing new functionally.
                 </p>
-              </div>
+              </motion.div>
 
-              <div>
+              <motion.div initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0 }}
+                variants={fadeInUp}>
                 <h3 className="text-2xl font-semibold">Project Includes</h3>
                 <ul className="mt-2 text-gray-300">
                   {projectincludes.map((projectinclude, i) => { return (<li key={i}>{projectinclude}</li>) })}
                 </ul>
-              </div>
-              <div>
+              </motion.div>
+              <motion.div initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0 }}
+                variants={fadeInUp}>
                 <h3 className="text-2xl font-semibold">Objective</h3>
                 <p className="max-w-[44ch] mt-2 text-gray-300">To design a fresh application experience with a high emphasis on user interactivity and visual content in a functional yet innovative design while also introducing new functionally.
                 </p>
-              </div>
+              </motion.div>
             </div>
 
 
@@ -160,7 +224,10 @@ function project1() {
 
         <hr className="opacity-20" />
 
-        <div>
+        <motion.div initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0 }}
+          variants={fadeInUp} >
           <div className="wrapper">
             <div className="grid md:grid-cols-2 gap-16">
               <div>
@@ -180,7 +247,7 @@ function project1() {
 
 
           </div>
-        </div>
+        </motion.div>
 
         <hr className="opacity-20" />
 
@@ -190,11 +257,17 @@ function project1() {
 
           <div>
             <div className="flex justify-between wrap">
-              <h2 className="text-3xl font-semibold md:text-[2.5rem]">
+              <motion.h2 initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0 }}
+                variants={fadeInUp} className="text-3xl font-semibold md:text-[2.5rem]">
                 OTHER PROJECTS
-              </h2>
+              </motion.h2>
               <div>
-                <button className="pbtn inline-block ">View all</button>
+                <motion.button initial="offscreen"
+                  whileInView="onscreen"
+                  viewport={{ once: true, amount: 0 }}
+                  variants={fadeInUp} className="pbtn inline-block ">View all</motion.button>
               </div>
             </div>
             <div className=" mt-14 grid grid-cols-1 justify-start gap-x-11 sm:grid-cols-2">

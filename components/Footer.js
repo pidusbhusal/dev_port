@@ -1,5 +1,23 @@
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
+
+const cardVariants = {
+  offscreen: {
+    y: 50,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+
+    transition: {
+      type: "spring",
+
+      duration: 1,
+    },
+  },
+};
 
 const social = {
   email: "pidusbhusal@gmail.com",
@@ -10,7 +28,12 @@ const social = {
 
 function Footer() {
   return (
-    <div>
+    <motion.div
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0 }}
+      variants={cardVariants}
+    >
       <div className="wrapper grid flex-wrap justify-between gap-4 text-white md:flex md:gap-10 ">
         <div>
           <h2 className="text-3xl font-semibold leading-tight md:text-[2.5rem] xl:max-w-[20ch]">
@@ -153,7 +176,7 @@ function Footer() {
           © 2023. All Rights Reserved
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
