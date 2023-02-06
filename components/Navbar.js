@@ -55,7 +55,7 @@ const Navbar = () => {
   const [navbutton, setnavbutton] = useState(true);
   return (
     <motion.div
-      initial={{ y: -10, opacity: 0 }}
+      initial={{ y: -10, opacity: 0, z: 100 }}
       animate={{
         y: 0,
         opacity: 1,
@@ -66,7 +66,7 @@ const Navbar = () => {
         },
       }}
     >
-      <nav
+      <motion.nav
         className={` ${
           show ? "top-0" : "top-[-100px]"
         } sticky z-50  block w-full bg-[#0F1010]  bg-opacity-60 bg-clip-padding backdrop-blur-xl backdrop-filter transition-[top] duration-[0.3s] ease-in`}
@@ -173,7 +173,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </nav>
+      </motion.nav>
 
       {/* mobile menu that apears when button is clicked */}
       <div

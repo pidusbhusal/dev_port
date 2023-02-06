@@ -12,6 +12,7 @@ import Catagorypills from "../components/Catagorypills";
 import ContactusBanner from "../components/ContactusBanner";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const workexpes = [
   {
@@ -256,6 +257,7 @@ export default function Home() {
       },
     },
   };
+  const router = useRouter();
 
   return (
     <motion.div
@@ -272,6 +274,7 @@ export default function Home() {
         <motion.div className=" wrapper flex flex-wrap-reverse items-end justify-center md:flex-nowrap  ">
           <div className="mt-10 md:mt-0">
             <motion.button
+              onClick={() => router.push("/work")}
               initial="offscreen"
               whileInView="onscreen"
               viewport={{ once: true, amount: 0 }}
@@ -331,7 +334,9 @@ export default function Home() {
             <div className="item-center flex items-center justify-between">
               <h2 className="text-3xl font-semibold md:text-[2.5rem]">WORK</h2>
               <div>
-                <button className="pbtn">See my work</button>
+                <button onClick={() => router.push("/work")} className="pbtn">
+                  See my work
+                </button>
               </div>
             </div>
 
@@ -700,6 +705,7 @@ export default function Home() {
               </motion.h2>
               <div>
                 <motion.button
+                  onClick={() => router.push("/blog")}
                   initial="offscreen"
                   whileInView="onscreen"
                   viewport={{ once: true, amount: 0 }}

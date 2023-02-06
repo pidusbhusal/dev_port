@@ -40,7 +40,12 @@ function ContactusBanner() {
             </p>
           </div>
           <div>
-            <button className="pbtn z-20  ">Get in touch</button>
+            <motion.button
+              onClick={() => router.push("/contact")}
+              className="pbtn z-20  "
+            >
+              Get in touch
+            </motion.button>
           </div>
         </div>
       </div>
