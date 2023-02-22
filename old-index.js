@@ -270,92 +270,10 @@ export default function Home() {
       </Head>
       <main className="py-20 text-white ">
         <div className="absolute left-[-77px] top-[-190px] z-50 h-[324px] w-[195px] bg-[#779283]   opacity-0 blur-3xl md:opacity-25 " />
-        {/* herosection */}
-        <motion.div className=" wrapper flex flex-wrap-reverse items-end justify-center md:flex-nowrap  ">
-          <div className="mt-10 md:mt-0">
-            <motion.button
-              onClick={() => router.push("/work")}
-              initial="offscreen"
-              whileInView="onscreen"
-              viewport={{ once: true, amount: 0 }}
-              variants={fadeInUp}
-              className=" group flex w-[100%] items-center justify-between rounded-full bg-white px-9 py-4 text-black hover:bg-green-200 md:w-auto md:items-center md:gap-[10rem] md:px-8"
-            >
-              <p className="text-black">See My Work</p>
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 14 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M13.407 1.34254C13.407 0.928328 13.0712 0.592542 12.657 0.592542H5.90697C5.49276 0.592542 5.15697 0.928328 5.15697 1.34254C5.15697 1.75676 5.49276 2.09254 5.90697 2.09254L11.907 2.09254L11.907 8.09254C11.907 8.50676 12.2428 8.84254 12.657 8.84254C13.0712 8.84254 13.407 8.50676 13.407 8.09254V1.34254ZM1.87359 13.1866L13.1873 1.87287L12.1266 0.812212L0.812932 12.1259L1.87359 13.1866Z"
-                  fill="black"
-                />
-              </svg>
-            </motion.button>
-            <motion.h1
-              initial="offscreen"
-              whileInView="onscreen"
-              viewport={{ once: true, amount: 0 }}
-              variants={fadeInUp}
-              className="line mt-9  text-[2.4rem] font-bold leading-10 md:text-[4rem] md:leading-[4.15rem]"
-            >
-              I'M A FULL STACK DEVELOPER
-            </motion.h1>
-            <motion.p
-              initial="offscreen"
-              whileInView="onscreen"
-              viewport={{ once: true, amount: 0 }}
-              variants={fadeInUp}
-              className="mt-5 max-w-[49ch]"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim
-            </motion.p>
-          </div>
-          <motion.div
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: true, amount: 0 }}
-            variants={fadeInUp}
-            className="overflow-hidden rounded-lg "
-          >
-            <img width="100%" src="./profile.jpg" alt="Me 😁" />
-          </motion.div>
-        </motion.div>
+        
 
         {/* work */}
 
-        <div className="home-work py-20 md:mt-3 md:pt-40 md:pb-20 ">
-          <div className="wrapper">
-            <div className="item-center flex items-center justify-between">
-              <h2 className="text-3xl font-semibold md:text-[2.5rem]">WORK</h2>
-              <div>
-                <button onClick={() => router.push("/work")} className="pbtn">
-                  See my work
-                </button>
-              </div>
-            </div>
-
-            <div className="mt-14 grid grid-cols-1 justify-start gap-x-11 sm:grid-cols-2 ">
-              {projects.map((project, i) => {
-                return (
-                  <Workcard
-                    key={i}
-                    projecttitle={project.projecttitle}
-                    projectdescription={project.projctdescription}
-                    projectthumbnail={project.projectthumbnail}
-                    catagories={project.catagories}
-                    projectcasestudy={project.projectcasestudy}
-                  />
-                );
-              })}
-            </div>
-          </div>
-        </div>
 
         {/* Timeline */}
         <motion.div
@@ -635,59 +553,7 @@ export default function Home() {
         </motion.div>
 
         {/* testimonials*/}
-        <div className="pt-16">
-          <div className="wrapper">
-            <div className="flex flex-wrap items-center justify-between gap-y-4">
-              <motion.h2
-                initial="offscreen"
-                whileInView="onscreen"
-                viewport={{ once: true, amount: 0 }}
-                variants={fadeInUp}
-                className="text-3xl font-semibold leading-tight md:text-[2.5rem] xl:w-[20ch]"
-              >
-                WHAT PEOPLE ARE SAYING ABOUT ME
-              </motion.h2>
-
-              <motion.p
-                initial="offscreen"
-                whileInView="onscreen"
-                viewport={{ once: true, amount: 0 }}
-                variants={fadeInUp}
-                className="leading-loose xl:w-[37ch]"
-              >
-                Over the year I have worked with plenty of client and here are
-                some of their testimonial
-              </motion.p>
-            </div>
-            {/* testimonial card */}
-            <div className="my-20 grid gap-6 md:mt-24 md:grid-cols-2 lg:grid-cols-4">
-              {testimonials.map((testimonial) => {
-                return (
-                  <Testimonialcard
-                    key={testimonial.id}
-                    description={testimonial.testimonialDetail}
-                    name={testimonial.testimonialName}
-                    profile={testimonial.testimonialImage}
-                    title={testimonial.testimonialTitle}
-                  />
-                );
-              })}
-            </div>
-
-            {/* testimonial company */}
-            <motion.div
-              initial="offscreen"
-              whileInView="onscreen"
-              viewport={{ once: true, amount: 0 }}
-              variants={fadeInUp}
-              className=" grid grid-cols-2 place-items-start  gap-7  md:grid-cols-3 md:gap-28 md:gap-y-2 xl:grid-cols-5"
-            >
-              {testimonialcompanys.map((testimonialcompany, i) => {
-                return <img key={i} src={testimonialcompany} />;
-              })}
-            </motion.div>
-          </div>
-        </div>
+        
 
         {/* blog */}
         <div className="pt-16">

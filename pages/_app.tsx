@@ -1,11 +1,10 @@
 import { AnimatePresence } from "framer-motion";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import {Footer, Navbar} from "../components";
 import "../styles/globals.css";
 
 export default function App({ Component, pageProps }) {
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence mode="wait">
       <Navbar />
       <Component {...pageProps} />
       <Footer />

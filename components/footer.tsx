@@ -20,13 +20,13 @@ const cardVariants = {
 };
 
 const social = {
-  email: "pidusbhusal@gmail.com",
-  facebook: "Sudip Bhusal",
-  insta: "pidus_id",
-  linkedin: "pidus_id",
+  email: "ashanghimire10@gmail.com",
+  facebook: "Aashan Ghimire",
+  insta: "aashan10",
+  linkedin: "aashan10",
 };
 
-function Footer() {
+const Footer = () => {
   return (
     <motion.div
       initial="offscreen"
@@ -180,4 +180,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export {Footer};

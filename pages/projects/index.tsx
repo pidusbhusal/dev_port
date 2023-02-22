@@ -1,99 +1,31 @@
-import React from "react";
-import Blogcard from "../components/Blogcard";
-import ContactusBanner from "../components/ContactusBanner";
-import Catagorypills from "../components/Catagorypills";
-import ScrollableTitles from "../components/scrollableTitles";
 import { motion } from "framer-motion";
-const blogs = [
-  {
-    blogtitle: "Project title name would be here",
-    blogcontent:
-      "Everyone wants to know what UX is nowadays, but can a course help you become a designer? The following are my thoughts after taking the Google UX Design course a year ago. As we begin this experience, let’s",
-    blogimage: "blogimg.jpg",
-    bloglink: "/blogopen",
-    blogtime: "8min",
-    blogtags: ["React", "Android", "Web Development"],
-  },
-  {
-    blogtitle: "Project title name would be here",
-    blogcontent:
-      "Everyone wants to know what UX is nowadays, but can a course help you become a designer? The following are my thoughts after taking the Google UX Design course a year ago. As we begin this experience, let’s",
-    blogimage: "blogimg.jpg",
-    bloglink: "/blogopen",
-    blogtime: "8min",
-    blogtags: ["React", "Android", "Web Development"],
-  },
-  {
-    blogtitle: "Project title name would be here",
-    blogcontent:
-      "Everyone wants to know what UX is nowadays, but can a course help you become a designer? The following are my thoughts after taking the Google UX Design course a year ago. As we begin this experience, let’s",
-    blogimage: "blogimg.jpg",
-    bloglink: "/blogopen",
-    blogtime: "8min",
-    blogtags: ["React", "Android", "Web Development"],
-  },
-  {
-    blogtitle: "Project title name would be here",
-    blogcontent:
-      "Everyone wants to know what UX is nowadays, but can a course help you become a designer? The following are my thoughts after taking the Google UX Design course a year ago. As we begin this experience, let’s",
-    blogimage: "blogimg.jpg",
-    bloglink: "/blogopen",
-    blogtime: "8min",
-    blogtags: ["React", "Android", "Web Development"],
-  },
-  {
-    blogtitle: "Project title name would be here",
-    blogcontent:
-      "Everyone wants to know what UX is nowadays, but can a course help you become a designer? The following are my thoughts after taking the Google UX Design course a year ago. As we begin this experience, let’s",
-    blogimage: "blogimg.jpg",
-    bloglink: "/blogopen",
-    blogtime: "8min",
-    blogtags: ["React", "Android", "Web Development"],
-  },
-  {
-    blogtitle: "Project title name would be here",
-    blogcontent:
-      "Everyone wants to know what UX is nowadays, but can a course help you become a designer? The following are my thoughts after taking the Google UX Design course a year ago. As we begin this experience, let’s",
-    blogimage: "blogimg.jpg",
-    bloglink: "/blogopen",
-    blogtime: "8min",
-    blogtags: ["React", "Android", "Web Development"],
-  },
-  {
-    blogtitle: "Project title name would be here",
-    blogcontent:
-      "Everyone wants to know what UX is nowadays, but can a course help you become a designer? The following are my thoughts after taking the Google UX Design course a year ago. As we begin this experience, let’s",
-    blogimage: "blogimg.jpg",
-    bloglink: "/blogopen",
-    blogtime: "8min",
-    blogtags: ["React", "Android", "Web Development"],
-  },
-  {
-    blogtitle: "Project title name would be here",
-    blogcontent:
-      "Everyone wants to know what UX is nowadays, but can a course help you become a designer? The following are my thoughts after taking the Google UX Design course a year ago. As we begin this experience, let’s",
-    blogimage: "blogimg.jpg",
-    bloglink: "/blogopen",
-    blogtime: "8min",
-    blogtags: ["React", "Android", "Web Development"],
-  },
-];
+import Head from "next/head";
+import { ContactMe, StackPills } from "../../components";
+import { WorkCard } from "../../components/work-card";
+import { client, gql } from "../../data-providers";
+import { AttributeCollection, Project, Stack } from "../../types";
 
-const blogrecomendations = [
-  "React",
-  "Design",
-  "Graph",
-  "Web Design",
-  "Web Developnment",
-];
+interface ProjectPageProps {
+  projects: AttributeCollection<Project>;
+  pagination: {
+    page: number;
+    total: number;
+    pageSize: number;
+    pageCount: number;
+  };
+  stacks: AttributeCollection<Stack>;
+}
 
-function blog() {
+const ProjectPage = ({ projects, pagination, stacks }: ProjectPageProps) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
+        <Head>
+            <title>Projects</title>
+        </Head>
       <div className="absolute left-[-77px] top-[-190px] z-50 h-[324px] w-[195px] bg-[#779283]   opacity-0 blur-3xl md:opacity-25 " />
 
       <div className="wrapper text-white">
@@ -103,7 +35,7 @@ function blog() {
           <div className=" grid   gap-6 md:gap-16">
             {/* heading */}
             <h2 className="text-3xl font-semibold md:text-[2.5rem] xl:mb-4 ">
-              BLOG
+              Projects
             </h2>
 
             {/* search bar which will apear on mobile */}
@@ -141,26 +73,16 @@ function blog() {
             </div>
 
             {/* blog recomendation in mobile version */}
-            <div className="flex w-full overflow-hidden xl:hidden">
-              <ScrollableTitles />
-            </div>
+            <StackPills stacks={stacks} containerClassName="flex w-full overflow-hidden xl:hidden"/>
 
-            {blogs.map((blog, i) => {
-              return (
-                <Blogcard
-                  key={i}
-                  blogcontent={blog.blogcontent}
-                  blogimg={blog.blogimage}
-                  blogtitle={blog.blogtitle}
-                  bloglink={blog.bloglink}
-                  catagories={blog.blogtags}
-                  blogtime={blog.blogtime}
-                />
-              );
-            })}
+            <div className="grid grid-cols-2 gap-4">
+              {projects.data.map((project, i) => {
+                return <WorkCard key={i} project={project.attributes} />;
+              })}
+            </div>
           </div>
           {/* side bar*/}
-          <div className="   hidden xl:block xl:w-64">
+          <div className="hidden xl:block xl:w-64">
             <div className="sticky top-10">
               <div className=" mb-16 flex w-full items-center  gap-4 rounded-full border-[0px] border-solid border-[#585858] bg-[#353535] md:w-fit  ">
                 <svg
@@ -195,11 +117,10 @@ function blog() {
                 />
               </div>
               <h4 className="text-xl xl:text-left">Reccomended topic</h4>
-              <div className="    mt-8 hidden flex-wrap justify-start gap-y-1 md:flex  ">
-                {blogrecomendations.map((blogrecomendation, i) => {
-                  return <Catagorypills key={i} catagory={blogrecomendation} />;
-                })}
-              </div>
+              <StackPills
+                stacks={stacks}
+                containerClassName="mt-8 hidden flex-wrap justify-start gap-y-1 md:flex"
+              />
               <hr className="my-16 opacity-20" />
               <div>
                 <h4 className="text-xl ">Subscribe to my newsletter</h4>
@@ -257,9 +178,78 @@ function blog() {
         </div>
       </div>
 
-      <ContactusBanner />
+      <ContactMe />
     </motion.div>
   );
-}
+};
 
-export default blog;
+export default ProjectPage;
+
+export const getServerSideProps = async (context) => {
+  const { page = 1 } = context.query;
+
+  const data = await client.query({
+    query: gql`query {
+            projects (pagination: {pageSize: 10, page: ${page}}, sort:  "createdAt:desc") {
+              meta {
+                pagination {
+                  page,
+                  total,
+                  pageCount,
+                  pageSize
+                }
+              }
+              data{
+                attributes {
+                  title,
+                  name,
+                  slug,
+                  link,
+                  stacks {
+                    data {
+                        attributes {
+                          title,
+                          slug
+                        }
+                      }
+                  },
+                  thumbnail {
+                    data {
+                      attributes {
+                        url,
+                        height,
+                        width,
+                        alternativeText
+                      }
+                    }
+                  },
+                  seo {
+                    description,
+                    title,
+                    keywords,
+                  }
+                  createdAt,
+                  updatedAt,
+                  publishedAt,
+                }
+              }
+            },
+            stacks {
+              data {
+                attributes {
+                  title,
+                  slug
+                }
+              }
+            }
+          }`,
+  });
+
+  return {
+    props: {
+      projects: data.data.projects,
+      pagination: data.data.projects.meta.pagination,
+      stacks: data.data.stacks,
+    },
+  };
+};

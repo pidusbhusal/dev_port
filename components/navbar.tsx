@@ -1,9 +1,8 @@
-"use client";
-
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import React from "react";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const Navbar = () => {
@@ -73,7 +72,7 @@ const Navbar = () => {
       >
         <div className="  wrapper flex items-center justify-between  py-6 md:py-4">
           <Link href="/" passHref>
-            <img src="logo.svg" alt="Our Logo" />
+            <Image width={60} height={60} src="/logo.svg" alt="Our Logo" />
           </Link>
 
           <ul className=" hidden items-center gap-[4vw] md:flex md:flex-row">
@@ -88,7 +87,7 @@ const Navbar = () => {
             <li>
               <Link
                 className="py-5 font-medium text-gray-400 hover:text-white"
-                href="/work"
+                href="/projects"
               >
                 Work
               </Link>
@@ -182,7 +181,7 @@ const Navbar = () => {
         } fixed right-0 top-0 z-20 grid h-full w-2/3 place-items-center  bg-[#0F1010]  bg-opacity-90 bg-clip-padding py-24 text-white backdrop-blur-xl backdrop-filter transition-all duration-[0.3s]  ease-in-out md:hidden`}
       >
         <MyButton href={"/"}>Home</MyButton>
-        <MyButton href={"/work"}>Work</MyButton>
+        <MyButton href={"/projects"}>Work</MyButton>
         <MyButton href={"/blog"}>Blog</MyButton>
       </div>
 
@@ -196,4 +195,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export {Navbar};

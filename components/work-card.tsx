@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
-import Catagorypills from "./Catagorypills";
-import Link from "next/link";
+import {StackPills} from './stack-pills';
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import { Project } from "../types";
+import Image from "next/image";
 
 const cardVariants = {
   offscreen: {
@@ -22,16 +23,15 @@ const cardVariants = {
   },
 };
 
-function Workcard({
-  projectthumbnail,
-  catagories,
-  projectdescription,
-  projecttitle,
-  projectlink,
-  projectcasestudy,
-}) {
+interface WorkCardProps {
+    project: Project
+}
+
+const WorkCard = ({project}: WorkCardProps) => {
   const router = useRouter();
 
+  const {title, thumbnail, stacks, seo, slug, link} = project;
+  const {description} = seo;
   return (
     <motion.div
       initial="offscreen"
@@ -40,33 +40,32 @@ function Workcard({
       variants={cardVariants}
       className="mb-20  "
     >
-      <img
-        src={projectthumbnail}
-        alt="dis my work"
+      <Image
+        loading="lazy"
+        src={thumbnail.data.attributes.url}
+        height={thumbnail.data.attributes.height}
+        width={thumbnail.data.attributes.width}
+        alt={title}
         className="w-full rounded  md:rounded-md "
       />
-      <div className=" mt-7 flex flex-wrap ">
-        {catagories &&
-          catagories.map((catagory, i) => {
-            return <Catagorypills key={i} catagory={catagory} />;
-          })}
-      </div>
+      <StackPills stacks={stacks} containerClassName="mt-7 flex flex-wrap"/>
       <div className="mt-5">
-        <h3 className="text-2xl font-semibold ">{projecttitle}</h3>
+        <h3 className="text-2xl font-semibold ">{title}</h3>
         <p className="mt-2 w-[90%] text-gray-400 line-clamp-3 ">
-          {projectdescription}
+          {description}
         </p>
       </div>
       {/* buttons */}
       <div className="mt-7 flex items-center gap-3">
         <div>
-          <button className="pbtn" onClick={() => router.push("/project1")}>
+          <button title="Read Case Study" className="pbtn" onClick={() => router.push(`/projects/${slug}`)}>
             Read Case Study
           </button>
         </div>
         <div>
-          <button className=" first-letter flex  h-[45px] w-[45px] items-center justify-center rounded-full bg-white md:h-[52px] md:w-[52px]">
-            <a href="#">
+          {link && (
+            <button title="View Project" className=" first-letter flex  h-[45px] w-[45px] items-center justify-center rounded-full bg-white md:h-[52px] md:w-[52px]">
+            <a href={link} title="View project in a new tab" target="_blank" rel="noreferrer">
               <svg
                 width="12"
                 height="12"
@@ -81,10 +80,12 @@ function Workcard({
               </svg>
             </a>
           </button>
+          )}
         </div>
       </div>
     </motion.div>
   );
 }
 
-export default Workcard;
+export {WorkCard};
+export type {WorkCardProps};
