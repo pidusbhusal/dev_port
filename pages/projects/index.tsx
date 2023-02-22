@@ -188,7 +188,7 @@ export default ProjectPage;
 export const getServerSideProps = async (context) => {
   const { page = 1 } = context.query;
 
-  const data = await client.query({
+  const {data} = await client.query({
     query: gql`query {
             projects (pagination: {pageSize: 10, page: ${page}}, sort:  "createdAt:desc") {
               meta {
@@ -247,9 +247,9 @@ export const getServerSideProps = async (context) => {
 
   return {
     props: {
-      projects: data.data.projects,
-      pagination: data.data.projects.meta.pagination,
-      stacks: data.data.stacks,
+      projects: data.projects,
+      pagination: data.projects.meta.pagination,
+      stacks: data.stacks,
     },
   };
 };

@@ -2,7 +2,8 @@ import {ApolloClient, InMemoryCache} from '@apollo/client';
 import { gql } from "@apollo/client";
 
 const client = new ApolloClient({
-    uri: 'http://192.168.1.64:1337/graphql',
+    uri: 'http://162.55.36.186:2770/graphql',
+    // uri: process.env.BACKEND_URL,
     cache: new InMemoryCache(),
 });
 
